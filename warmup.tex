@@ -1,0 +1,144 @@
+\documentclass{scrartcl}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[left=1cm, right=1cm, top=0.5cm, bottom=0.5cm, a4paper]{geometry}
+\usepackage{graphicx}
+\usepackage{rotating}
+
+\parindent 0pt
+\parskip 0pt
+
+\newcommand{\gdw}{\quad :\Leftrightarrow\quad &}
+\newcommand{\is}{\quad :=\,\quad &}
+\newcommand{\gleich}{\quad =\;\quad &}
+\newcommand{\dann}{\quad \Rightarrow\quad &}
+\newcommand{\aeq}{\quad \Leftrightarrow\quad &} % äquivalent
+\newcommand{\zb}{\quad \;\text{zB}\quad &}
+\newcommand{\teilm}{\subseteq}
+\newcommand{\sse}{\subseteq}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\s}[1]{\begin{split}#1\end{split}}
+\renewcommand{\r}[1]{\begin{split}#1\end{split} \\}
+
+\begin{document}
+\section{October 04, 2012}
+\begin{align*}
+  \varnothing \is \{x \mid x \neq x\} \\
+  A=B \gdw x \in A \Leftrightarrow x \in B \\
+  A \cap B \is \{x \mid x \in A \land x \in B \} \\
+  A \cup B \is \{x \mid x \in A \lor x \in B\} \\
+  A \teilm B \gdw \forall x \in A: x \in B \\
+  A \setminus B \is \{x \in A \mid x \not\in B\} \\
+  (a,b) \is \{\{a, b\}, \{b\}\} \\
+  A^C \is \text{\emph{Bezugsmenge}} \setminus A \\
+  A \times B \is \{(a,b) \mid a \in A, b \in B\} \\
+  \mathcal{P}(A) \is \{x \mid x \teilm A\} \\
+  |A| \is \text{Mächtigkeit von }A \\
+  (a_i)_{i \in \NN} \is (a_1, a_2, ..., a_n) \\
+  \sum^{n}_{i=1}{a_i} \is a_1 + a_2 + ... + a_n \\
+  \prod^{n}_{i=1}{a_i} \is a_1 \cdot a_2 \cdot ... \cdot a_n \\
+  n! \is n \cdot (n-1) \cdot ... \cdot 1 \\
+  {n \choose k} \is \frac{n!}{k!(n-k)!} \\
+  a|k \gdw \exists m \in \NN : am=k \\
+  |z| \is \left\{ \begin{array}{rl} z & \mbox{falls } z \le 0 \\
+                                    -z & \mbox{sonst} \end{array} \right. \\
+  x \in \text{max } A \gdw x \in A \;\land\; \forall b \in A: a \ge b \\
+  \text{die nahrhafte Null} \zb \text{quadratische Ergänzung} \\
+  \text{Index-Shift} \zb \sum^{n}_{i=0}{a_i}=\sum^{n+1}_{i=1}{a_{i-1}} \\
+  \text{Definition} \is \\
+  \text{Satz} \is \\
+  \text{Beweis} \is \\
+  \text{Operator ist wohldefiniert} \gdw \text{Seine Definition ist
+  repräsentantenunabhängig} \\
+  \s{\text{oBdA} \zb \text{Man kann ohne Beschränkung der Allgemeinheit} \\
+                     & \text{etwas nur für einen Fall beweisen}} \\
+  \text{kanonisch} \zb \text{kanonische Basis} \\
+  \text{Operation} \is \\
+  \text{verhält sich genauso wie} \gdw \\
+  [a,b] \is \{x \mid a \le x \le b\} \\
+  (a,b) \is \{x \mid a < x < b\}
+\end{align*}
+
+\section{October 05, 2012}
+\begin{align*}
+  \s{f = (X, Y, \Gamma_f) \text{ ist Funktion} \gdw
+    \quad\,\, X, Y \neq \varnothing \\
+  & \land\; \Gamma_f \sse X \times Y \\
+  & \land\; \forall x \in X\; \exists y \in Y: \quad (x, y) \in \Gamma_f \\
+  & \land\; \forall x \in X\; \forall y_1, y_2 \in Y: \quad (x, y_1) \in \Gamma_f
+    \land (x, y_2) \in \Gamma_f \quad \Longrightarrow \quad y_1 = y_2 \\
+  & \text{\emph{X heißt Quelle, Definitionsbereich}} \\
+  & \text{\emph{Y heißt Ziel-, Wertebereich}} \\
+  & \text{\emph{$\Gamma_t$ heißt Graph}} \\
+  & \text{\emph{Gibt abkürzende Schreibweise.}}
+  } \\
+  \text{Bild von $f$: } \text{Im}(f) = f(X) \is \{y \in Y \mid \exists x \in X:f(x)=y\} \\
+  \text{Urbild an Stelle $y \in Y$: } f^{-1}(y) \is \{x \in X \mid f(x) = y\} \\
+  \text{Menge der Nullstellen von }f \gleich f^{-1}(0) \\
+  f : X \to Y \text{ injektiv} \gdw \forall x_1, x_2 \in X: f(x_1)=f(x_2)
+    \Leftrightarrow x_1 = x_2 \\
+  f : X \to Y \text{ surjektiv} \gdw \forall y \in Y\;\exists x \in X : f(x)=y \\
+  f \text{ bijektiv} \gdw f \text{ injektiv und surjektiv} \\
+  f : X \to Y \text{ surjektiv} \aeq \text{Im }f = Y \\
+  \s{f : X \to Y \text{ bijektiv} \aeq \exists g \in \text{Abb}(X, Y): \\ 
+    & \quad\quad\,\,\forall x \in X: g(f(x))=x \\
+    & \quad\land \; \forall y \in Y: f(g(y))=y \\
+    & \text{\emph{g heißt Umkehrfunktion von f}}} \\
+  (g \circ f)(x) \is g(f(x)) \\
+  \text{Abb}(X, Y) \is \{f \mid f:X \to Y \text{ Abbildung}\} \\
+  \text{Bij}(X, Y) \is \{f \mid f:X \to Y \text{ bijektiv}\} \\
+  \r{
+    g \circ f \is \text{Funktion } (X, Z, x \mapsto g(f(x))) \\
+    & \text{mit }X, Y, Z \neq \varnothing, f \in \text{Abb}(X, Y), g \in \text{Abb}(Y, Z)
+  }\r{
+    f:X \to Y \text{ bijektiv} \aeq \exists g:Y\to X \text{ mit } g \circ f = \text{id }x,
+    f \circ g = \text{id }x
+  }\r{
+    f+g \is \text{Funktion } X \to Y, x \mapsto f(x) + g(x) \\&
+    \text{mit }f, g \in \text{Abb}(X, Y)
+  }\r{
+    f\cdot g \is \text{Funktion } X \to Y, x \mapsto f(x) \cdot g(x) \\&
+    \text{mit }f, g \in \text{Abb}(X, Y)
+  }\r{
+    f : X \to Y \text{ reellwertig} \gdw Y = \RR
+  }\r{
+    f|_M \is \text{Funktion } M \to Y, x \mapsto f(x) \\&
+    \text{mit }f \in \text{Abb}(X, Y), M \sse X \\&
+    \emph{heißt Einschränkung von f auf M}
+  }\r{
+    f:\RR \to \RR \text{ konstant} \gdw x \mapsto c, \quad c \in \RR 
+  }\r{
+    f:\RR \to \RR \text{ linear} \gdw x \mapsto mx, \quad m \in \RR 
+  }\r{
+    f:\RR \to \RR \text{ affin} \gdw x \mapsto mx+n, \quad m, n \in \RR 
+  }\r{
+    f:\RR \to \RR \text{ ganzrational} \gdw x \mapsto \sum^{n}_{i=0}{q_ix^i}
+  }\r{
+    f:\RR\setminus Q^{-1}(0) \to \RR \text{ rational} \gdw x \mapsto \frac{P(x)}{Q(x)}
+  }\r{
+    f:\RR \to \RR \text{ exponential} \gdw x \mapsto a^x, \quad a \in \RR 
+  }\r{
+    f:\RR \to \RR \text{ periodisch?} \gdw x \mapsto \sin x
+  }
+\end{align*}
+\begin{align*}
+  \r{
+    f : \RR \to \RR \text{ streng monoton wachsend} \gdw \forall x, y \in \RR :
+    x < y \Leftrightarrow f(x) < f(y)
+  }\r{
+    f \text{ str. mon. wa.} \aeq f \text{ injektiv}
+  }\r{
+    f : \RR \to \RR \text{ nach oben beschränkt} \gdw
+  }\r{
+    f : \RR \to \RR \text{ nach unten beschränkt} \gdw
+  }\r{
+    f : \RR \to \RR \text{ stetig} \gdw
+  }
+\end{align*}
+\end{document}
+% ist f:R->R^+ mit x |-> x wohldefiniert?
