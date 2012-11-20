@@ -1,0 +1,63 @@
+\documentclass{scrartcl}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[left=1cm, right=1cm, top=0.5cm, bottom=0.5cm, a4paper]{geometry}
+\usepackage{graphicx}
+\usepackage{rotating}
+
+\parindent 0pt
+\parskip 6pt
+
+\newcommand{\gdw}{\quad :\Leftrightarrow\quad &}
+\newcommand{\is}{\quad :=\,\quad &}
+\newcommand{\gleich}{\quad =\;\quad &}
+\newcommand{\dann}{\quad \Rightarrow\quad &}
+\newcommand{\aeq}{\quad \Leftrightarrow\quad &} % äquivalent
+\newcommand{\zb}{\quad \;\text{zB}\quad &}
+\newcommand{\teilm}{\subseteq}
+\newcommand{\sse}{\subseteq}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\s}[1]{\begin{split}#1\end{split}}
+\renewcommand{\r}[1]{\begin{split}#1\end{split} \\}
+
+%TODO: Leichter in Math-Mode kommen
+%TODO: "ker(" übersetzen in "\text{ker}(", "sgn(", " und ", "ZZ" in "\mathbb{Z}"
+%TODO: weniger "\" tippen müssen. Vll, in dem "sigma", "forall" etc. automatisch eins vorgesetzt
+%wird?
+%TODO: Sachen außerhalb des Math-Mode in Markdown.
+%TODO: /^[A-Z]\S*\.\s/ Solche hervorheben.
+%TODO: griechische Buchstaben dann direkt als Unicode eingeben, ggf. mit :ab \sigma σ 
+
+\begin{document}
+
+\section{20.11.2012}
+
+Prop. Seien $a, b \in \mathbb{Z}, d = ggT(a, b)$. Dann gibt es $x, y \in \mathbb{Z}$, so dass $d=xa+yb$.
+
+Bmk. Der ggt($a, b$) ist die kleinste natürliche Zahl, die als lineare Kombination von a und b
+darstellbar ist.
+
+Lemma. Sei $f:G \to G'$ Gruppenmorphismus. Dann ist $N:=ker(f) \lhd G$.
+
+Def. $sgn(\sigma) = (-1)^{#\{(i,j): i<j und \sigma(i) > \sigma(j)\}}$
+
+Lemma. $\forall \sigma \in S_n : sgn(\sigma) = (Produkt) \frac{\sigma(j) - \sigma(i)}{j-i}$.
+
+Def. $sigma in S_n$ heißt gerade, gdw. $sgn(sigma) = 1$. Ungerade, gdw. $sgn(sigma) = -1$.
+
+Def. $Ker(sgn) = A_n = \{ sigma in S_n : sng(sigma) = 1 \}$ heißt die \emph{alternierende Gruppe}.
+
+Bmk. $A_n \lhd S_n$. $|A_n| = \frac{n!}{2}$.
+
+Isomorphiesatz. Sei $phi : G to G'$ Gruppenmorphismus. Dann ist $Ker(phi) \lhd G$ und es gibt einen
+kanonischen Isomorphismus von Gruppen $overline φ : G/Ker(φ) gleichschlange to φ(G)$. ($φ(G) <= G'$
+Untergruppe.)
+
+Bmk. Falls $φ$ surjektiv ist, d.h. $φ(G) = G'$, dann bildet $overline φ$ nach $G'$ ab.
+
+\end{document}
