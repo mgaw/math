@@ -1,6 +1,68 @@
 Titel: Lineare Algebra I*
 Vorlage: math
 
+# ??
+
+# ??
+
+# ?? (Übung)
+
+# ??
+
+# ??
+
+# ??
+
+# October 30, 2012
+
+# October 30, 2012 (Übung)
+
+# November 1, 2012
+
+# November 6, 2012
+
+# November 6, 2012 (Übung)
+
+# November 13, 2012
+
+Bsp. Sei  G  Gruppe,  H ≤ G.  Dann ist  (G/H)_l := \{gH : g in G\} sse P(G)  die Menge der
+**Linksnebenklassen** von  H  in  G.  Haben Äquivalenzrelation auf *G*:
+  x sim_l y :<=> x^{-1}y in H.  Dann ist  overline x = \{y in G : x sim_l y\} = \{y in G : x^{-1}y
+= h in H\} = \{y in G : y = xh, h in H\} = xH.  
+
+Def. Eine Untergruppe  H  einer Gruppe  G  heißt **Normalteiler**, wenn  forall h in H, g in G:
+g^{-1}hg in H.  Dann schreibt man  H unlhd G.  
+
+Bmk. Für abelsche Gruppen gilt, dass jede Untergruppe ein Normalteiler ist.
+
+Satz. Sei  H unlhd G,  dann kann man die Verknüpfung  (G/H)_l times (G/H)_l to (G/H)_l  mit  (xH,
+yH) mapsto xyH  definieren.
+
+Bmk. Sei  H ≤ G.  Dann ist  H unlhd G <=> gH=Hg, \; forall g in G.  Die Linksnebenklassen sind also
+die Rechtsnebenklassen sind die Nebenklassen.
+
+Satz. Ist  H unlhd G,  dann ist  ((G/H), cdot)  eine Gruppe. Man nennt sie **Faktorgruppe**.
+
+Def. Sei  H ≤ G.  Dann heißt  [G:H] := |(G/H)_l|  der **Index** von  H  in  G.  
+
+Satz von Lagrange. Sei  G  endliche Gruppe,  H ≤ G.  Dann  |G| = |H| cdot [G:H].  
+
+Kor. Die Ordnung einer Untergruppe teilt die Ordnung der Gruppe:  |H|\;|\;|G|.  
+
+# November 15, 2012
+
+Satz von Lagrange anders.  G  endliche Gruppe,  H ≤ G.  Dann gibt es eine Bijektion  (G/H)_l times 
+H to G.  
+
+Bmk. Die Anzahl der Links- und Rechtsnebenklassen ist gleich, d.h.  [G:H] = |(G/H)_l| = |(G/H)_r|.  
+
+Kor. Ist  G  endliche Gruppe,  n = |G|, x in G.  Dann  ord (x) \; | \; |G|,  d.h.  x^n = e, \; forall x in G.  
+
+Bsp.  overline a in ZZ/nZZ, \; 0 ≤ a ≤ n-1.  Dann  ord(overline x) = n <=> ggt(a,n) = 1.  
+
+Kleiner Satz von Fermat. Sei  p  Primzahl und  a in ZZ  mit  p not | \; a.  Dann gilt  a^{p-1}
+equiv 1 mod p.  Außerdem gilt für alle  a in ZZ : a^p equiv a mod p.  
+
 # November 20, 2012
 
 Prop. Seien  a, b in ZZ, d = \text{ggT}(a, b).  Dann gibt es  x, y \in ZZ,  so dass  d=xa+yb.  
@@ -8,7 +70,7 @@ Prop. Seien  a, b in ZZ, d = \text{ggT}(a, b).  Dann gibt es  x, y \in ZZ,  so d
 Bmk. Der  ggT(a, b)  ist die kleinste natürliche Zahl, die als lineare Kombination von a und b
 darstellbar ist.
 
-Lemma. Sei  f:G \to G'  Gruppenmorphismus. Dann ist  N:=ker(f) \unlhd G.  
+Lemma. Sei  f:G \to G'  Gruppenmorphismus. Dann ist  N:=ker(f) unlhd G.  
 
 Def.  sgn(sigma) = (-1)^{\#\{(i,j) \;:\; i<j \text{ und } sigma(i) > sigma(j)\}}.  
 
@@ -18,13 +80,21 @@ Def.  sigma in S_n  heißt gerade, gdw.  sgn(sigma) = 1.  Ungerade, gdw.  sgn(si
 
 Def.  ker(sgn) = A_n = \{ sigma in S_n : sgn(sigma) = 1 \}  heißt die *alternierende Gruppe*.
 
-Bmk.  A_n \unlhd S_n.    |A_n| = \frac{n!}{2}.  
+Bmk.  A_n unlhd S_n.    |A_n| = \frac{n!}{2}.  
 
-Isomorphiesatz. Sei  phi : G to G'  Gruppenmorphismus. Dann ist  ker(phi) \unlhd G  und es gibt
-einen kanonischen Isomorphismus von Gruppen  \overline φ : G/Ker(φ) \xrightarrow{\simeq} φ(G).  
+Isomorphiesatz. Sei  phi : G to G'  Gruppenmorphismus. Dann ist  ker(phi) unlhd G  und es gibt
+einen kanonischen Isomorphismus von Gruppen  overline φ : G/Ker(φ) \xrightarrow{\simeq} φ(G).  
   (φ(G) ≤ G'  Untergruppe.)
 
-Bmk. Falls  φ  surjektiv ist, d.h.  φ(G) = G',  dann bildet  \overline φ  nach  G'  ab.
+Bmk. Falls  φ  surjektiv ist, d.h.  φ(G) = G',  dann bildet  overline φ  nach  G'  ab.
+
+# November 20, 2012 (Übung)
+
+Satz.  G  Gruppe,  overline x cdot overline y := overline {x cdot y}. quad (G/H, cdot)  ist Gruppe,
+gdw.  H unlhd G.  
+
+Prop.  G  Gruppe,  overline x cdot overline y := overline {x cdot y}, H unlhd G. quad π : (G, cdot)
+ to (G/H, cdot), \; x mapsto overline x  ist Gruppenhomomorphismus.
 
 # November 22, 2012
 
