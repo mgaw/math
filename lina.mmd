@@ -1,27 +1,55 @@
-Titel: hallo
+Titel: Lineare Algebra I*
 Vorlage: math
 
-# 20.11.2012
+# November 20, 2012
 
-**Prop.** Seien ´a, b in ZZ, d = \text{ggT}(a, b)´. Dann gibt es ´x, y \in ZZ´, so dass ´d=xa+yb´.
+Prop. Seien  a, b in ZZ, d = \text{ggT}(a, b).  Dann gibt es  x, y \in ZZ,  so dass  d=xa+yb.  
 
-**Bmk.** Der ´ggT(a, b´) ist die kleinste natürliche Zahl, die als lineare Kombination von a und b
+Bmk. Der  ggT(a, b)  ist die kleinste natürliche Zahl, die als lineare Kombination von a und b
 darstellbar ist.
 
-Lemma. Sei ´f:G \to G'´ Gruppenmorphismus. Dann ist ´N:=ker(f) \lhd G´.
+Lemma. Sei  f:G \to G'  Gruppenmorphismus. Dann ist  N:=ker(f) \unlhd G.  
 
-Def. ´sgn(sigma) = (-1)^{\#\{(i,j) \;:\; i<j \text{ und } sigma(i) > sigma(j)\}}´
+Def.  sgn(sigma) = (-1)^{\#\{(i,j) \;:\; i<j \text{ und } sigma(i) > sigma(j)\}}.  
 
-Lemma. ´\forall sigma \in S_n : sgn(sigma) = (Produkt) \frac{sigma(j) - sigma(i)}{j-i}´.
+Lemma.  \forall sigma \in S_n : sgn(sigma) = (Produkt) \frac{sigma(j) - sigma(i)}{j-i}.  
 
-Def. ´sigma in S_n´ heißt gerade, gdw. ´sgn(sigma) = 1´. Ungerade, gdw. ´sgn(sigma) = -1´.
+Def.  sigma in S_n  heißt gerade, gdw.  sgn(sigma) = 1.  Ungerade, gdw.  sgn(sigma) = -1.  
 
-Def. ´ker(sgn) = A_n = \{ sigma in S_n : sgn(sigma) = 1 \}´ heißt die *alternierende Gruppe*.
+Def.  ker(sgn) = A_n = \{ sigma in S_n : sgn(sigma) = 1 \}  heißt die *alternierende Gruppe*.
 
-Bmk. ´A_n \lhd S_n´. ´|A_n| = \frac{n!}{2}´.
+Bmk.  A_n \unlhd S_n.    |A_n| = \frac{n!}{2}.  
 
-Isomorphiesatz. Sei ´phi : G to G'´ Gruppenmorphismus. Dann ist ´ker(phi) \lhd G´ und es gibt einen
-kanonischen Isomorphismus von Gruppen ´\overline φ : G/Ker(φ) gleichschlange to φ(G)´. (´φ(G) <= G'´
-Untergruppe.)
+Isomorphiesatz. Sei  phi : G to G'  Gruppenmorphismus. Dann ist  ker(phi) \unlhd G  und es gibt
+einen kanonischen Isomorphismus von Gruppen  \overline φ : G/Ker(φ) \xrightarrow{\simeq} φ(G).  
+  (φ(G) ≤ G'  Untergruppe.)
 
-Bmk. Falls ´φ´ surjektiv ist, d.h. ´φ(G) = G'´, dann bildet ´\overline φ´ nach ´G'´ ab.
+Bmk. Falls  φ  surjektiv ist, d.h.  φ(G) = G',  dann bildet  \overline φ  nach  G'  ab.
+
+# November 22, 2012
+
+Def. Eine Menge  R  zusammen mit zwei Verknüpfungen  +: R times R to R  und  cdot : R times R to R  
+heißt **Ring**, wenn (i)  (R, +)  ist abelsche Gruppe mit neutralem Element  0 in RR,  (ii) "
+  cdot  " ist assoziativ und (iii) es gilt Distributivität.
+
+Def. Ein Ring heißt **kommutativ**, wenn  a cdot b = b cdot a, \; forall a, b in R.  
+
+Def.  0 in R  heißt das **Nullelement**.
+
+Def. Ein Element  1 in R  heißt **Einselement**, wenn  1 cdot a = a cdot 1 = a, \; forall a in R.  
+Ein Ring mit Einselement heißt **Ring mit Eins**.
+
+Prop. Sei  R  ein Ring,  0 in R  das Nullelement. Dann gilt (i)
+  0 cdot a = a cdot 0 = 0, \; forall a in R  und (ii) falls  R  Ring mit Eins ist, dann
+  (-1) cdot a = -a,  wobei  -a in R : a + (-a) = 0.  
+
+Def.  (R, +, cdot), (R', oplus, odot)  Ringe. Eine Abbildung  phi : R to R'  heißt **Morphismus von
+Ringen**, wenn  forall a, b in R  (i)  phi(a+b) = phi(a) oplus phi(b)  und (ii)
+  phi(a cdot b) = phi(a) odot phi(b).  
+
+Satz. (i) gdw.  phi : (R, +) to (R', oplus)  ist Morphismus von abelschen Gruppen.
+(ii) gdw.  phi : (R, cdot) to (R', odot)  ist Monoidmorphismus.
+
+Def.  phi  ist Isomorphismus, wenn  phi  ist bijektiver Morphismus.
+
+Def. Ein Ring mit Eins  (K, +, cdot)  heißt **Körper**, gdw.  (K^* = K setminus \{0\}, cdot)  ist abelsche Gruppe.
