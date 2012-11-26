@@ -1,19 +1,48 @@
 Titel: Analysis I*
 Vorlage: math
 
-# November 22, 2012
+# Nov 13
 
-Satz. a_n ≤ c_n ≤ b_n,  limn a_n = limn b_n = a. Dann ist (c_n) eine konvergente Folge
-und limn c_n = a. 
+Def. Eine **Folge**  (a_n)_{n in NN}  ist Abbildung  a : NN to CC. a_n in CC  mit  a_n := a(n).  Eine Folge  (a_n)_{n in NN}  heißt **konvergent**, falls es eine komplexe Zahl  a in CC  gibt mit folgender Eigenschaft: Für jedes  eps > 0  gibt es ein  N in NN  mit: für jedes  n in NN  gilt:  |a_n - a| < eps. \; a  heißt dann **Grenzwert** der Folge. Man sagt:  (a_n)  konvergiert gegen  a  oder:  limn a_n = a.  
 
-Def. Eine *reelle* Folge (a_n)_{n in NN} heißt **monoton wachsend** falls gilt: a_{n+1} ≥ a_n für
-alle n in NN, **monoton fallend**, falls a_{n+1} ≤ a_n für n in NN. Gilt sogar a_{n+1} > a_n 
- (a_{n+1} < a_n) für alle n in NN, dann heißt sie **streng monoton wachsend (fallend)**.
+# Nov 15
 
-Satz. Eine *beschränkte*, monoton wachsende Folge ist konvergent.
-Mit A=\{a_n : n in NN\} gilt: limn a_n = sup A. Ist (a_n) monoton fallend und beschränkt, so
-gilt limn a_n = inf A. 
+Bmk.  eps > 0. \; \triangle(a, eps) := \{z in CC : |z-a| < eps \}  "Epsilon-Scheibe".  (a_n)_{n in NN}  konvergiert gegen  a in CC,  gdw.  exists N in NN : forall n ≥ N  gilt  a_n in \triangle(a, eps).  
 
-# November 22, 2012 (Übung)
+Satz.  (a_n)_{n in NN}  konvergiert gegen  a in CC  gdw.  (a_n - a)_{n in NN}  eine **Nullfolge** ist, d.h. gegen  0 in CC  konvergiert. (1)  s in QQ_+  gilt  limn 1/n^s = 0.  (2) Für  a > 0  gilt  limn sqrt[n]{a} = 1, \; (n ≥ 1).  (3)  limn sqrt[n]{n} = 1, \; (n≥1).  (4)  z in CC, |z| < 1 : limn z^n = 0.  (5)  z in CC, s in Q_+, |z| > 1 : limn n^s/z^n > 0.  
 
-Def. a in A sse RR heißt **Schranke** von A, wenn a untere oder obere Schranke von A ist. a heißt **optimale Schranke**, wenn a kleinste obere oder größte untere Schranke von A ist.
+Satz. Der Limes ist eindeutig bestimmt, wenn er existiert. Beweis Forster S. 34.
+
+# Nov 15. Abzählbarkeit (Übung)
+
+Satz. Ist  M  unendlich und es gibt *surjektive* Abildung  g: NN to M,  dann ist  M  abzählbar.
+
+Satz. Ist  M  abzählbar, und ist  N sse M  unendlich, dann ist auch  N  abzählbar.
+
+Satz. Eine unendliche Vereinigung abzählbar unendlicher Mengen ist abzählbar.
+
+Satz. Eine disjunkte abzählbar unendliche Vereinigung nichtleerer endlicher Mengen ist abzählbar.
+
+# Nov 20. Rechenregeln für Grenzwerte
+
+Def. Sei  (a_n)_{n in NN}  eine Folge. (1) Sie heißt **divergent**, wenn sie nicht konvergiert. (2) Falls für eine reelle Folge gilt: Für jedes  C>0  gibt es ein  N in NN,  s.d. für alle  n in NN, n ≥ N  gilt:  a_n > C,  dann schreibt man  limn a_n = + infty.  Analog  limn a_n = - infty.  
+
+Satz. Eine reelle Folge  (a_n)_{n in NN}  konvergiert gegen  + infty,  gdw. die Folge  (1/a_n)_{n in NN}  ab einem gewissen Folgenglied definiert ist und positiv ist und  limn 1/a_n = 0.  
+
+Satz. Seien  (a_n)_{n in NN}, (b_n)_{n in NN}  konvergente Folgen,  a, b  deren Grenzwerte. (1) Dann sind  (a_n+b_n)_{n in NN}, (a_n cdot b_n)_{n in NN}  ebenfalls konvergent,  (a+b)  bzw.  (a cdot b)  ihre zugehörigen Grenzwerte. (2) Ist  b neq 0,  so gibt es  N_0 in NN,  s.d.  b_n neq 0  falls  n ≥ N_0  und  limn 1/b_n = 1/b = 1/limn b_n.  (3) Dann sind auch  (|a_n|), (Re a_n), (Im a_n), (overline a_n)  konvergent und es gelten  limn |a_n| = |a|, limn (Re a_n) = Re a,  usw. Beweis Forster S. 34--36.
+
+Satz.  (a_n)_{n in NN}, (b_n)_{n in NN}  reelle, konvergente Folgen. Es sei  a_n ≤ b_n  für  n ≥ N  mit  N in NN.  Dann folgt  limn a_n ≤ limn b_n.  Beweis Forster S. 37.
+
+Folgerung. (1) Gilt für konvergente Folge  (a_n)_{n in NN},  dass  a_n in [c, d],  falls  n ≥ N.  Dann ist  limn a_n in [c, d].  (2) Ist  (c_n)  eine weitere beliebige Folge und  a_n ≤ c_n ≤ b_n  für  n ≥ N  und  limn a_n = limn b_n = a = b.  Dann ist  (c_n)  konvergent und  limn c_n = a.  
+
+# Nov 22. Monotonie
+
+Satz.  a_n ≤ c_n ≤ b_n, \; limn a_n = limn b_n = a.  Dann ist  (c_n)  eine konvergente Folge und  limn c_n = a.  
+
+Def. Eine *reelle* Folge  (a_n)_{n in NN}  heißt **monoton wachsend** falls gilt:  a_{n+1} ≥ a_n  für alle  n in NN,  **monoton fallend**, falls  a_{n+1} ≤ a_n  für  n in NN.  Gilt sogar  a_{n+1} > a_n (a_{n+1} < a_n)  für alle  n in NN,  dann heißt sie **streng monoton wachsend (fallend)**.
+
+Satz. Eine *beschränkte*, monoton wachsende Folge ist konvergent. Mit  A=\{a_n : n in NN\}  gilt:  limn a_n = sup A.  Ist  (a_n)  monoton fallend und beschränkt, so gilt  limn a_n = inf A.  
+
+# Nov 22. Optimale Schranke
+
+Def.  a in A sse RR  heißt **Schranke** von  A,  wenn  a  untere oder obere Schranke von  A  ist.  a  heißt **optimale Schranke**, wenn  a  kleinste obere oder größte untere Schranke von  A  ist.
