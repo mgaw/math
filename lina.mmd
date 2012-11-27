@@ -1,33 +1,19 @@
 Titel: Lineare Algebra I*
 Vorlage: math
 
-# ??
+# Nov 8. Linksnebenklasse
 
-# ??
+Def. Sei  (G, cdot)  eine Gruppe und  H ≤ G.  Die Teilmenge von  PP(G),  die aus Elementen der Form  gH  besteht wird als  (G/H)  bezeichnet. Sie heißt **Linksnebenklasse** von  H.  
 
-# ?? (Übung)
+Lemma.  forall x, y in G : xH=yH <=> x^{-1}y in H.  
 
-# ??
+Satz. Linksnebenklassen von  H  sind Äquivalenzklassen, d.h. die Relation  ~  mit  x~y <=> xH=yH  ist eine Äquivalenzrelation.
 
-# ??
+Bmk.  G  wirkt auf  (G/H)_l  durch Multiplikation von links, d.h. für  g, x in G : g(xH) = (gx)H in (G/H)_l.  
 
-# ??
+Satz. Multiplikation von links definiert einen Gruppenhomomorphismus  L_g : (G/H)_l to (G/H)_l  mit  L_g(xH) := (gx)H.  
 
-# October 30, 2012
-
-# October 30, 2012 (Übung)
-
-# November 1, 2012
-
-# November 6, 2012
-
-# November 6, 2012 (Übung)
-
-# November 8, 2012
-
-Von Foto.
-
-# November 13, 2012
+# Nov 13. Normalteiler, Faktorgruppe
 
 Bsp. Sei  G  Gruppe,  H ≤ G.  Dann ist  (G/H)_l := \{gH : g in G\} sse P(G)  die Menge der
 **Linksnebenklassen** von  H  in  G.  Haben Äquivalenzrelation auf *G*:
@@ -53,7 +39,7 @@ Satz von Lagrange. Sei  G  endliche Gruppe,  H ≤ G.  Dann  |G| = |H| cdot [G:H
 
 Kor. Die Ordnung einer Untergruppe teilt die Ordnung der Gruppe:  |H|\;|\;|G|.  
 
-# November 15, 2012
+# Nov 15. Kleiner Satz von Fermat
 
 Satz von Lagrange anders.  G  endliche Gruppe,  H ≤ G.  Dann gibt es eine Bijektion  (G/H)_l times 
 H to G.  
@@ -67,7 +53,7 @@ Bsp.  overline a in ZZ/nZZ, \; 0 ≤ a ≤ n-1.  Dann  ord(overline x) = n <=> g
 Kleiner Satz von Fermat. Sei  p  Primzahl und  a in ZZ  mit  p not | \; a.  Dann gilt  a^{p-1}
 equiv 1 mod p.  Außerdem gilt für alle  a in ZZ : a^p equiv a mod p.  
 
-# November 20, 2012
+# Nov 20. Isomorphiesatz
 
 Prop. Seien  a, b in ZZ, d = \text{ggT}(a, b).  Dann gibt es  x, y \in ZZ,  so dass  d=xa+yb.  
 
@@ -80,9 +66,9 @@ Def.  sgn(sigma) = (-1)^{\#\{(i,j) \;:\; i<j \text{ und } sigma(i) > sigma(j)\}}
 
 Lemma.  \forall sigma \in S_n : sgn(sigma) = (Produkt) \frac{sigma(j) - sigma(i)}{j-i}.  
 
-Def.  sigma in S_n  heißt gerade, gdw.  sgn(sigma) = 1.  Ungerade, gdw.  sgn(sigma) = -1.  
+Def.  sigma in S_n  heißt **gerade**, gdw.  sgn(sigma) = 1.  **Ungerade**, gdw.  sgn(sigma) = -1.  
 
-Def.  ker(sgn) = A_n = \{ sigma in S_n : sgn(sigma) = 1 \}  heißt die *alternierende Gruppe*.
+Def.  ker(sgn) = A_n = \{ sigma in S_n : sgn(sigma) = 1 \}  heißt die **alternierende Gruppe**.
 
 Bmk.  A_n unlhd S_n.    |A_n| = \frac{n!}{2}.  
 
@@ -92,7 +78,7 @@ einen kanonischen Isomorphismus von Gruppen  overline φ : G/Ker(φ) \xrightarro
 
 Bmk. Falls  φ  surjektiv ist, d.h.  φ(G) = G',  dann bildet  overline φ  nach  G'  ab.
 
-# November 20, 2012 (Übung)
+# Nov 20 (Übung)
 
 Satz.  G  Gruppe,  overline x cdot overline y := overline {x cdot y}. quad (G/H, cdot)  ist Gruppe,
 gdw.  H unlhd G.  
@@ -100,7 +86,7 @@ gdw.  H unlhd G.
 Prop.  G  Gruppe,  overline x cdot overline y := overline {x cdot y}, H unlhd G. quad π : (G, cdot)
  to (G/H, cdot), \; x mapsto overline x  ist Gruppenhomomorphismus.
 
-# November 22, 2012
+# Nov 22. Ring, Körper
 
 Def. Eine Menge  R  zusammen mit zwei Verknüpfungen  +: R times R to R  und  cdot : R times R to R  
 heißt **Ring**, wenn (i)  (R, +)  ist abelsche Gruppe mit neutralem Element  0 in RR,  (ii) "
@@ -124,6 +110,14 @@ Ringen**, wenn  forall a, b in R  (i)  phi(a+b) = phi(a) oplus phi(b)  und (ii)
 Satz. (i) gdw.  phi : (R, +) to (R', oplus)  ist Morphismus von abelschen Gruppen.
 (ii) gdw.  phi : (R, cdot) to (R', odot)  ist Monoidmorphismus.
 
-Def.  phi  ist Isomorphismus, wenn  phi  ist bijektiver Morphismus.
+Def.  phi  ist **Isomorphismus**, wenn  phi  ist bijektiver Morphismus.
 
 Def. Ein Ring mit Eins  (K, +, cdot)  heißt **Körper**, gdw.  (K^* = K setminus \{0\}, cdot)  ist abelsche Gruppe.
+
+# Nov 27. Komplexe Zahlen
+
+Satz.  (CC := RR^2, +, cdot)  bildet einen Körper.
+
+Bmk. Wir können  RR  als Untermenge von  CC  betrachten wie folgt.  phi : RR to CC  mit  phi(a) := (a, 0).  Dann ist  phi  ein Ringhomomorphismus.
+
+Satz. Seien  x, y in CC.  Dann folgt: (1)  overline{x+y} = overline x + overline y,  (ii)  overline{x cdot y} = overline x cdot overline y  und (iii)  x in RR <=> x = overline x.  Aus (i) und (ii) folgt, dass  x mapsto overline x  Ringhomomorphismus ist.
