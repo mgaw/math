@@ -1,11 +1,11 @@
 Titel: Analysis I*
 Vorlage: math
 
-# Nov 13
+# Nov 13. Konvergenz
 
 Def. Eine **Folge**  (a_n)_{n in NN}  ist Abbildung  a : NN to CC. a_n in CC  mit  a_n := a(n).  Eine Folge  (a_n)_{n in NN}  heißt **konvergent**, falls es eine komplexe Zahl  a in CC  gibt mit folgender Eigenschaft: Für jedes  eps > 0  gibt es ein  N in NN  mit: für jedes  n in NN  gilt:  |a_n - a| < eps. \; a  heißt dann **Grenzwert** der Folge. Man sagt:  (a_n)  konvergiert gegen  a  oder:  limn a_n = a.  
 
-# Nov 15
+# Nov 15. Grenzwerte
 
 Bmk.  eps > 0. \; \triangle(a, eps) := \{z in CC : |z-a| < eps \}  "Epsilon-Scheibe".  (a_n)_{n in NN}  konvergiert gegen  a in CC,  gdw.  exists N in NN : forall n ≥ N  gilt  a_n in \triangle(a, eps).  
 
@@ -46,3 +46,15 @@ Satz. Eine *beschränkte*, monoton wachsende Folge ist konvergent. Mit  A=\{a_n 
 # Nov 22. Optimale Schranke
 
 Def.  a in A sse RR  heißt **Schranke** von  A,  wenn  a  untere oder obere Schranke von  A  ist.  a  heißt **optimale Schranke**, wenn  a  kleinste obere oder größte untere Schranke von  A  ist.
+
+# Nov 27. Euler-Zahl, Häufungspunkt
+
+Def. Der Grenzwert der Folge  a_n = (1+frac 1 n)^n  heißt **Euler-Zahl** und wird mit  e:= limn (1+frac 1 n)^n  bezeichnet.
+
+Def.  (a_n)_{n in NN}  sei Folge (in  CC).  Dann heißt ein  h in CC  **Häufungspunkt**, falls für beliebiges  eps > 0  die Menge  \{n : a_n in triangle(h, eps)\}  unendlich ist, d.h. in jeder Epsilon-Scheibe von  h  liegen unendlich viele Folgenglieder von  (a_n).  
+
+Def. Für eine Folge  (a_n)_{n in NN}  und eine Folge  (n_k)_{k in NN}  *natürlicher* Zahlen, die streng monoton wächst, bezeichnet man  (a_{n_k})_{k in NN}  als **Teilfolge** von  (a_n).  
+
+Satz (Bolzano-Weierstraß). (1) Ist  (a_n)_{n in NN}  eine beschränkte Folge, so besitzt sie einen Häufungspunkt. (2) Ist  (a_n)_{n in NN}  reell und beschränkt, so gibt es einen kleinsten sowie einen größten Häufungspunkt,  h_*  und  h^*.  Es gilt:  NN setminus \{n : h_* - eps < a_n < h^* + eps\}  ist endlich für jedes  eps > 0.  
+
+Def.  h_*  heißt **Limes inferior** der Folge,  h^*  heißt **Limes superior**.
