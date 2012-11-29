@@ -121,3 +121,41 @@ Satz.  (CC := RR^2, +, cdot)  bildet einen Körper.
 Bmk. Wir können  RR  als Untermenge von  CC  betrachten wie folgt.  phi : RR to CC  mit  phi(a) := (a, 0).  Dann ist  phi  ein Ringhomomorphismus.
 
 Satz. Seien  x, y in CC.  Dann folgt: (1)  overline{x+y} = overline x + overline y,  (ii)  overline{x cdot y} = overline x cdot overline y  und (iii)  x in RR <=> x = overline x.  Aus (i) und (ii) folgt, dass  x mapsto overline x  Ringhomomorphismus ist.
+
+# Nov 29. Polynomkörper
+
+Def.  x in CC.  Dann  |x|:=sqrt{x cdot overline x}.  
+
+Satz.  x, y in CC. \;|x + y| ≤ |x| + |y|. \;|x cdot y| = |x| cdot |y|. \; x = |x| cdot cos phi + i|x| sin phi = |x|(cos phi + i sin phi) = |x|e^{i phi} = |x|e^{i cdot \arg(x)}.  Bisher gilt  e^{i phi} := cos phi + i sin phi.  
+
+Def. Sei  R  ein Ring. Ein Element  x in R^*  heißt **Nullteiler**, falls es ein  y in R*  gibt, so dass  x cdot y = 0_R  ist. Ein Ring ohne Nullteiler heißt **nullteilerfrei**.
+
+Satz. Jeder Körper ist nullteilerfrei.
+
+Def. Ein kommutativer, nullteilerfreier Ring mit 1 heißt **Integritätsbereich**.
+
+Bmk. Jeder Körper ist Integritätsbereich.
+
+Lemma. Ein Integritätsbereich mit endlich vielen Elementen ist ein Körper.
+
+Bmk. Sei  k  Primzahl. Dann ist  ZZ/pZZ  Körper und wird mit  FF_2  bezeichnet.
+
+Def. Sei  R  ein Ring mit 1. Dann heißt  char(R) := 0  falls  n cdot 1_R neq 0_R  für alle  n in NN_{>0}  und  char(R) := min \{n in NN_{>0} : n cdot 1_R = 0_R\}  die **Charakteristik** von  R.  
+
+Satz. Sei  K  Körper. Dann ist  char(K)  entweder 0 oder eine Primzahl.
+
+Bmk. Ist  K  ein endlicher Körper, so ist  char(K) = p > 0  und es ist  |K|=p^n, \; n in NN_{>0}  und es gibt einen injektiven Ringhomomorphismus  FF_k to K.  
+
+Def. Der Körper  FF_p  heißt **Primkörper** der Charakteristik  p.  
+
+Def. Sei  K  Körper. Ein **Polynom** mit Koeffizienten in  K  in der Unbestimmten  t  ist ein Ausdruck der Form  f = f(t) = a_0 + a_1 t + a_2 t^2 + ... + a_n t^n  mit  a_0, ..., a_n in K, \; n in NN. \; K[t]  ist die Menge aller solchen Polynome.  f=0  heißt **Nullpolynom**.  deg(f) := max \{n in NN : a_n neq 0\}  heißt **Grad** von  f.  Das Polynom heißt **normiert**, falls  a_n = 1,  wobei  n = deg f.  
+
+Bmk. Man kann für  t  ein  x in K  einsetzen, dann ist  f(x) in K.  Ein Polynom induziert also eine Abbildung  tilde f : K to K, \; x mapsto f(x).  
+
+Bmk.  f mapsto tilde f  ist nicht injektiv, da  tilde f  Nullabbildung sein kann, obwohl  f  nicht Nullpolynom ist.
+
+Satz.  (K[t])  ist mit den folgenden Operationen  +  und  cdot  ein Ring. Sei  f(t) = sum^m_{i=0} a_i t^i, \; g(t) = sum^n_{i=0}.  Dann  (f+g)(t) := sum^{max (m, n)}_{i=0} c_k t^k, \; c_k = a_k+b_k  und  (f cdot g)(t) := sum^{m+n}_{i=0}d_k t^k, \; d_k = sum_{i+j=k}a_i b_j.  
+
+Bmk. Für den Grad der Polynome gilt  deg(f+g) ≤ max (deg f, deg g)  und  deg(f cdot g) = deg f + deg g,  wobei  -infty + n := -infty  und  max (-infty, n) := n.  
+
+Satz. Seien  f, g in K[t]  mit  g neq 0.  Dann existieren eindeutig bestimmte  q, r in K[t],  so dass  f=qg+r  ist und  deg(r) < deg(g).  
