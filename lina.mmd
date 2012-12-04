@@ -72,9 +72,8 @@ Def.  ker(sgn) = A_n = \{ sigma in S_n : sgn(sigma) = 1 \}  heißt die **alterni
 
 Bmk.  A_n unlhd S_n.    |A_n| = \frac{n!}{2}.  
 
-Isomorphiesatz. Sei  phi : G to G'  Gruppenmorphismus. Dann ist  ker(phi) unlhd G  und es gibt
-einen kanonischen Isomorphismus von Gruppen  overline φ : G/Ker(φ) \xrightarrow{\simeq} φ(G).  
-  (φ(G) ≤ G'  Untergruppe.)
+Isomorphiesatz. Sei  phi : G to G'  Gruppenmorphismus, damit  ker(phi) unlhd G.  Dann gibt es einen kanonischen Isomorphismus von Gruppen  overline φ : G/ker(φ) \xrightarrow{\simeq} φ(G).  
+  (φ(G) ≤ G'  Untergruppe.)  phi = overline phi circ pi. \; pi  ist die Projektion, die ein Element aus  G  auf seine Nebenklasse abbildet. Eigentlich nur:  overline φ : G/ker(φ) to G'  ist injektiv. Aber wenn  phi(G)=G'  dann surjektiv und damit auch bijektiv.
 
 Bmk. Falls  φ  surjektiv ist, d.h.  φ(G) = G',  dann bildet  overline φ  nach  G'  ab.
 
@@ -159,3 +158,23 @@ Satz.  (K[t])  ist mit den folgenden Operationen  +  und  cdot  ein Ring. Sei  f
 Bmk. Für den Grad der Polynome gilt  deg(f+g) ≤ max (deg f, deg g)  und  deg(f cdot g) = deg f + deg g,  wobei  -infty + n := -infty  und  max (-infty, n) := n.  
 
 Satz. Seien  f, g in K[t]  mit  g neq 0.  Dann existieren eindeutig bestimmte  q, r in K[t],  so dass  f=qg+r  ist und  deg(r) < deg(g).  
+
+# Dez 4. Polynomteiler, Vielfachheit von Nullstellen
+
+Satz (Division mit Rest). Sei  K  Körper,  f,g in K[t]  Polynome. Dann existieren  q(t), r(t)  eindeutig bestimmt in  f=gq+r  mit  deg(r) < deg(g).  
+
+Def. Sei  f in K[t]. \; lam in K  heißt **Nullstelle**, falls  f(lam) = 0.  
+
+Kor.  lam in K  Nullstelle von  f <=> (t-lam) | f :<=> exists q in K[t]  mit  f=(t-lam)q.  
+
+Satz. Sei  K  Körper,  f in K[t], \; f neq 0, \; deg(f) = n.  Dann besitzt  f  höchstens  n  Nullstellen.
+
+Def.  f in K[t], \; f neq 0, \; lam in K  Nullstelle. Die **Vielfachheit** von  lam,  ausgedrückt durch  mü(f, lam),  ist die größte natürliche Zahl  r  mit  (t-lam)^r | f.  
+
+Bmk.  mü(f, lam) ≥ 1  heißt, dass  lam  Nullstelle ist.
+
+Kor.  f in K[t]  Polynom,  lam_1, ..., lam_s  die verschiedenen Nullstelllen von  f,  das heißt  r_i = mü(f, lam) ≥ 1.  Dann gibt es ein  g in K[t]  mit  f=(t-lam_1)^{r_1} cdot (t-lam_2)^{r_2} cdot ... cdot (t-lam_s)^{r_s} cdot g.  Anders ausgedrückt: Produkt von i=1 bis s  (t-lam_i)^{r_i} | f.  
+
+Satz.  sin(alpha+beta) = sin alpha cos beta + sin beta cos alpha.  
+
+Satz. Sei  w=re^{i theta} in CC.  Dann besitzt das Polynom  z^n-w in CC[z] \; n  verschiedene Nullstellen, das heißt es existieren  n  verschiedene komplexe Zahlen  z_1, ..., z_n  mit  z_i^n = w.  Schreiben  sqrt[n] w := \{z_1, z_2, ..., z_n\}.  
