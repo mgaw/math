@@ -58,3 +58,39 @@ Def. Für eine Folge  (a_n)_{n in NN}  und eine Folge  (n_k)_{k in NN}  *natürl
 Satz (Bolzano-Weierstraß). (1) Ist  (a_n)_{n in NN}  eine beschränkte Folge, so besitzt sie einen Häufungspunkt. (2) Ist  (a_n)_{n in NN}  reell und beschränkt, so gibt es einen kleinsten sowie einen größten Häufungspunkt,  h_*  und  h^*.  Es gilt:  NN setminus \{n : h_* - eps < a_n < h^* + eps\}  ist endlich für jedes  eps > 0.  
 
 Def.  h_*  heißt **Limes inferior** der Folge,  h^*  heißt **Limes superior**.
+
+# Nov 29
+
+# Dez 4. Konvergenzkriterien
+
+??.  sum^infty_{k=0} a_k,  auch  sum^infty_{k=k_0},  auch  sum^infty_{k=-k_0}, \; k_0 in NN.  
+
+Konvergenzen.
+
+(i). Geometrische Reihe.
+
+(ii).  sum^infty_{k=1} frac 1 {k(k+1)}; \; s_n = sum^n_{k=1} frac 1 {k(k+1)} = 1 - frac 1 {k+1}, \; limn s_n = 1 - limn frac 1 {n+1} = 1.  
+
+(iii).  sum^infty_{k=0} (-1)^k  divergent.  s_n = 1  für  n  ungerade,  s_n = 0  sonst.
+
+(iv). Harmonische Reihe  sum_{k=1}^infty frac 1 k = infty.  [^2]
+
+[^2]: http://www.proofwiki.org/wiki/Sum_of_Reciprocals_is_Divergent
+
+Satz.  sum_{k=0}^infty a_k  konvergiert genau dann, wenn für jedes  eps > 0  existiert  N in NN,  so dass für  n > m ≥ N : |sum_{k=m+1}^n a_k| < eps.  
+
+Folgerung. 1) Konvergiert  sum_{k=0}^infty a_k  so ist die Folge ihrer Glieder  (a_k)_{k in NN}  eine Nullfolge. 2) Das Abändern *endlich vieler* Reihenglieder ändert nichts am Konvergenzverhalten der Reihe.
+
+Satz (Majorantenkriterium). Sei  |a_n| ≤ b_n  für alle  n in NN.  Wenn  sum_{k=0}^infty b_n  konvergiert, so konvergiert auch  sum_{k=0}^infty a_k.  [^3]
+
+[^3]: http://www.proofwiki.org/wiki/Comparison_Test
+
+Satz. Sei  a_n ≥ 0  für alle  n in NN.  Dann konvergiert  sum_{k=0}^infty a_k  genau dann, wenn ihre Partialsummenfolge beschränkt ist.
+
+Bmk.  \zeta (s) := sum_{k=1}^infty frac 1 {k^s}  hießt Riemannsche Zetafunktion.
+
+Satz (Leibniz-Kriterium). Sei  (a_n)  eine monoton fallende Nullfolge, dann konvergiert die alternierende Reihe  sum_{k=0}^infty (-1)^k a_k.  [^1]
+
+[^1]: http://www.proofwiki.org/wiki/Alternating_Series_Test
+
+Bmk.  s_{2n+1} ≤ s ≤ s_{2n}  für  n in NN  beliebig.
