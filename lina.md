@@ -178,3 +178,27 @@ Kor.  f in K[t]  Polynom,  lam_1, ..., lam_s  die verschiedenen Nullstelllen von
 Satz.  sin(alpha+beta) = sin alpha cos beta + sin beta cos alpha.  
 
 Satz. Sei  w=re^{i theta} in CC.  Dann besitzt das Polynom  z^n-w in CC[z] \; n  verschiedene Nullstellen, das heißt es existieren  n  verschiedene komplexe Zahlen  z_1, ..., z_n  mit  z_i^n = w.  Schreiben  sqrt[n] w := \{z_1, z_2, ..., z_n\}.  
+
+# Dez 4. Ideal (Übung)
+
+Satz. Ein Homomorphismus  phi  zwischen Ringen mit trivialem Kern  ker(phi) = varnothing  ist injektiv.
+
+Def. Sei  (X, +, cdot)  ein Ring. Eine Menge  I sse X  heißt **rechtes (linkes) Ideal**, falls (i)  (I, +)  ist Untergruppe und (ii)  X cdot I sse I \; (I cdot X sse I).  
+
+# Dez 6. Fundamentalsatz der Algebra, Vektorraum
+
+Satz.  z=re^{i theta} in CC. \; z^n = w <=> z = sqrt[n] w = \{sqrt[n]r (cos frac{theta + 2k pi} n + i sin frac{theta + 2k pi} n) : k in \{0, 1, ..., n-1\} \}.  
+
+Folgerung. Für  n=2  gilt  sqrt w = \{sqrt r (cos frac theta 2 + i sin frac theta 2), \; -sqrt r (cos frac theta 2 + i sin frac theta 2)\}  (wegen  cos (x + pi) = -cos x).  
+
+Satz. Sei  az^2 + bz + c=0, \; a neq 0.  Dann  z=-frac{b +- sqrt{b^2-4ac}}{2a}.  
+
+Prop. Ist  f in RR[t]  ein *reelles* Polynom und  lam in CC  eine Nullstelle von  f.  Dann ist  overline lam in CC  eine Nullstelle von  f.  Es gilt sogar  mü(f, lam) = mü(f, overline lam).  
+
+Satz: Fundamentalsatz der Algebra. Jeder Polynom  f in CC[t]  mit  deg(f) > 0  hat mindestens eine Nullstelle.
+
+Kor. Jedes Polynom  f in CC[t]  zerfällt in Linearfaktoren, das heißt es gibt  lam_1, ..., lam_n in CC  mit  f(t) = a(t-lam_1)(t-lam_2)...(t-lam_n).  
+
+Prop. Sei  K  unendlicher Körper. Dann ist die Abbildung  K[t] to Abb(K, K)  injektiv.
+
+Def. Sei  K  ein Körper. Eine Menge  V  mit einer inneren Verknüpfung  +:V times V to V  und einer äußeren Verknüpfung  cdot : K times V to V  heißt **K-Vektorraum**, wenn gilt: (1)  (V, +)  ist abelsche Gruppe mit neutralem Element  0 in V.  (2) Verträglichkeiten für  lam, mü in K, \; v, w in V,  nämlich (i)  (lam + mü)v = lam v + mü v,  (ii)  lam(v+w) = lam v + lam w,  (iii)  lam(mü v) = (lam mü) v  und (iv)  1v = v.  
