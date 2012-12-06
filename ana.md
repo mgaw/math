@@ -73,24 +73,20 @@ Konvergenzen.
 
 (iii).  sum^infty_{k=0} (-1)^k  divergent.  s_n = 1  für  n  ungerade,  s_n = 0  sonst.
 
-(iv). Harmonische Reihe  sum_{k=1}^infty frac 1 k = infty.  [^2]
-
-[^2]: http://www.proofwiki.org/wiki/Sum_of_Reciprocals_is_Divergent
+Satz: [Harmonische Reihe](http://www.proofwiki.org/wiki/Sum_of_Reciprocals_is_Divergent).
+  sum_{k=1}^infty frac 1 k = infty.  
 
 Satz.  sum_{k=0}^infty a_k  konvergiert genau dann, wenn für jedes  eps > 0  existiert  N in NN,  so dass für  n > m ≥ N : |sum_{k=m+1}^n a_k| < eps.  
 
 Folgerung. 1) Konvergiert  sum_{k=0}^infty a_k  so ist die Folge ihrer Glieder  (a_k)_{k in NN}  eine Nullfolge. 2) Das Abändern *endlich vieler* Reihenglieder ändert nichts am Konvergenzverhalten der Reihe.
 
-Satz (Majorantenkriterium). Sei  |a_n| ≤ b_n  für alle  n in NN.  Wenn  sum_{k=0}^infty b_n  konvergiert, so konvergiert auch  sum_{k=0}^infty a_k.  [^3]
-
-[^3]: http://www.proofwiki.org/wiki/Comparison_Test
+Satz: [Majorantenkriterium](http://www.proofwiki.org/wiki/Comparison_Test).
+Sei  |a_n| ≤ b_n  für alle  n in NN.  Wenn  sum_{k=0}^infty b_n  konvergiert, so konvergiert auch  sum_{k=0}^infty a_k.  
 
 Satz. Sei  a_n ≥ 0  für alle  n in NN.  Dann konvergiert  sum_{k=0}^infty a_k  genau dann, wenn ihre Partialsummenfolge beschränkt ist.
 
 Bmk.  \zeta (s) := sum_{k=1}^infty frac 1 {k^s}  hießt Riemannsche Zetafunktion.
 
-Satz (Leibniz-Kriterium). Sei  (a_n)  eine monoton fallende Nullfolge, dann konvergiert die alternierende Reihe  sum_{k=0}^infty (-1)^k a_k.  [^1]
-
-[^1]: http://www.proofwiki.org/wiki/Alternating_Series_Test
+Satz: [Leibniz-Kriterium](http://www.proofwiki.com/wiki/Alternating_Series_Test). Sei  (a_n)  eine monoton fallende Nullfolge, dann konvergiert die alternierende Reihe  sum_{k=0}^infty (-1)^k a_k.  
 
 Bmk.  s_{2n+1} ≤ s ≤ s_{2n}  für  n in NN  beliebig.
