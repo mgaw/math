@@ -87,6 +87,31 @@ Satz. Sei  a_n ≥ 0  für alle  n in NN.  Dann konvergiert  sum_{k=0}^infty a_k
 
 Bmk.  \zeta (s) := sum_{k=1}^infty frac 1 {k^s}  hießt Riemannsche Zetafunktion.
 
-Satz: [Leibniz-Kriterium](http://www.proofwiki.com/wiki/Alternating_Series_Test). Sei  (a_n)  eine monoton fallende Nullfolge, dann konvergiert die alternierende Reihe  sum_{k=0}^infty (-1)^k a_k.  
+Satz: [Leibniz-Kriterium](http://www.proofwiki.com/wiki/Alternating_Series_Test).
+Sei  (a_n)  eine monoton fallende Nullfolge, dann konvergiert die alternierende Reihe  sum_{k=0}^infty (-1)^k a_k.  
 
 Bmk.  s_{2n+1} ≤ s ≤ s_{2n}  für  n in NN  beliebig.
+
+# Dez 6.
+
+Satz: [Riemannscher Umordnungssatz]().
+Sei  (a_n)_{n in NN}  Nullfolge positiver Zahlen mit  sum_{n=0}^{infty} a_n = infty.  Dann gibt es für jedes  lam in RR cup \{-infty, +infty\}  eine Bijektion  sigma : NN to NN,  so dass  sum_{n=0}^infty (-1)^{sigma(n)}a_{sigma(n)} = lam.  
+
+Def. Eine Reihe  sum a_k  heißt **absolut konvergent**, falls  sum |a_k|  konvergiert.
+
+Bmk. Wenn  sum |a_k|  konvergiert, dann konvergiert auch  sum a_k.  
+
+Satz. Sei  sum a_k  absolut konvergent. Dann ist für jede Bijektion  sigma : NN to NN  die Reihe  sum_{k=0}^infty a_{sigma(k)}  absolut konvergent und  sum a_{sigma(k)} = sum a_k.  
+
+Satz.  sum(a_k+b_k) = sum a_k + sum b_k. quad sum(Re a_k) = Re (sum a_k). quad sum Im a_k = Im sum a_k. quad sum overline{a_k} = overline{sum a_k}.  
+
+Def. Seien  sum a_k, \; sum b_k  zwei Reihen. Weiterhin sei  sigma : NN to NN  bijektiv und  sigma(k) =: (sigma_1(k), sigma_2(k)).  Definieren  c_k := a_{sigma_1(k)} cdot b_{sigma_s(k)}.  Dann heißt  sum_{k=0}^infty c_k  (die zu  sigma  gehörende) **Produktreihe**.
+
+Satz. Seien  sum a_k, \; sum b_k  absolut konvergent. Dann ist für jedes bijektive  sigma : NN to NN^2  die zugehörige Produktreihe konvergent. Sie konvergieren *alle* gegen  (sum_{k=0}^infty a_k)(sum_{k=0}^infty b_k).  
+
+Def. Seien  sum a_k, \; sum b_k  Reihen und  c_n := a_0b_n + a_1b_{n-1} + ... + a_nb_0 = sum_{k=0}^infty a_kb_{n-k}.  Dann heißt  sum_{k=0}^infty c_k  das **Cauchy-Produkt** der beiden Reihen.
+
+Folgerung. Sind  sum a_k  und  sum b_k  absolut konvergent, so konvergiert ihr Cauchy-PRodukt absolut gegen  (sum a_k)(sum b_k).  
+
+Satz: [Doppelreihensatz]().
+Sei  (i, j) in NN^2 mapsto a_{ij} in CC  gegeben. Zu jeder Bijektion  sigma : NN to NN^2  konvergiere  sum a_{sigma(k)}  absolut  (a_{(i,j)} := a_{ij}).  Dann gilt: (a) Für alle  i  konvergiert  sum_{j=0}^infty  absolut. (b) Mit  a_i := sum_{j=0}^infty a_{ij}  kovergiert  sum_{i=0}^infty a_i  absolut. (c)  sum_{i=0}^infty (sum_{j=0}^infty a_{ij}) := sum_{i=0}^infty a_i = sum_{k=0}^infty a_{sigma(k)}.  
