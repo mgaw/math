@@ -59,7 +59,19 @@ Satz (Bolzano-Weierstraß). (1) Ist  (a_n)_{n in NN}  eine beschränkte Folge, s
 
 Def.  h_*  heißt **Limes inferior** der Folge,  h^*  heißt **Limes superior**.
 
-# Nov 29
+# Nov 29. Cauchy-Folge, Reihe
+
+Def. Sei  (a_n)  reelle Folge. Dann ist  limn sup a_n := infty  für nach oben unbeschränkte  a_n,  sonst  limn sup a_n := limn (sup \{a_k : k ≥ n\}). \; limn inf a_n  analog.
+
+Def. Eine Folge  (a_n)  heißt **Cauchy-Folge**, falls gilt: Für jedes  eps > 0  gibt es ein  N in N,  so dass für alle  m, n in NN, \; m, n ≥ N  gilt:  |a_n-a_m| < eps.  
+
+Satz: Cauchy-Kriterium. Eine Folge  (a_n)  in  CC  ist konvergent genau dann, wenn sie eine Cauchy-Folge ist.
+
+Bmk. Das Cauchy-Kriterium folgt aus Supremumeigenschaft von  RR,  beide Eigenschaften sind sogar äquivalent.
+
+Def. Sei  (a_n)  Folge in  CC  und  s_n := sum_{k=0}^n a_k.  Die Folge  (s_n)  heißt **Reihe**, die  a_n  **Glieder der Reihe**, die  s_n  **Partialsummen**. Eine Reihe heißt **konvergent**, falls die Folge  (s_n)  konvergiert. Dann wird der Grenzwert mit  sum_{k=0}^infty a_k := limn s_n  bezeichnet. (Achtung: Mit  sum_{k=0}^infty a_k  wird gewöhnlich auch die *Reihe*  (s_n)  bezeichnet.)
+
+Bsp. Für ein  z in CC  heißt  sum_{k=0}^infty z^k  die **geometrische Reihe**. Für  z neq 1  ist  s_n = sum_{k=0}^n = frac{1-z^{n+1}}{1-z}.  Also für  |z| < 1 : sum_{k=0}^infty z^k = frac 1 {1-z}.  
 
 # Dez 4. Konvergenzkriterien
 
@@ -92,9 +104,9 @@ Sei  (a_n)  eine monoton fallende Nullfolge, dann konvergiert die alternierende 
 
 Bmk.  s_{2n+1} ≤ s ≤ s_{2n}  für  n in NN  beliebig.
 
-# Dez 6.
+# Dez 6. Absolute Konvergenz, Produktreihe
 
-Satz: [Riemannscher Umordnungssatz]().
+Satz: Riemannscher Umordnungssatz.
 Sei  (a_n)_{n in NN}  Nullfolge positiver Zahlen mit  sum_{n=0}^{infty} a_n = infty.  Dann gibt es für jedes  lam in RR cup \{-infty, +infty\}  eine Bijektion  sigma : NN to NN,  so dass  sum_{n=0}^infty (-1)^{sigma(n)}a_{sigma(n)} = lam.  
 
 Def. Eine Reihe  sum a_k  heißt **absolut konvergent**, falls  sum |a_k|  konvergiert.
@@ -113,5 +125,5 @@ Def. Seien  sum a_k, \; sum b_k  Reihen und  c_n := a_0b_n + a_1b_{n-1} + ... + 
 
 Folgerung. Sind  sum a_k  und  sum b_k  absolut konvergent, so konvergiert ihr Cauchy-PRodukt absolut gegen  (sum a_k)(sum b_k).  
 
-Satz: [Doppelreihensatz]().
+Satz: Doppelreihensatz.
 Sei  (i, j) in NN^2 mapsto a_{ij} in CC  gegeben. Zu jeder Bijektion  sigma : NN to NN^2  konvergiere  sum a_{sigma(k)}  absolut  (a_{(i,j)} := a_{ij}).  Dann gilt: (a) Für alle  i  konvergiert  sum_{j=0}^infty  absolut. (b) Mit  a_i := sum_{j=0}^infty a_{ij}  kovergiert  sum_{i=0}^infty a_i  absolut. (c)  sum_{i=0}^infty (sum_{j=0}^infty a_{ij}) := sum_{i=0}^infty a_i = sum_{k=0}^infty a_{sigma(k)}.  
