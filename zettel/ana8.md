@@ -1,27 +1,28 @@
 Vorlesung: Analysis I*
 Autor: Marius Gawrisch
 Matrikelnummer: 545346
-Zettel: Übungsblatt 6
-Gruppe: Do 11-13, Fromm
+Zettel: Übungsblatt 8
+Gruppe: Do. 11-13 bei V. Fromm
 Vorlage: zettel
-
-**Aufgabe 1**
-
-**(i)**
-
-pagebreak
-header
 
 **Aufgabe 2**
 
 **(i)**
 
-Sei  (x_n)  beschränkte reelle Folge.  a := limn sup x_n  ist der größte Häufungspunkt.  b_n = sup \{x_k : k ≥ n\}.  
+Sei  (x_n)  beschränkte reelle Folge,  a := limn sup x_n  der größte Häufungspunkt,  b_n := sup \{x_k : k ≥ n\}.  
 
 Zu zeigen:  limn b_n = a.  
 
-Ein Wert ist genau dann Häufungspunkt einer Folge, wenn es eine Teilfolge gibt, die gegen diesen Wert konvergiert. Es gibt also eine Teilfolge von  (x_n),  die gegen  a  konvergiert. Sei  (y_n)  eine solche Teilfolge.
+  (b_n)  ist monoton fallend, da die Menge der Folgenglieder, von denen das Supremum gebildet wird, mit jedem Schritt kleiner wird. Es kann also kein größeres Element dazukommen, dass das Supremum der Menge erhöhen würde. Daraus folgt:  forall N in NN, x in RR: (b_N < x) \;=>\; (forall n > N: b_n < x).  
 
-Sei  (z_n)  die (möglicherweise endliche) Teilfolge von  (x_n),  die alle Folgenglieder enthält, für die gilt:  x_n ≥ a.  Sei  (a_n)  die "Vereinigung" von  (y_n)  und  (z_n).  (sollte hier auf Ebene der Filterfolge argumentieren.)  (z_n)  war aber entweder endlich, dann ist  limn a_n = limn y_n = a.  War  (z_n)  unendlich, dann konvergiert  (z_n)  gegen  a.  (Warum muss  (z_n)  konvergieren? Beschränktheit ist leicht, aber  (z_n)  muss nicht monoton sein.) Würde  (z_n)  gegen ein  b neq a  konvergieren, dann wäre  b  Häufungspunkt von  (x_n). \; b  wäre dann aber  > a,  da alle  z_n  nach Definition  > a  sind. Dann wäre  b  größerer Häufungspunkt als  a,  was Wiederspruch zur Annahme ist. Wenn aber zwei konvergente Folgen mit demselben Grenzwert vereinigt werden, dann hat die resultierenden Folge auch diesen Grenzwert (ist das so?).
+  (b_n)  ist nach unten durch  a  beschränkt, das heißt  forall n in NN: b_n ≥ a.  Das gilt, da in jeder beliebig kleinen Umgebung um  a  unendlich viele Folgenglieder von  (x_n)  liegen.
 
-Sei außerdem  (c_n)  eine Teilfolge von  (b_n),  die durch dieselbe "Filterfolge" entstanden ist. Nach Konstruktion konvergiert  (c_n)  gegen  a. \; (b_n)  ist konvergente Folge. Damit auch  (b_n),  da der Grenzwert einer konvergenten Folge immer mit dem Grenzwert jeder Teilfolge übereinstimmt.
+Aus der Tatsache, dass  a  größter Häufungspunkt ist, folgt  (*):\; forall eps > 0 \;exists N in NN \;forall n > N : x_n < a+eps.  Das lässt sich durch Kontraposition zeigen: Nehmen wir an, es gäbe ein  eps > 0,  so dass sich "hinter" jedem  N in NN  ein  x_{n_0} > a+eps  finden lässt. Dann gibt es schon unendlich viele  x_n  mit dieser Eigenschaft, da man die Annahme immer wieder für ein  N>n_0  anwenden kann. Dann gibt es aber eine *unendliche* Teilfolge, die durch  a+eps  nach unten *beschränkt* ist. Sie "erbt" außerdem die Beschränktheit nach oben von  (x_n),  die nach Voraussetzung beschränkt ist. Damit gäbe es aber einen Häufungspunkt  h ≥ a+eps,  was Widerspruch zur Definition von  a  ist. Damit gilt  (*).  
+
+  (**)  Um nun zu zeigen, dass  (b_n)  gegen  a  konvergiert, muss man zeigen, dass man für jedes beliebige  eps > 0  ein  N in NN  finden kann, ab dem alle Folgenglieder in dem Bereich  (a-eps, a+eps)  liegen, das heißt  forall n > N: a-eps < b_n < a+eps.  
+
+Der erste Teil der Ungleichung ist aber geschenkt, da wie oben gezeigt immer gilt:  b_n > a.  Außerdem reicht es wegen der fallenden Monotonie jeweils zu zeigen, dass  b_N < a+eps.  
+
+Aus  (*)  wissen wir, dass es für alle  eps_1  ein  N in NN  gibt, so dass  forall n>N: x_n < a+eps_1.  Wenn aber ab einem Punkt alle Folgenglieder kleiner als ein Wert sind, dann gilt für das Supremum dieser Werte:  b_N = sup \{x_n, n ≥ N\} ≤ a+eps_1.  
+
+Um für ein beliebiges  eps > 0  das entsprechende  N  aus  (**)  zu finden, geht man folgendermaßen vor: Man nehme ein  eps_1 in RR  mit  eps > eps_1 > 0.  Dann ist wie eben gezeigt  b_{N(eps_1)} ≤ a+eps_1.  Wegen  eps_1 < eps  gilt  b_N < a+eps.  Damit gilt mithilfe der Vorüberlegungen, dass  limn b_n = a. qed  
