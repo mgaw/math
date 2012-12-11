@@ -3,11 +3,11 @@ Vorlage: math
 
 # Nov 13. Konvergenz
 
-Def. Eine **Folge**  (a_n)_{n in NN}  ist Abbildung  a : NN to CC. a_n in CC  mit  a_n := a(n).  Eine Folge  (a_n)_{n in NN}  heißt **konvergent**, falls es eine komplexe Zahl  a in CC  gibt mit folgender Eigenschaft: Für jedes  eps > 0  gibt es ein  N in NN  mit: für jedes  n in NN  gilt:  |a_n - a| < eps. \; a  heißt dann **Grenzwert** der Folge. Man sagt:  (a_n)  konvergiert gegen  a  oder:  limn a_n = a.  
+Def. Eine **Folge**  (a_n)_{n in NN}  ist Abbildung  a : NN to CC. a_n in CC  mit  a_n := a(n).  Eine Folge  (a_n)_{n in NN}  heißt **konvergent**, falls es eine komplexe Zahl  a in CC  gibt mit folgender Eigenschaft: Für jedes  eps > 0  gibt es ein  N in NN  mit: für jedes  n > N  gilt:  |a_n - a| < eps. \; a  heißt dann **Grenzwert** der Folge. Man sagt:  (a_n)  konvergiert gegen  a  oder:  limn a_n = a.  
 
 # Nov 15. Grenzwerte
 
-Bmk.  eps > 0. \; \triangle(a, eps) := \{z in CC : |z-a| < eps \}  "Epsilon-Scheibe".  (a_n)_{n in NN}  konvergiert gegen  a in CC,  gdw.  exists N in NN : forall n ≥ N  gilt  a_n in \triangle(a, eps).  
+Bmk.  eps > 0. \; \triangle(a, eps) := \{z in CC : |z-a| < eps \}  "Epsilon-Scheibe".  (a_n)_{n in NN}  konvergiert gegen  a in CC,  gdw.  exists N in NN : forall n > N  gilt  a_n in \triangle(a, eps).  
 
 Satz.  (a_n)_{n in NN}  konvergiert gegen  a in CC  gdw.  (a_n - a)_{n in NN}  eine **Nullfolge** ist, d.h. gegen  0 in CC  konvergiert. (1)  s in QQ_+  gilt  limn 1/n^s = 0.  (2) Für  a > 0  gilt  limn sqrt[n]{a} = 1, \; (n ≥ 1).  (3)  limn sqrt[n]{n} = 1, \; (n≥1).  (4)  z in CC, |z| < 1 : limn z^n = 0.  (5)  z in CC, s in Q_+, |z| > 1 : limn n^s/z^n > 0.  
 
@@ -25,7 +25,7 @@ Satz. Eine disjunkte abzählbar unendliche Vereinigung nichtleerer endlicher Men
 
 # Nov 20. Rechenregeln für Grenzwerte
 
-Def. Sei  (a_n)_{n in NN}  eine Folge. (1) Sie heißt **divergent**, wenn sie nicht konvergiert. (2) Falls für eine reelle Folge gilt: Für jedes  C>0  gibt es ein  N in NN,  s.d. für alle  n in NN, n ≥ N  gilt:  a_n > C,  dann schreibt man  limn a_n = + infty.  Analog  limn a_n = - infty.  
+Def. Sei  (a_n)_{n in NN}  eine Folge. (1) Sie heißt **divergent**, wenn sie nicht konvergiert. (2) Falls für eine reelle Folge gilt: Für jedes  C>0  gibt es ein  N in NN,  so dass für alle  n in NN, n ≥ N  gilt:  a_n > C,  dann schreibt man  limn a_n = + infty.  Analog  limn a_n = - infty.  
 
 Satz. Eine reelle Folge  (a_n)_{n in NN}  konvergiert gegen  + infty,  gdw. die Folge  (1/a_n)_{n in NN}  ab einem gewissen Folgenglied definiert ist und positiv ist und  limn 1/a_n = 0.  
 
