@@ -227,3 +227,21 @@ Satz. Sei  V  ein Vektorraum und  M sse V  eine Teilmenge. Dann ist  langle M ra
 Def. Sei  V  ein Vekorraum. Eine endliche Familie  (v_1, ..., v_k)  von Vektoren in  V  heißt **linear unabhängig**, wenn für alle  lam_1, ..., lam_r in K  gilt:  (lam_1v_1 + ... + lam_rv_r = 0) \;=>\; (lam_1 = ... = lam_r = 0),  das heißt der Nullvektor lässt sich nur auf *eine* (triviale) Art als Linearkombination der  v_i  schreiben. Eine unendliche Familie  (v_i)_{i in I}  heißt linear unabhängig, wenn jede endliche Teilfamilie linear unabhängig ist. Eine Familie, die nicht linear unabhängig ist, heißt **linear abhängig**.
 
 Lemma. (a)  \{v\}  ist genau dann linear unabhängig, wenn  v = 0.  (b) Jede Familie, die den Nullvektor enthält, ist linear abhängig. (c) Eine Familie, die einen Vektor doppelt enthält, ist linear abhängig. (d) Zwei oder mehr Vektoren  v_1, ..., v_r  sind genau dann linear abhängig, wenn einer davon im Spann der anderen liegt.
+
+# Dez 11. Maximales Ideal, Primideal (Übung)
+
+Prop. Seien  p, q in NN^*.  Dann  pZZ + qZZ = ggT(p,q)ZZ.  
+
+Theorem. Seien  p, q in NN^*  und  d = ggT(p,q).  Dann existieren  s, t in ZZ  so, dass  sp+tq = d.  
+
+Def. Zwei Ideale  A, B  eines Ringes  R  heißen **fremd**, falls  A+B=R.  
+
+Kor.  pZZ  und  qZZ  sind genau dann fremde Ideale, wenn  ggT(p,q)=1.  
+
+Def. Sei  (X, +, cdot)  ein kommutativer Ring. Ein Ideal  I sse X  heißt **Primideal**, falls  xy in I => x in I  oder  y in I. \; I  heißt **maximal**, falls  J  Ideal von  X  und  I sse J sse X \;=>\; J = I  oder  J = X.  
+
+Satz.  pZZ  ist genau dann Primideal von  ZZ,  wenn  p  Primzahl ist.
+
+Satz. Sei  I sse ZZ, x in X setminus I.  Dann gilt  J := displaystyle bigcap_{tilde J \text{ Ideal, } I cup \{x\} sse tilde J} = \{i+kx : i in I, k in ZZ\} =: H.  
+
+Satz. Sei  I  ein maximales Ideal von  ZZ.  Dann ist  I  Primideal.
