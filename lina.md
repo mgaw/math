@@ -202,3 +202,28 @@ Kor. Jedes Polynom  f in CC[t]  zerfällt in Linearfaktoren, das heißt es gibt 
 Prop. Sei  K  unendlicher Körper. Dann ist die Abbildung  K[t] to Abb(K, K)  injektiv.
 
 Def. Sei  K  ein Körper. Eine Menge  V  mit einer inneren Verknüpfung  +:V times V to V  und einer äußeren Verknüpfung  cdot : K times V to V  heißt **K-Vektorraum**, wenn gilt: (1)  (V, +)  ist abelsche Gruppe mit neutralem Element  0 in V.  (2) Verträglichkeiten für  lam, mü in K, \; v, w in V,  nämlich (i)  (lam + mü)v = lam v + mü v,  (ii)  lam(v+w) = lam v + lam w,  (iii)  lam(mü v) = (lam mü) v  und (iv)  1v = v.  
+
+# Dez 11. Untervektorraum, lineare Unabhängigkeit
+
+Satz, Rechenregeln. a)  0_K cdot v = 0 in V.  b)  lam cdot 0 = 0.  c)  lam cdot v = 0 \;=>\; lam = 0  oder  v = 0.  d)  (-1) cdot v = -v,  das additiv Inverse zu  v.  
+
+Def. Sei  V  ein K-Vektorraum. Eine Teilmenge  W sse V  heißt **Untervektorraum** (man
+schreibt  W ≤ V),  falls gilt: (UV1)  W neq varnothing.  (UV2)  v, w in W \;=>\; v+w in W.  (UV3)  v in W, lam in K \;=>\; lam cdot v in W.  (Nichtleer und abgeschlossen gegenüber  +  und  cdot.)  
+
+Bmk. Wegen (UV2) und (UV3) erhalten wir induzierte Operationen  +_W : W times W to W  und  cdot_W : K times W to W.  
+
+Satz. Sei  W  ein UVR. Dann ist  (W, +_W, cdot_W)  ein Vektorraum.
+
+Lemma. Sei  V  ein VR und  (W_i)_{i in I}  eine Familie von UVR von V. Dann ist auch  W := bigcap_{i in I} W_i  ein UVR.
+
+Lemma. Sei  V  ein K-Vektorraum und  W_1, W_2 ≤ V.  Dann gilt:  W_1 cup W_2 ≤ V \;<=>\; W_1 sse W_2  oder  W_2 sse W_1.  
+
+Def. Sei  v_1, ..., v_r in V:  Ein beliebiger Vektor  v in V  heißt **Linearkombination** von  v_1, ... v_r,  falls es  lam_1, ..., lam_r in K  gibt, so dass  v = lam_1 v_1 + ... + lam_r v_r.  
+
+Def. Sei  M sse V  eine Teilmenge. Die Menge aller Linearkombinationen von *endlich vielen* Vektoren aus  M  heißt **Lineare Hülle** (oder **Spann**) von  M.  Man schreibt  langle M rangle  oder  span_K(M).  
+
+Satz. Sei  V  ein Vektorraum und  M sse V  eine Teilmenge. Dann ist  langle M rangle  der kleinste UVR von  V,  der  M  enthält, das heißt (a)  langle M rangle  ist ein UVR und (b) Ist  W ≤ V  ein UVR mit  M sse W,  so gilt  langle M rangle sse W.  
+
+Def. Sei  V  ein Vekorraum. Eine endliche Familie  (v_1, ..., v_k)  von Vektoren in  V  heißt **linear unabhängig**, wenn für alle  lam_1, ..., lam_r in K  gilt:  (lam_1v_1 + ... + lam_rv_r = 0) \;=>\; (lam_1 = ... = lam_r = 0),  das heißt der Nullvektor lässt sich nur auf *eine* (triviale) Art als Linearkombination der  v_i  schreiben. Eine unendliche Familie  (v_i)_{i in I}  heißt linear unabhängig, wenn jede endliche Teilfamilie linear unabhängig ist. Eine Familie, die nicht linear unabhängig ist, heißt **linear abhängig**.
+
+Lemma. (a)  \{v\}  ist genau dann linear unabhängig, wenn  v = 0.  (b) Jede Familie, die den Nullvektor enthält, ist linear abhängig. (c) Eine Familie, die einen Vektor doppelt enthält, ist linear abhängig. (d) Zwei oder mehr Vektoren  v_1, ..., v_r  sind genau dann linear abhängig, wenn einer davon im Spann der anderen liegt.
