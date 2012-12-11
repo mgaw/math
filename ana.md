@@ -126,4 +126,26 @@ Def. Seien  sum a_k, \; sum b_k  Reihen und  c_n := a_0b_n + a_1b_{n-1} + ... + 
 Folgerung. Sind  sum a_k  und  sum b_k  absolut konvergent, so konvergiert ihr Cauchy-PRodukt absolut gegen  (sum a_k)(sum b_k).  
 
 Satz: Doppelreihensatz.
-Sei  (i, j) in NN^2 mapsto a_{ij} in CC  gegeben. Zu jeder Bijektion  sigma : NN to NN^2  konvergiere  sum a_{sigma(k)}  absolut  (a_{(i,j)} := a_{ij}).  Dann gilt: (a) Für alle  i  konvergiert  sum_{j=0}^infty  absolut. (b) Mit  a_i := sum_{j=0}^infty a_{ij}  kovergiert  sum_{i=0}^infty a_i  absolut. (c)  sum_{i=0}^infty (sum_{j=0}^infty a_{ij}) := sum_{i=0}^infty a_i = sum_{k=0}^infty a_{sigma(k)}.  
+Sei  (i, j) in NN^2 mapsto a_{ij} in CC  gegeben. Zu jeder Bijektion  sigma : NN to NN^2  konvergiere  sum a_{sigma(k)}  absolut  (a_{(i,j)} := a_{ij}).  Dann gilt: (a) Für alle  i  konvergiert  sum_{j=0}^infty  absolut. (b) Mit  a_i := sum_{j=0}^infty a_{ij}  konvergiert  sum_{i=0}^infty a_i  absolut. (c)  sum_{i=0}^infty (sum_{j=0}^infty a_{ij}) := sum_{i=0}^infty a_i = sum_{k=0}^infty a_{sigma(k)}.  
+
+Bmk. Die obige Vorraussetzung "Für ein bijektives  sigma : NN to NN times NN  ist  sum_{k=0}^infty a_{sigma(k)}  absolut konvergent" ist äquivalent zu: Für alle  m, n in NN  ist  sum_{i=0}^m sum_{j=0}^n |a_{ij}| < C.  
+
+Bmk. Die obige Aussage gilt auch für  i  und  j  vertauscht  (widetilde{a_{ij}} := a_{ji}).  
+
+# Dez 11. Wurzel- und Quotientenkriterium, Faktorreihen
+
+Satz, Wurzelkriterium. (a) Sei  q in (0,1) sse RR.  Für  sum_{k=0}^infty a_k  gelte  sqrt[n]{|a_n|} ≤ q  für fast alle  n.  Dann konvergiert  sum a_k  absolut. (b) Falls hingegen  sqrt[n]{|a_n|} ≥ 1  für fast alle (?)  n in NN,  dann divergiert diese Reihe.
+
+Satz, Quotientenkriterium. (a) Sei  q in (0, 1).  Sei außerdem  a_n neq 0  für fast alle  n in NN,  sowie  left|frac {a_n+1} {a_n}right| ≤ q  für fast alle  n.  Dann konvergiert  sum a_k  absolut. (b)  a neq 0  für fast alle  n  und  left|frac {a_n+1} {a_n}right| ≥ 1  für fast alle (?)  n,  dann ist  sum a_k  divergent.
+
+Bmk. Aus Voraussetzung des QK folgt Voraussetzung des WK. (Voraussetzung des QK ist stärker als Voraussetzung des WK, das heißt die Aussage des WK ist stärker als die des QK.)
+
+Def. Eine Reihe der Form  P(z) := sum_{k=0}^infty a_k z^k  mit  a_k in CC  und (Parameter)  z in CC  heißt **Potenzreihe**.
+
+Satz. Sei  z_0 neq 0, z_0 in CC  und  sum_{k=0}^infty a_k z_0^k  konvergent. Dann konvergiert  sum_{k=0}^infty a_k z^k  absolut für alle  z in CC  mit  |z| < |z_0|.  
+
+Def. Der **Konvergenzradius** einer Potenzreihe  P(z) = sum_{k=0}^infty a_k a^k  ist definiert als  R := sup \{r ≥ 0 : P(r)  konvergiert  \}. \; K_R(0) := \{z in CC : |z| < R\} \; (R≥0)  heißt **Konvergenzkreis**.  (R in [0, infty] := [0, infty) cup \{infty\}).  
+
+Satz. Sei  P(z) = sum_{n=0}^infty a_n z^n  und  R in [0, infty]  ihr Konvergenzradius. (i)  P(z)  konvergiert dann absolut für alle  z in CC  mit  |z| < R.  (ii)  P(z)  divergiert dann für alle  z in CC, |z| > R.  
+
+Satz, Berechnung des Konvergenzradius. Sei  R  Konvergenzradius der Reihe  sum a_k z^k.  (a)  R=frac 1 L  falls  L := limn sup sqrt[n]{|a_n|} in [0, infty] \; (frac 1 0 := infty, frac 1 infty := 0  HIER!). (b) Sei  left|frac {a_n+1} {a_n}right|  konvergent oder konvergierend gegen  infty.  Dann ist  R= frac 1 q,  wobei  q := limn left|frac {a_n+1} {a_n}right|.  
