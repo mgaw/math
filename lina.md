@@ -3,20 +3,20 @@ Vorlage: math
 
 # Nov 8. Linksnebenklasse
 
-Def. Sei  (G, cdot)  eine Gruppe und  H ≤ G.  Die Teilmenge von  PP(G),  die aus Elementen der Form  gH  besteht wird als  (G/H)  bezeichnet. Sie heißt **Linksnebenklasse** von  H.  
+Def. Sei  (G, cdot)  eine Gruppe und  H ≤ G.  Die Teilmenge von  PP(G),  die aus Elementen der Form  gH  besteht wird als  (G/H)_l  bezeichnet. Sie heißt Menge der **Linksnebenklassen** von  H.  
 
 Lemma.  forall x, y in G : xH=yH <=> x^{-1}y in H.  
 
-Satz. Linksnebenklassen von  H  sind Äquivalenzklassen, d.h. die Relation  ~  mit  x~y <=> xH=yH  ist eine Äquivalenzrelation.
+Satz. Die Relation  ~_l  mit  x~_ly <=> xH=yH  ist eine Äquivalenzrelation. Die Linksnebenklassen von  H  sind also Äquivalenzklassen, das heißt  overline x = xH.  
 
-Bmk.  G  wirkt auf  (G/H)_l  durch Multiplikation von links, d.h. für  g, x in G : g(xH) = (gx)H in (G/H)_l.  
+Bmk.  G  wirkt auf  (G/H)_l  durch Multiplikation von links, das heißt für  g, x in G : g(xH) = (gx)H in (G/H)_l.  
 
-Satz. Multiplikation von links definiert einen Gruppenhomomorphismus  L_g : (G/H)_l to (G/H)_l  mit  L_g(xH) := (gx)H.  
+Satz. Multiplikation von links mit einem bestimmten Element  g in GG  definiert einen Gruppenhomomorphismus  L_g : (G/H)_l to (G/H)_l  mit  L_g(xH) := (gx)H.  
 
 # Nov 13. Normalteiler, Faktorgruppe
 
 Bsp. Sei  G  Gruppe,  H ≤ G.  Dann ist  (G/H)_l := \{gH : g in G\} sse P(G)  die Menge der
-**Linksnebenklassen** von  H  in  G.  Haben Äquivalenzrelation auf *G*:
+Linksnebenklassen von  H  in  G.  Haben Äquivalenzrelation auf *G*:
   x sim_l y :<=> x^{-1}y in H.  Dann ist  overline x = \{y in G : x sim_l y\} = \{y in G : x^{-1}y
 = h in H\} = \{y in G : y = xh, h in H\} = xH.  
 
@@ -48,14 +48,14 @@ Bmk. Die Anzahl der Links- und Rechtsnebenklassen ist gleich, d.h.  [G:H] = |(G/
 
 Kor. Ist  G  endliche Gruppe,  n = |G|, x in G.  Dann  ord (x) \; | \; |G|,  d.h.  x^n = e, \; forall x in G.  
 
-Bsp.  overline a in ZZ/nZZ, \; 0 ≤ a ≤ n-1.  Dann  ord(overline x) = n <=> ggt(a,n) = 1.  
+Bsp.  overline a in ZZ/nZZ, \; 0 ≤ a ≤ n-1.  Dann  ord(overline x) = n <=> ggT(a,n) = 1.  
 
 Kleiner Satz von Fermat. Sei  p  Primzahl und  a in ZZ  mit  p not | \; a.  Dann gilt  a^{p-1}
 equiv 1 mod p.  Außerdem gilt für alle  a in ZZ : a^p equiv a mod p.  
 
 # Nov 20. Isomorphiesatz
 
-Prop. Seien  a, b in ZZ, d = \text{ggT}(a, b).  Dann gibt es  x, y \in ZZ,  so dass  d=xa+yb.  
+Prop. Seien  a, b in ZZ, \; d = \text{ggT}(a, b).  Dann gibt es  x, y \in ZZ,  so dass  d=xa+yb.  
 
 Bmk. Der  ggT(a, b)  ist die kleinste natürliche Zahl, die als lineare Kombination von a und b
 darstellbar ist.
@@ -66,7 +66,7 @@ Def.  sgn(sigma) = (-1)^{\#\{(i,j) \;:\; i<j \text{ und } sigma(i) > sigma(j)\}}
 
 Lemma.  \forall sigma \in S_n : sgn(sigma) = (Produkt) \frac{sigma(j) - sigma(i)}{j-i}.  
 
-Def.  sigma in S_n  heißt **gerade**, gdw.  sgn(sigma) = 1.  **Ungerade**, gdw.  sgn(sigma) = -1.  
+Def.  sigma in S_n  heißt **gerade**, falls  sgn(sigma) = 1. \; sigma heißt **ungerade**, falls  sgn(sigma) = -1.  
 
 Def.  ker(sgn) = A_n = \{ sigma in S_n : sgn(sigma) = 1 \}  heißt die **alternierende Gruppe**.
 
