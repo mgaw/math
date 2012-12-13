@@ -123,7 +123,7 @@ Satz. Seien  sum a_k, \; sum b_k  absolut konvergent. Dann ist für jedes bijekt
 
 Def. Seien  sum a_k, \; sum b_k  Reihen und  c_n := a_0b_n + a_1b_{n-1} + ... + a_nb_0 = sum_{k=0}^infty a_kb_{n-k}.  Dann heißt  sum_{k=0}^infty c_k  das **Cauchy-Produkt** der beiden Reihen.
 
-Folgerung. Sind  sum a_k  und  sum b_k  absolut konvergent, so konvergiert ihr Cauchy-PRodukt absolut gegen  (sum a_k)(sum b_k).  
+Folgerung. Sind  sum a_k  und  sum b_k  absolut konvergent, so konvergiert ihr Cauchy-Produkt absolut gegen  (sum a_k)(sum b_k).  
 
 Satz: Doppelreihensatz.
 Sei  (i, j) in NN^2 mapsto a_{ij} in CC  gegeben. Zu jeder Bijektion  sigma : NN to NN^2  konvergiere  sum a_{sigma(k)}  absolut  (a_{(i,j)} := a_{ij}).  Dann gilt: (a) Für alle  i  konvergiert  sum_{j=0}^infty  absolut. (b) Mit  a_i := sum_{j=0}^infty a_{ij}  konvergiert  sum_{i=0}^infty a_i  absolut. (c)  sum_{i=0}^infty (sum_{j=0}^infty a_{ij}) := sum_{i=0}^infty a_i = sum_{k=0}^infty a_{sigma(k)}.  
@@ -134,9 +134,9 @@ Bmk. Die obige Aussage gilt auch für  i  und  j  vertauscht  (widetilde{a_{ij}}
 
 # Dez 11. Wurzel- und Quotientenkriterium, Faktorreihen
 
-Satz, Wurzelkriterium. (a) Sei  q in (0,1) sse RR.  Für  sum_{k=0}^infty a_k  gelte  sqrt[n]{|a_n|} ≤ q  für fast alle  n.  Dann konvergiert  sum a_k  absolut. (b) Falls hingegen  sqrt[n]{|a_n|} ≥ 1  für fast alle (?)  n in NN,  dann divergiert diese Reihe.
+Satz, Wurzelkriterium. (a) Sei  q in (0,1) sse RR.  Für  sum_{k=0}^infty a_k  gelte  sqrt[n]{|a_n|} ≤ q  für fast alle  n.  Dann konvergiert  sum a_k  absolut. (b) Falls hingegen  sqrt[n]{|a_n|} ≥ 1  unendlich viele  n in NN,  dann divergiert diese Reihe.
 
-Satz, Quotientenkriterium. (a) Sei  q in (0, 1).  Sei außerdem  a_n neq 0  für fast alle  n in NN,  sowie  left|frac {a_n+1} {a_n}right| ≤ q  für fast alle  n.  Dann konvergiert  sum a_k  absolut. (b)  a neq 0  für fast alle  n  und  left|frac {a_n+1} {a_n}right| ≥ 1  für fast alle (?)  n,  dann ist  sum a_k  divergent.
+Satz, Quotientenkriterium. (a) Sei  q in (0, 1).  Sei außerdem  a_n neq 0  für fast alle  n in NN,  sowie  left|frac {a_n+1} {a_n}right| ≤ q  für fast alle  n.  Dann konvergiert  sum a_k  absolut. (b)  a neq 0  für fast alle  n  und  left|frac {a_n+1} {a_n}right| ≥ 1  für fast alle  n,  dann ist  sum a_k  divergent.
 
 Bmk. Aus Voraussetzung des QK folgt Voraussetzung des WK. (Voraussetzung des QK ist stärker als Voraussetzung des WK, das heißt die Aussage des WK ist stärker als die des QK.)
 
@@ -149,3 +149,13 @@ Def. Der **Konvergenzradius** einer Potenzreihe  P(z) = sum_{k=0}^infty a_k a^k 
 Satz. Sei  P(z) = sum_{n=0}^infty a_n z^n  und  R in [0, infty]  ihr Konvergenzradius. (i)  P(z)  konvergiert dann absolut für alle  z in CC  mit  |z| < R.  (ii)  P(z)  divergiert dann für alle  z in CC, |z| > R.  
 
 Satz, Berechnung des Konvergenzradius. Sei  R  Konvergenzradius der Reihe  sum a_k z^k.  (a)  R=frac 1 L  falls  L := limn sup sqrt[n]{|a_n|} in [0, infty] \; (frac 1 0 := infty, frac 1 infty := 0  HIER!). (b) Sei  left|frac {a_n+1} {a_n}right|  konvergent oder konvergierend gegen  infty.  Dann ist  R= frac 1 q,  wobei  q := limn left|frac {a_n+1} {a_n}right|.  
+
+# Dez 13. Identitätssatz, Stetigkeit
+
+Satz. Seien  P(z) = sum a_k z^k  und  Q(z) = sum b_k z^k  zwei Reihen mit Konvergenzradius  R_1  bzw.  R_2.  Dann hat die Potenzreihe  sum_{n=0}^infty (sum_{k=0}^n a_k b_{n-k})z^n =: S(z)  den Konvergenzradius  R = min (R_1, R_2).  
+
+Satz, Identitätssatz. Seien  P(z), \; Q(z)  zwei Potenzreihen mit *positiven* Konvergenzradien und sei  P(z_n) = Q(z_n)  für eine Nullfolge paarweise verschiedener  z_n in CC.  Dann ist  P=Q,  das heißt wenn  P=sum a_k z^k  und  Q=b_k z^k,  dann ist  a_k = b_k  für alle  k.  
+
+Lemma. Sei  P(z) = sum a_k z^k, \; a_k neq 0  für mindestens ein  k,  eine Reihe mit Konvergenzradius  R in (0, infty].  Dann gibt es ein  eps > 0,  so dass für jedes  z in CC, \; |z| < R \; (z in K_R(0))  mit  z neq 0  gilt:  P(z) = sum_{k=0}^infty a_k z^k neq 0,  falls  |z| < eps.  
+
+Def. Eine Funktion  f:D to CC \; (D sse CC)  heißt **stetig in**  z_0 in D  falls: Für alle  eps > 0  existiert ein  delta > 0,  so dass für jedes  z in D  mit  |z-z_0|<delta  gilt:  |f(z)-f(z_0)| < eps.  Eine Funktion, die in allen  z in D  stetig ist, heißt **stetig**.
