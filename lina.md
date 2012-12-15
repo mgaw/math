@@ -66,7 +66,7 @@ Def.  sgn(sigma) = (-1)^{\#\{(i,j) \;:\; i<j \text{ und } sigma(i) > sigma(j)\}}
 
 Lemma.  \forall sigma \in S_n : sgn(sigma) = (Produkt) \frac{sigma(j) - sigma(i)}{j-i}.  
 
-Def.  sigma in S_n  heißt **gerade**, falls  sgn(sigma) = 1. \; sigma heißt **ungerade**, falls  sgn(sigma) = -1.  
+Def.  sigma in S_n  heißt **gerade**, falls  sgn(sigma) = 1. \; sigma heißt **ungerade**, falls  sgn(sigma) = -1. 
 
 Def.  ker(sgn) = A_n = \{ sigma in S_n : sgn(sigma) = 1 \}  heißt die **alternierende Gruppe**.
 
