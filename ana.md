@@ -71,33 +71,32 @@ Bmk. Das Cauchy-Kriterium folgt aus Supremumeigenschaft von  RR,  beide Eigensch
 
 Def. Sei  (a_n)  Folge in  CC  und  s_n := sum_{k=0}^n a_k.  Die Folge  (s_n)  heißt **Reihe**, die  a_n  **Glieder der Reihe**, die  s_n  **Partialsummen**. Eine Reihe heißt **konvergent**, falls die Folge  (s_n)  konvergiert. Dann wird der Grenzwert mit  sum_{k=0}^infty a_k := limn s_n  bezeichnet. (Achtung: Mit  sum_{k=0}^infty a_k  wird gewöhnlich auch die *Reihe*  (s_n)  bezeichnet.)
 
-Bsp. Für ein  z in CC  heißt  sum_{k=0}^infty z^k  die **geometrische Reihe**. Für  z neq 1  ist  s_n = sum_{k=0}^n = frac{1-z^{n+1}}{1-z}.  Also für  |z| < 1 : sum_{k=0}^infty z^k = frac 1 {1-z}.  
+Bsp. Für ein  z in CC  heißt  sum_{k=0}^infty z^k  die [**geometrische Reihe**](http://www.proofwiki.org/wiki/Geometric_Series). Für  z neq 1  ist  s_n = sum_{k=0}^n z^k = frac{1-z^{n+1}}{1-z}.  Also für  |z| < 1 : sum_{k=0}^infty z^k = frac 1 {1-z}.  
 
 # Dez 4. Konvergenzkriterien
 
-??.  sum^infty_{k=0} a_k,  auch  sum^infty_{k=k_0},  auch  sum^infty_{k=-k_0}, \; k_0 in NN.  
+Satz. Sei  sum^infty_{k=0} a_k  konvergent und  k_0 in NN.  Dann sich auch  sum^infty_{k=k_0} a_k  und  sum^infty_{k=-k_0} a_k  konvergent. Anders gesagt: Das Hinzufügen oder Entfernen *endlich vieler* Summanden ändert nichts an der Konvergenz der Reihe (am Grenzwert möglicherweise schon).
 
-Konvergenzen.
+Bsp.  sum^infty_{k=1} frac 1 {k(k+1)}; \; s_n = sum^n_{k=1} frac 1 {k(k+1)} = 1 - frac 1 {k+1}, \; limn s_n = 1 - limn frac 1 {n+1} = 1.  
 
-(i). Geometrische Reihe.
-
-(ii).  sum^infty_{k=1} frac 1 {k(k+1)}; \; s_n = sum^n_{k=1} frac 1 {k(k+1)} = 1 - frac 1 {k+1}, \; limn s_n = 1 - limn frac 1 {n+1} = 1.  
-
-(iii).  sum^infty_{k=0} (-1)^k  divergent.  s_n = 1  für  n  ungerade,  s_n = 0  sonst.
+Bsp.  sum^infty_{k=0} (-1)^k  divergent.  s_n = 1  für  n  ungerade,  s_n = 0  sonst.
 
 Satz: [Harmonische Reihe](http://www.proofwiki.org/wiki/Sum_of_Reciprocals_is_Divergent).
   sum_{k=1}^infty frac 1 k = infty.  
 
-Satz.  sum_{k=0}^infty a_k  konvergiert genau dann, wenn für jedes  eps > 0  existiert  N in NN,  so dass für  n > m ≥ N : |sum_{k=m+1}^n a_k| < eps.  
+Satz.  sum_{k=0}^infty a_k  konvergiert genau dann, wenn für jedes  eps > 0  existiert ein  N in NN,  so dass für  n > m ≥ N : |sum_{k=m+1}^n a_k| < eps.  
 
-Folgerung. 1) Konvergiert  sum_{k=0}^infty a_k  so ist die Folge ihrer Glieder  (a_k)_{k in NN}  eine Nullfolge. 2) Das Abändern *endlich vieler* Reihenglieder ändert nichts am Konvergenzverhalten der Reihe.
+Folgerung. [1)](http://www.proofwiki.org/wiki/Terms_in_Convergent_Series_Converge_to_Zero) Konvergiert  sum_{k=0}^infty a_k  so ist die Folge ihrer Glieder  (a_k)_{k in NN}  eine Nullfolge. 2) Das Abändern *endlich vieler* Reihenglieder ändert nichts am Konvergenzverhalten der Reihe.
 
 Satz: [Majorantenkriterium](http://www.proofwiki.org/wiki/Comparison_Test).
-Sei  |a_n| ≤ b_n  für alle  n in NN.  Wenn  sum_{k=0}^infty b_n  konvergiert, so konvergiert auch  sum_{k=0}^infty a_k.  
+Sei  |a_n| ≤ b_n  für alle  n in NN.  Wenn  sum_{k=0}^infty b_k  konvergiert, so konvergiert auch  sum_{k=0}^infty a_k.  Man sagt:  (b_n)  ist (konvergierende) Majorante von  (a_n).  
 
 Satz. Sei  a_n ≥ 0  für alle  n in NN.  Dann konvergiert  sum_{k=0}^infty a_k  genau dann, wenn ihre Partialsummenfolge beschränkt ist.
 
-Bmk.  \zeta (s) := sum_{k=1}^infty frac 1 {k^s}  hießt Riemannsche Zetafunktion.
+Satz: [Hyperharmonische Reihe](http://www.proofwiki.org/wiki/P-Series_Converge_Absolutely).
+  sum_{k=1}^infty k^{-p}  divergiert für  0 < p ≤ 1.  Sie konvergiert absolut für  p > 1.  
+
+Bmk.  \zeta (s) := sum_{k=1}^infty frac 1 {k^s}  (der Grenzwert einer konvergenten hyperharmonischen Reihe) heißt **Riemannsche Zetafunktion** und ist höchst rätselhaft.
 
 Satz: [Leibniz-Kriterium](http://www.proofwiki.com/wiki/Alternating_Series_Test).
 Sei  (a_n)  eine monoton fallende Nullfolge, dann konvergiert die alternierende Reihe  sum_{k=0}^infty (-1)^k a_k.  
@@ -134,9 +133,11 @@ Bmk. Die obige Aussage gilt auch für  i  und  j  vertauscht  (widetilde{a_{ij}}
 
 # Dez 11. Wurzel- und Quotientenkriterium, Faktorreihen
 
-Satz, Wurzelkriterium. (a) Sei  q in (0,1) sse RR.  Für  sum_{k=0}^infty a_k  gelte  sqrt[n]{|a_n|} ≤ q  für fast alle  n.  Dann konvergiert  sum a_k  absolut. (b) Falls hingegen  sqrt[n]{|a_n|} ≥ 1  unendlich viele  n in NN,  dann divergiert diese Reihe.
+Satz, [Wurzelkriterium](http://www.proofwiki.org/wiki/Nth_Root_Test).
+(a) Sei  q in (0,1) sse RR.  Für  sum_{k=0}^infty a_k  gelte  sqrt[n]{|a_n|} ≤ q  für fast alle  n.  Dann konvergiert  sum a_k  absolut. (b) Falls hingegen  sqrt[n]{|a_n|} ≥ 1  unendlich viele  n in NN,  dann divergiert diese Reihe.
 
-Satz, Quotientenkriterium. (a) Sei  q in (0, 1).  Sei außerdem  a_n neq 0  für fast alle  n in NN,  sowie  left|frac {a_n+1} {a_n}right| ≤ q  für fast alle  n.  Dann konvergiert  sum a_k  absolut. (b)  a neq 0  für fast alle  n  und  left|frac {a_n+1} {a_n}right| ≥ 1  für fast alle  n,  dann ist  sum a_k  divergent.
+Satz, [Quotientenkriterium](http://www.proofwiki.org/wiki/Ratio_Test).
+(a) Sei  q in (0, 1).  Sei außerdem  a_n neq 0  für fast alle  n in NN,  sowie  left|frac {a_{n+1}} {a_n}right| ≤ q  für fast alle  n.  Dann konvergiert  sum a_k  absolut. (b)  a neq 0  für fast alle  n  und  left|frac {a_{n+1}} {a_n}right| ≥ 1  für fast alle  n,  dann ist  sum a_k  divergent.
 
 Bmk. Aus Voraussetzung des QK folgt Voraussetzung des WK. (Voraussetzung des QK ist stärker als Voraussetzung des WK, das heißt die Aussage des WK ist stärker als die des QK.)
 
@@ -148,7 +149,7 @@ Def. Der **Konvergenzradius** einer Potenzreihe  P(z) = sum_{k=0}^infty a_k a^k 
 
 Satz. Sei  P(z) = sum_{n=0}^infty a_n z^n  und  R in [0, infty]  ihr Konvergenzradius. (i)  P(z)  konvergiert dann absolut für alle  z in CC  mit  |z| < R.  (ii)  P(z)  divergiert dann für alle  z in CC, |z| > R.  
 
-Satz, Berechnung des Konvergenzradius. Sei  R  Konvergenzradius der Reihe  sum a_k z^k.  (a)  R=frac 1 L  falls  L := limn sup sqrt[n]{|a_n|} in [0, infty] \; (frac 1 0 := infty, frac 1 infty := 0  HIER!). (b) Sei  left|frac {a_n+1} {a_n}right|  konvergent oder konvergierend gegen  infty.  Dann ist  R= frac 1 q,  wobei  q := limn left|frac {a_n+1} {a_n}right|.  
+Satz, Berechnung des Konvergenzradius. Sei  R  Konvergenzradius der Reihe  sum a_k z^k.  (a)  R=frac 1 L  falls  L := limn sup sqrt[n]{|a_n|} in [0, infty] \; (frac 1 0 := infty, frac 1 infty := 0  HIER!). (b) Sei  left|frac {a_{n+1}} {a_n}right|  konvergent oder konvergierend gegen  infty.  Dann ist  R= frac 1 q,  wobei  q := limn left|frac {a_{n+1}} {a_n}right|.  
 
 # Dez 13. Identitätssatz, Stetigkeit
 
