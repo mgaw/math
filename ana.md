@@ -116,11 +116,11 @@ Satz. Sei  sum a_k  absolut konvergent. Dann ist für jede Bijektion  sigma : NN
 
 Satz.  sum(a_k+b_k) = sum a_k + sum b_k. quad sum(Re a_k) = Re (sum a_k). quad sum Im a_k = Im sum a_k. quad sum overline{a_k} = overline{sum a_k}.  
 
-Def. Seien  sum a_k, \; sum b_k  zwei Reihen. Weiterhin sei  sigma : NN to NN  bijektiv und  sigma(k) =: (sigma_1(k), sigma_2(k)).  Definieren  c_k := a_{sigma_1(k)} cdot b_{sigma_s(k)}.  Dann heißt  sum_{k=0}^infty c_k  (die zu  sigma  gehörende) **Produktreihe**.
+Def. Seien  sum a_k, \; sum b_k  zwei Reihen. Weiterhin sei  sigma : NN to NN times NN  bijektiv und  sigma(k) =: (sigma_1(k), sigma_2(k)).  Definieren  c_k := a_{sigma_1(k)} cdot b_{sigma_s(k)}.  Dann heißt  sum_{k=0}^infty c_k  (die zu  sigma  gehörende) **Produktreihe**.
 
 Satz. Seien  sum a_k, \; sum b_k  absolut konvergent. Dann ist für jedes bijektive  sigma : NN to NN^2  die zugehörige Produktreihe konvergent. Sie konvergieren *alle* gegen  (sum_{k=0}^infty a_k)(sum_{k=0}^infty b_k).  
 
-Def. Seien  sum a_k, \; sum b_k  Reihen und  c_n := a_0b_n + a_1b_{n-1} + ... + a_nb_0 = sum_{k=0}^infty a_kb_{n-k}.  Dann heißt  sum_{k=0}^infty c_k  das **Cauchy-Produkt** der beiden Reihen.
+Def. Seien  sum a_k, \; sum b_k  Reihen und  c_n := a_0b_n + a_1b_{n-1} + ... + a_nb_0 = sum_{k=0}^n a_kb_{n-k}.  Dann heißt die Reihe  sum_{k=0}^infty c_k  das **Cauchy-Produkt** der beiden Reihen.
 
 Folgerung. Sind  sum a_k  und  sum b_k  absolut konvergent, so konvergiert ihr Cauchy-Produkt absolut gegen  (sum a_k)(sum b_k).  
 

@@ -245,3 +245,11 @@ Satz.  pZZ  ist genau dann Primideal von  ZZ,  wenn  p  Primzahl ist.
 Satz. Sei  I sse ZZ, x in X setminus I.  Dann gilt  J := displaystyle bigcap_{tilde J \text{ Ideal, } I cup \{x\} sse tilde J} = \{i+kx : i in I, k in ZZ\} =: H.  
 
 Satz. Sei  I  ein maximales Ideal von  ZZ.  Dann ist  I  Primideal.
+
+# Dez 18. Basis
+
+Def. Sei  V  ein *K*-Vektorraum. Eine Familie  B = (e_i)_{i in I} sse V  heißt **Basis**, falls gilt: (1)  B  ist linear unabhängig und (2)  B  ist ein Erzeugendensystem von  V,  das heißt  span(B) = V.  
+
+Satz. Für eine Teilmenge  B=(e_i)_{i in I} sse V  sind die folgenden Bedingungen äquivalent: (1)  B  ist Basis. (2)  B  ist ein *minimales* Erzeugendensystem von  V,  das heißt:  A sse B  ist Erz.sys.  => A=B.  (3)  B  ist eine *maximale* linear unabhängige Teilmenge von  V,  das heißt:  B ssne B' sse V => B'  ist linear unabhängig.
+
+Lemma, Austauschlemma. Sei  V  *K*-Vektorraum,  B = \{e_1, ..., e_r\}  Basis von  V  und  v=lam_1e_1 + ... + lam_re_r in V.  Ist  lam_k neq 0 \;(1 ≤ k ≤ r),  dann ist  B':=\{e_1, ..., e_{k-1}, v, e_{k+1}, ..., e_r\}  wieder Basis von  V.  
