@@ -1,6 +1,34 @@
 Titel: Analysis I*
 Vorlage: math
 
+# Okt 30. Angeordneter Körper
+
+Def.  QQ := \{frac p q : p,q in ZZ, q neq 0\}, \; frac p q = frac r s :<=> ps=qr, \; frac p q + frac r s := frac{ps+rq}{qs}, \; frac p q cdot frac r s := frac{pr}{qs}, \; q,s >0 : frac p q < frac r s :<=> ps < qr.  
+
+Bmk.  (QQ, <=)  ist geordnete Menge.
+
+Def (Anordnungsaxiom). Körper  KK  heißt **angeordnet**, falls eine Teilmenge  KK_+ subset KK  folgendes erfüllt: (A1) Für jedes  a in KK  gilt *entweder*  (a in KK_+)  *oder*  (-a in KK_+)  *oder*  a=0.  (A2) Für alle  a,b in KK_+  gilt:  a+b in KK_+  *und*  a cdot b in KK_+. \; KK_+  werden auch die **positiven** Elemente von  KK  genannt.
+
+Def.  (a>0) :<=> a in KK_+.  
+
+Def.  KK  Körper,  a,b in KK. \; a>b :<=> (a-b)>0.  
+
+(...)
+
+# Nov 1. Supremumseigenschaft der reellen Zahlen
+
+Satz. Es gibt keine rationale Zahl  x in QQ  mit  x^2 = 2.  
+
+(Reelle Zahlen:  RR supset QQ. \; +, cdot, <=  auf  QQ  wie bei  QQ.)  
+
+Def. Menge mit Ordnungsrelation gegeben. (i)  M neq varnothing  heißt **nach oben beschränkt** falls es ein Element  s  (nicht notwendigerweise in  M)  gibt mit:  forall x in M: x <= s.  (ii) Analog **nach unten beschränkt**. (iii)  s  heißt **Supremum von**  M,  falls  s  *kleinste* obere Schranke ist. (iv) **Infimum** analog. (v) **Maximum**, falls Supremum  s in M.  (vi) Analog **Minimum**.
+
+(Vollständigkeitsaxiom bringt die reellen Zahlen)
+
+Satz.  NN subset RR  ist unbeschränkt.
+
+Satz (von Eudoxos). Sei  x in RR, \; x > 0.  Dann existiert  n in NN  mit  frac 1 n < x.  
+
 # Nov 6. Existenz der *n*-ten Wurzel, Intervallschachtelung
 
 Satz (Existenz der *n*-ten Wurzel).  n in NN, n >= 1, a in RR, a > 0.  Für jedes  a  gibt es  x in RR, x > 0  mit  x^n = a.  Schreibweise:  sqrt[n] a := a^{frac 1 n} := x.  
