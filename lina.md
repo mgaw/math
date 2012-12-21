@@ -253,3 +253,17 @@ Def. Sei  V  ein *K*-Vektorraum. Eine Familie  B = (e_i)_{i in I} sse V  heißt 
 Satz. Für eine Teilmenge  B=(e_i)_{i in I} sse V  sind die folgenden Bedingungen äquivalent: (1)  B  ist Basis. (2)  B  ist ein *minimales* Erzeugendensystem von  V,  das heißt:  A sse B  ist Erz.sys.  => A=B.  (3)  B  ist eine *maximale* linear unabhängige Teilmenge von  V,  das heißt:  B ssne B' sse V => B'  ist linear unabhängig.
 
 Lemma, Austauschlemma. Sei  V  *K*-Vektorraum,  B = \{e_1, ..., e_r\}  Basis von  V  und  v=lam_1e_1 + ... + lam_re_r in V.  Ist  lam_k neq 0 \;(1 ≤ k ≤ r),  dann ist  B':=\{e_1, ..., e_{k-1}, v, e_{k+1}, ..., e_r\}  wieder Basis von  V.  
+
+# Dez 20. Dimension
+
+Satz (Austauschsatz). Sei  V  *K*-Vektorraum,  B = \{e_1, ... e_r\}  Basis und  \{v_1, ..., v_n\}  eine linear unabhängige Familie. Dann gilt: (1)  n <= r.  (2) Es gibt Indizes  i_{n+1}, ..., i_r in \{1, ..., r\},  so dass  \{v_1, ..., v_n, e_{i_{n+1}}, ..., e_{i_r}\}  auch eine Basis von  V  ist. (Bew. mit Induktion nach  n  und Austauschlemma.)
+
+Kor. Hat ein *K*-Vektorraum  V  eine endliche Basis, so ist jede Basis von  V  endlich.
+
+Kor. Zwei endliche Basen eines *K*-Vektorraumes haben die gleiche Länge.
+
+Def. Sei  V  *K*-Vektorraum. Dann  dim_K V := infty,  falls  V  keine endliche Basis besitzt.  dim_K V := r,  falls  V  eine Basis der Länge  r  besitzt.
+
+Satz. Ist  V  endlich erzeugt, dann gibt es eine endliche Basis von  V.  
+
+Prop. Ist  V  nicht endlich erzeugt, so gibt es eine unendliche linear unabhängige Familie von Vektoren.

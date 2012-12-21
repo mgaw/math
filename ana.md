@@ -1,7 +1,31 @@
 Titel: Analysis I*
 Vorlage: math
 
+# Nov 6. Existenz der *n*-ten Wurzel, Intervallschachtelung
+
+Satz (Existenz der *n*-ten Wurzel).  n in NN, n >= 1, a in RR, a > 0.  Für jedes  a  gibt es  x in RR, x > 0  mit  x^n = a.  Schreibweise:  sqrt[n] a := a^{frac 1 n} := x.  
+
+Satz. Die rationalen Zahlen liegen in den reellen Zahlen dicht, das heißt für je zwei reelle Zahlen  x,y in RR  mit  x<y  existiert ein  a in QQ  mit  x<a<y.  
+
+Def. Seien  a,b in RR, \; a <b.  Dann  [a,b] := \{x in RR : a <= x <= b\}  heißt **abgeschlossenes Intervall**.  (a,b) := \{x in RR : a < x <b\}  **offenes Intervall**. Halboffene Intervalle  (a, b]  und  [a,b). \; I  Intervall. Dann  |I| := (b-a)  **Länge des Intervalls**. **Intervallschachtelung** ist Folge von Intervallen  I_0, I_1, I_2, ...  mit  I_{n+1} sse I_n  und zu jedem  esp > 0  gibt es ein  n in NN  mit  |I_n| < eps.  
+
+Satz (Intervallschachtelungsprinzip). Für jede Intervallschachtelung *abgeschlossener* Intervalle existiert genau ein Element im Durchschnitt:  \{x\} = bigcap_{n=0}^infty I_n.  
+
+# Nov 8. Abzählbarkeit, komplexe Zahlen
+
+Bmk. (i) Allgemein gilt für Intervalle  I_n  mit  I_n sse I_{n+1}  immer  bigcap_{n=0}^infty I_n neq varnothing.  (?) (ii) Supremumseigenschaft und Intervallschachtelung sind äquivalent. (iii) Satz 21 gilt nicht für offene/halboffene Intervalle  I_n.  
+
+Def. Eine unendliche Menge heißt **abzählbar**, wenn es eine *bijektive* von den natürlichen Zahlen in diese Menge gibt.
+
+Satz. Die Menge der reellen Zahlen ist nicht abzählbar.
+
+Def.  CC:=\{a+ib : a,b in RR\} cong RR^2.  
+
+Satz.  CC  ist eine Körper mit  0+i0  als Null und  1+i0  als Eins. Das Reziproke (multiplikativ Inverse) von  a+ib neq 0  ist gegeben durch  frac{1}{a+ib} := frac{a-ib}{a^2+b^2}.  
+
 # Nov 13. Konvergenz
+
+Satz. (1) Quadratwurzeln existieren für jede komplexe Zahl.  +- z = +- sqrt w = +- sqrt r (cos frac phi 2 + i sin frac phi 2).  (2) Erhalten somit immer Lösung einer quadratischen Gleichung. (3) (Fundamentalsatz der Algebra) Jedes nicht-konstante Polynom mit Koeffizienten in  CC  besitzt eine Nullstelle.
 
 Def. Eine **Folge**  (a_n)_{n in NN}  ist Abbildung  a : NN to CC. a_n in CC  mit  a_n := a(n).  Eine Folge  (a_n)_{n in NN}  heißt **konvergent**, falls es eine komplexe Zahl  a in CC  gibt mit folgender Eigenschaft: Für jedes  eps > 0  gibt es ein  N in NN  mit: für jedes  n > N  gilt:  |a_n - a| < eps. \; a  heißt dann **Grenzwert** der Folge. Man sagt:  (a_n)  konvergiert gegen  a  oder:  limn a_n = a.  
 
@@ -160,3 +184,15 @@ Satz, Identitätssatz. Seien  P(z), \; Q(z)  zwei Potenzreihen mit *positiven* K
 Lemma. Sei  P(z) = sum a_k z^k, \; a_k neq 0  für mindestens ein  k,  eine Reihe mit Konvergenzradius  R in (0, infty].  Dann gibt es ein  eps > 0,  so dass für jedes  z in CC, \; |z| < R \; (z in K_R(0))  mit  z neq 0  gilt:  P(z) = sum_{k=0}^infty a_k z^k neq 0,  falls  |z| < eps.  
 
 Def. Eine Funktion  f:D to CC \; (D sse CC)  heißt **stetig in**  z_0 in D  falls: Für alle  eps > 0  existiert ein  delta > 0,  so dass für jedes  z in D  mit  |z-z_0|<delta  gilt:  |f(z)-f(z_0)| < eps.  Eine Funktion, die in allen  z in D  stetig ist, heißt **stetig**.
+
+# Dez 20. Lipschitz-stetig, Folgenkriterium
+
+Def.  D sse CC. \; f:D to CC  heißt **Lipschitz-stetig** falls es ein  L >= 0  gibt für das gilt:  |f(x)-f(y)| <= L cdot (x-y).  
+
+Satz. Jede Lipschitz-stetige Funktion ist stetig.
+
+Satz.  E sse D sse CC, \; z_0 in E, \; f:D to CC  ist stetig in  z_0.  Dann ist auch  f|_E : E to CC  stetig in  z_0.  
+
+Satz (Folgenkriterium der Stetigkeit).  D sse CC, \; z_0 in D.  Eine Funktion  f: D to CC  ist genau dann stetig in  z_0,  wenn *für jede* Folge  (z_n) sse CC  mit  limn z_n = z_0  gilt, dass  limn f(z_n) = f(z_0).  
+
+Satz. (i)  D sse CC.  Seien  f,g : D to CC  stetig in  z_0 in D.  Dann sind  f+g, f cdot g : D to CC  stetig in  z_0.   (ii) Sei  E:=\{z in D : g(z) neq 0\}.  Dann gibt es für jedes  z_0 in E  ein  r>0  mit  g|_{K_r(z_0) cap D} neq 0  überall (das heißt  K_r(z_0) cap D sse E).  Weiterhin gilt  frac{f|_E}{g|_E} : E to CC  ist stetig in  z_0.  
