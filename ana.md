@@ -21,7 +21,7 @@ Satz.. Es gibt keine rationale Zahl  x in QQ  mit  x^2 = 2.
 
 (Reelle Zahlen:  RR supset QQ. \; +, cdot, <=  auf  QQ  wie bei  QQ.)  
 
-Def.. Menge mit Ordnungsrelation gegeben.. (i) Eine Teilmenge  M neq varnothing  heißt **nach oben beschränkt** falls es ein Element  s  (nicht notwendigerweise in  M)  gibt mit:  forall x in M: x <= s..  (ii) Analog **nach unten beschränkt**.. (iii)  s  heißt **Supremum von**  M,  falls  s  *kleinste* obere Schranke ist.. (iv) **Infimum** analog.. (v) **Maximum**, falls Supremum  s in M..  (vi) Analog **Minimum**.
+Def.. Menge mit Ordnungsrelation gegeben.. (i) Eine Teilmenge  M neq varnothing  heißt **nach oben beschränkt** falls es ein Element  s  (nicht notwendigerweise in  M)  gibt mitt:  forall x in M: x <= s..  (ii) Analog **nach unten beschränkt**.. (iii)  s  heißt **Supremum von**  M,  falls  s  *kleinste* obere Schranke ist.. (iv) **Infimum** analog.. (v) **Maximum**, falls Supremum  s in M..  (vi) Analog **Minimum**.
 
 (Vollständigkeitsaxiom bringt die reellen Zahlen)
 
@@ -224,3 +224,29 @@ Satz..  E sse D sse CC, \; z_0 in E, \; f:D to CC  ist stetig in  z_0.  Dann ist
 **Folgenkriterium der Stetigkeit**..  D sse CC, \; z_0 in D.  Eine Funktion  f: D to CC  ist genau dann stetig in  z_0,  wenn *für jede* Folge  (z_n) sse CC  mit  limn z_n = z_0  gilt, dass  limn f(z_n) = f(z_0).  
 
 Satz.. (i)  D sse CC.  Seien  f,g : D to CC  stetig in  z_0 in D.  Dann sind  f+g, f cdot g : D to CC  stetig in  z_0..  (ii) Sei  E:=\{z in D : g(z) neq 0\}.  Dann gibt es für jedes  z_0 in E  ein  r>0  mit  g|_{K_r(z_0) cap D} neq 0  überall (das heißt  K_r(z_0) cap D sse E).  Weiterhin gilt  frac{f|_E}{g|_E} : E to CC  ist stetig in  z_0.  
+
+# Jan 8. Gleichmäßige Konvergenz
+
+Satz..  D sse CC.  Seien  f:D to CC, g:E to CC  stetige Funktionen mit  f(D) sse E.  Dann ist  g circ f : D to CC  ebenfalls stetig.
+
+Satz..  f:D to CC  stetig. Dann sind  overline f, |f|, Re f  und  Im f  ebenfalls stetig.
+
+Def..  D sse RR, f : D to RR  heißt **(streng) monoton wachsend**, falls für alle  x, y in D: x < y => f(x) ≤ f(y) \; (f(x) < f(y)).  **Monoton fallend** analog.
+
+Satz.. Sei  I sse RR  ein Intervall und  f:I to RR  streng monoton wachsend. Definieren  E:=f(I) = \{f(x) : x in I\}  und  g:E to I sse RR  mit  g(y) := x  für  f(x) = y. \; g  heißt **Umkehrfunktion**. Sie ist wohldefiniert und stetig.
+
+Bsp..  n in NN.. g(x) := sqrt[n]{x}  ist stetig.
+
+Folgerung..  f(x) = x^s  für  s in QQ_+  ist stetig.
+
+Def.. Sei  D sse CC  und  f_n : D to CC  eine Folge,  (f_n),  von Funktionen  f:D to CC. \; (f_n)  **konvergiert punktweise** gegen  f  falls für *jedes*  z in D  gilt:  limn f_n(z) = f(z). \; f  heißt **Grenzwert** oder **Grenzfunktion**. Schreibweise:  limn f_n = f  punktweise.
+
+Def.. Sei  D sse CC  und  f:D to CC  Funktion.  ||f||_D := sup \{|f(x)|:x in D\} in [0, infty]  ist die **Supremumsnorm**.  f  heißt **beschränkt**, falls  ||f||_D < infty.  
+
+Bmk.. Seien  f, g : D to CC  beschränkt.. (1)  ||f||_D = 0 <=> f == 0..  (2)  c in CC : ||cf||_D = |c| cdot ||f||_D.  (3)  ||f+g||_D ≤ ||f||_D + ||g||_D.  
+
+Def..  D sse CC, \; f_n, f : D to CC  Funktionen,  n in NN.. (f_n)  **konvergiert gleichmäßig** gegen  f  falls  limn ||f_n-f||_D = 0.  Schreibweise:  limn f_n = f  gleichmäßig.
+
+Bmk..  (f_n)  konvergiere gleichmäßig gegen  f.  Dann konvergiert  (f_n)  auch punktweise.
+
+Satz..  D sse CC, \; f_n, f : D to CC, n in NN.. (f_n)  konvergiere gleichmäßig gegen  f  und alle  f_n  seien stetig. Dann ist  f  auch stetig.
