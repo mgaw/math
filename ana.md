@@ -250,3 +250,23 @@ Def..  D sse CC, \; f_n, f : D to CC  Funktionen,  n in NN.. (f_n)  **konvergier
 Bmk..  (f_n)  konvergiere gleichmäßig gegen  f.  Dann konvergiert  (f_n)  auch punktweise.
 
 Satz..  D sse CC, \; f_n, f : D to CC, n in NN.. (f_n)  konvergiere gleichmäßig gegen  f  und alle  f_n  seien stetig. Dann ist  f  auch stetig.
+
+# Jan 10. Funktionenreihen, Zwischenwertsatz
+
+Def.. Sei  (f_n)_{n in NN}  eine Folge von Funktionen  f_n : D sse CC to CC.  Die Funktionenreihe  sum_{n=0}^infty f_n  heißt **absolut** konvergent, falls für jedes  z in DD  die Reihe  sum_{n=0}^infty f_n(z)  absolut konvergiert.
+
+Def..  sum_{n=0}^infty f_n  heißt **gleichmäßig** konvergent, falls die Folge der Partialsummen  s_n = sum_{k=0}^infty f_k : D to CC  gleichmäßig konvergiert.
+
+**Weierstraßkriterium für die Konvergenz einer Funktionenreihe**.. Sei  sum_{n=0}^infty f_n  eine Funktionenreihe wie oben. Gilt  sum_{n=0}^infty ||f_n||_D < infty,  dann ist  sum_{n=0}^infty f_n  absolut und gleichmäßig konvergent.
+
+Bmk.. Die Umkehrung gilt nicht.
+
+Satz.. Sei  P(z) = sum_{k=0}^infty a_k z^k  eine Potenzreihe mit Konvergenzradius  R > 0..  (1) Für  0<r<R  ist  P(z)|_{K_r(0)}  absolut und gleichmäßig konvergent.. (2)  P:K_R(0) to CC  ist stetig.
+
+Bsp.. (i)  z mapsto sum_{k=0}^infty z^k  ist stetig auf  K_1(0)..  (ii)  exp(z) = sum_{k=0}^infty frac{1}{k!} z^k  definiert eine stetige Funktion  CC to CC.  
+
+**Zwischenwertsatz**.. Sei  f : [a,b] to RR  eine stetige Funktion. Dann existiert für jedes  y  echt zwischen  f(a)  und  f(b)  ein  c in (a,b)  mit  y = f(c).  
+
+Satz.. Ist  P(x) = a_n x^n + ... + a_1 x + a_0  ein reelles Polynom vom Grad  n in NN, \; a_n neq 0, \; n  ungerade. Dann hat  P  eine Nullstelle in  RR.  
+
+Satz.. (i) Für  z, w in CC  gilt  exp(z+w) = exp(z)exp(w)..  (ii)  exp|_RR : RR to RR_+  ist streng monoton wachsend, stetig und bijektiv.. (iii) Die Umkehrfunktion  ln = (exp|_RR)^{-1}  ist eine streng monoton wachsende, stetige und bijektive Funktion  RR_+ to RR..  (iv) Es gilt  ln(1) = 0  und  ln(xy) = ln(x) + ln(y)  für  x,y in RR_+.  
