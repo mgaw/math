@@ -253,7 +253,7 @@ Satz..  D sse CC, \; f_n, f : D to CC, n in NN.. (f_n)  konvergiere gleichmäßi
 
 # Jan 10. Funktionenreihen, Zwischenwertsatz
 
-Def.. Sei  (f_n)_{n in NN}  eine Folge von Funktionen  f_n : D sse CC to CC.  Die Funktionenreihe  sum_{n=0}^infty f_n  heißt **absolut** konvergent, falls für jedes  z in DD  die Reihe  sum_{n=0}^infty f_n(z)  absolut konvergiert.
+Def.. Sei  (f_n)_{n in NN}  eine Folge von Funktionen  f_n : D sse CC to CC.  Die Funktionenreihe  sum_{n=0}^infty f_n  heißt **absolut** konvergent, falls für jedes  z in D  die Reihe  sum_{n=0}^infty f_n(z)  absolut konvergiert.
 
 Def..  sum_{n=0}^infty f_n  heißt **gleichmäßig** konvergent, falls die Folge der Partialsummen  s_n = sum_{k=0}^infty f_k : D to CC  gleichmäßig konvergiert.
 
@@ -270,3 +270,25 @@ Bsp.. (i)  z mapsto sum_{k=0}^infty z^k  ist stetig auf  K_1(0)..  (ii)  exp(z) 
 Satz.. Ist  P(x) = a_n x^n + ... + a_1 x + a_0  ein reelles Polynom vom Grad  n in NN, \; a_n neq 0, \; n  ungerade. Dann hat  P  eine Nullstelle in  RR.  
 
 Satz.. (i) Für  z, w in CC  gilt  exp(z+w) = exp(z)exp(w)..  (ii)  exp|_RR : RR to RR_+  ist streng monoton wachsend, stetig und bijektiv.. (iii) Die Umkehrfunktion  ln = (exp|_RR)^{-1}  ist eine streng monoton wachsende, stetige und bijektive Funktion  RR_+ to RR..  (iv) Es gilt  ln(1) = 0  und  ln(xy) = ln(x) + ln(y)  für  x,y in RR_+.  
+
+# Jan 15. Offene Menge
+
+Def..  exp(z) := sum_{k=0}^infty frac{z^k}{k!}.  
+
+Satz..  x, y in CC.. exp(x+y) = exp(x) cdot exp(y).  
+
+Folgerung.. (1)  exp(1) = sum_{k=0}^infty frac{1}{k!} = e (= limn (1+frac 1 n)^n)..  (2) Für  x in QQ  gilt  exp(x) = e^x.  Setzen für  x in RR: \; e^x := exp(x)..  (3)  a > 0, x in RR. \; a^x := e^{x cdot ln a}.  Das passt zu der alten Definition:  x in QQ => a^x = sqrt[n]{m}.  Außerdem:  x in RR mapsto a^x in RR  stetig.
+
+Def.. (1) Eine Teilmenge  U sse RR  heißt **offen** (offene Menge), falls es für jedes  x in U  ein  ε > 0  gibt, so dass  (x-ε, x+ε) sse U..  (2)  U sse CC  heißt offen, falls für jedes  x in U  ein  ε > 0  existiert, so dass  K(x; ε) sse U..  (3)  A sse RR  (bzw.  A sse CC)  heißt **abgeschlossen**, wenn  RR setminus A  (bzw.  CC setminus A)  offen ist.
+
+Bsp.. (1)  RR subset CC  abgeschlossen, aber nicht offen. (2)  a,b in RR, a<b. \; (a,b) subset RR  offen, aber nicht in  CC. \; [a,b] subset RR  abgeschlossen, auch abgeschlossen in  CC.  
+
+Satz.. (1) Jede offene Menge in  RR  (in  CC)  ist *abzählbare* Vereinigung von offenen Intervallen (offenen Kreisscheiben).. (2)  A sse RR  abgeschlossen, dann auch  A sse CC  abgeschlossen.. (3)  A sse CC  abgeschlossen genau dann, wenn für jede Folge  (x_n) sse A  gilt:  (limn x_n = x) => (x in A).  
+
+Satz. Sei  f : D to RR, \; f  stetig,  D sse CC  sei abgeschlossen und beschränkt. Dann nimmt  f  ihr Minimum und ihr Maximum auf  D  an: Es gibt ein  x_{min}, x_{max} in D,  so dass  f(x_{min}) = inf \{f(x) : x in D\}, \; f(x_{max}) = sup \{f(x) : x in D\}.  Insbesondere ist  f  beschränkt. Man spricht dann von Minimum/Maximum.  max \{f(x) : x in D\} = sup \{f(x) : x in D\}.  
+
+Def.. Eine Funktion  f : D to CC, D sse CC  heißt **gleichmäßig stetig**, falls es für jedes  ε > 0  ein  ∂ > 0  gibt, so dass für beliebige  x, x_0 in D  gilt:  (|x-x_0|) < ∂) => (|f(x) - f(x_0)| < ε).  
+
+Bmk.. Gleichmäßig stetig  =>  stetig (überall).
+
+Bsp..  f(x) = frac 1 x, \; 0 < a < b. \; f|_{[a,b]} to RR  ist gleichmäßig stetig..  f: (0, infty) to RR  ist stetig, aber nicht gleichmäßig stetig.
