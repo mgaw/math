@@ -285,10 +285,30 @@ Bsp.. (1)  RR subset CC  abgeschlossen, aber nicht offen. (2)  a,b in RR, a<b. \
 
 Satz.. (1) Jede offene Menge in  RR  (in  CC)  ist *abzählbare* Vereinigung von offenen Intervallen (offenen Kreisscheiben).. (2)  A sse RR  abgeschlossen, dann auch  A sse CC  abgeschlossen.. (3)  A sse CC  abgeschlossen genau dann, wenn für jede Folge  (x_n) sse A  gilt:  (limn x_n = x) => (x in A).  
 
-Satz. Sei  f : D to RR, \; f  stetig,  D sse CC  sei abgeschlossen und beschränkt. Dann nimmt  f  ihr Minimum und ihr Maximum auf  D  an: Es gibt ein  x_{min}, x_{max} in D,  so dass  f(x_{min}) = inf \{f(x) : x in D\}, \; f(x_{max}) = sup \{f(x) : x in D\}.  Insbesondere ist  f  beschränkt. Man spricht dann von Minimum/Maximum.  max \{f(x) : x in D\} = sup \{f(x) : x in D\}.  
+Satz.. Sei  f : D to RR, \; f  stetig,  D sse CC  sei abgeschlossen und beschränkt. Dann nimmt  f  ihr Minimum und ihr Maximum auf  D  an: Es gibt ein  x_{min}, x_{max} in D,  so dass  f(x_{min}) = inf \{f(x) : x in D\}, \; f(x_{max}) = sup \{f(x) : x in D\}.  Insbesondere ist  f  beschränkt. Man spricht dann von Minimum/Maximum.  max \{f(x) : x in D\} = sup \{f(x) : x in D\}.  
 
 Def.. Eine Funktion  f : D to CC, D sse CC  heißt **gleichmäßig stetig**, falls es für jedes  ε > 0  ein  ∂ > 0  gibt, so dass für beliebige  x, x_0 in D  gilt:  (|x-x_0|) < ∂) => (|f(x) - f(x_0)| < ε).  
 
 Bmk.. Gleichmäßig stetig  =>  stetig (überall).
 
 Bsp..  f(x) = frac 1 x, \; 0 < a < b. \; f|_{[a,b]} to RR  ist gleichmäßig stetig..  f: (0, infty) to RR  ist stetig, aber nicht gleichmäßig stetig.
+
+# Jan 17. Links- und rechtsseitiger Grenzwert, Differenzierbarkeit
+
+Satz.. Sei  C sse CC  beschränkt und abgeschlossen, und  f:D to CC.  Dann ist  f  stetig genau dann, wenn  f  gleichmäßig stetig ist.
+
+Bmk.. Dieser Satz und der vorherige gelten, weil  D  "kompakt" ist: Jede Folge  (x_n) subset D  besitzt Teilfolge, die gegen Element in  D  konvergiert.
+
+Bsp..  f:[0,∞) to RR, \; f(x) := sqrt x. \; f|_{[0,N]}  ist gleichmäßig stetig (Satz) und ist sogar gleichmäßig stetig auf  [0,∞)  (explizites Nachrechnen).  f  ist aber nicht Lipschitz-stetig.
+
+Def.. Sei  f:D to CC  eine Funktion und  a in CC,  so dass es eine Folge  (x_n) subset D  gibt, mit  limn x_n = a..  (1) Für *jede* Folge  (x_n) subset D  mit  limn x_n = a  gelte  limn f(x_n) = c.  Dann heißt  lim_{x to a} f(x) = c  der **Grenzwert von _f_ in _a_**.. (2) Sei  D subset RR  und für jede Folge  (x_n) subset D  mit  x_n > a  und  limn x_n = a  gelte  limn f(x_n) = c.  Dann heißt  lim_{x down a} f(x) = c  der **rechtsseitige Grenzwert von _f_ in _a_**.. (3) Es gelte dasselbe wie in (2), aber  x_n < a.  Dann heißt  lim_{x up a} f(x) = c  der **linksseitige Grenzwert von _f_ in _a_**.. (4) Für jede Folge  (x_n) subset D  mit  limn x_n = ±∞  gelte  limn f(x_n) = c.  Wir schreiben dann  lim_{x to ±∞} f(x) = c..  (5) Sei  a in RR cup \{+∞, -∞\}  und für jede Folge  (x_n) subset D  mit  limn x_n = a  gelte  limn f(x_n) = ±∞.  Wir schreiben dann  lim_{x to a} f(x) = ±∞.  Entsprechend  lim_{x up a} f(x) = ±∞  und  lim_{x down a} f(x) = ±∞.  
+
+Bmk.. (1)  f:D to CC, \; a in D.  Dann  f  stetig in  a <=> lim_{x to a} f(x) = f(a)..  (2)  D sse RR, \; a in D.  Dann  f  stetig in  a <=> lim_{x down a} f(x) = lim_{x up a} f(x) = f(a).  
+
+Bmk.. Rechenregeln für Grenzwerte von Folgen implizieren entsprechende Regeln für Grenzwerte von Funktionen:  lim_{x to a} (f cdot g)(x) = lim_{x to a} f(x) cdot lim_{x to a} g(x)  usw. Auch Cauchyfolgenkonvergenz und Konvergenz monotoner, beschränkter Folgen.
+
+Def..  f:D to CC, \; D sse RR  Funktion.  x in D  sei **nicht isoliert in _D_**, das heißt es existiert  (x_n) subset D setminus \{x\}  mit  limn x_n = x.  Dann heißt  f  **differenzierbar in _x_** falls der Grenzwert  lim_{ξ to x} frac{f(ξ)-f(x)}{ξ-x}  existiert.
+
+Bmk..  frac{f(ξ)-f(x)}{ξ-x} = a  ist der Anstieg der Geraden durch die Punkte  (x, f(x))  und  (ξ,f(ξ)).  
+
+Bmk..  f'(x)  wird interpretiert als Anstieg der Tangenten an den Graphen von  f. \; f'(x)  heißt **Ableitung von _f_ in _x_**.
