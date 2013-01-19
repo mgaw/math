@@ -276,7 +276,7 @@ Prop..  W_1 + W_2 + ... + W_n = span(W_1 cup W_2 cup ... cup W_n).
 
 Prop..  dim(W_1 + ... + W_n) <= dim(W_1) + ... + dim(W_n).  
 
-**Dimensionssatz**.. Sind  U_1  und  U_2  Untervektorräume eines endlichdimensionalen *K*-Vektorraums  V,  so gilt:  dim_K(U_1 + U_2) + dim_K(U_1 cap U_2) = dim_k(U_1) + dim_K(U_2)..  
+**Dimensionssatz**.. Sind  U_1  und  U_2  Untervektorräume eines endlichdimensionalen *K*-Vektorraums  V,  so gilt:  dim_K(U_1 + U_2) + dim_K(U_1 cap U_2) = dim_K(U_1) + dim_K(U_2)..  
 
 Satz.. Seien  U_1, U_2 <= V  Teilräume,  U := U_1 + U_2.  Dann sind die folgenden äquivalent.. (1) Ist  u_1 + u_2 = 0, \; u_1 in U_1, \; u_2 in U_2,  dann  u_1 = u_2 = 0..  (2) Für alle  u in U  ist die Darstellung  u = u_1 + u_2, \; u in U  eideutig.. (3)  U_1 cap U_2 = \{0\}..  In diesem Fall heißt die Summe  U_1 + U_2  **direkte Summe**. Man schreibt  U_1 oplus U_2.  
 
@@ -293,3 +293,11 @@ Def..  f in Hom_K(V,W). \; ker(f) := f^{-1}(0).
 Satz..  f  injektiv  <=> ker(f) = \{0\}.  
 
 Def..  m,n in NN, \; K  Körper.  A=(...)  ist  m times n\text{-Matrix}  mit Einträgen aus  K.  Matrix ist eine Abbildung  A:\{1..m\} times \{1..n\} to K.  
+
+# Jan 10.
+
+Def..  M(m,n:K) := \{A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}\} pmatrix{hallo \\ hallo}  
+
+# Jan 15.
+
+# Jan 17.
