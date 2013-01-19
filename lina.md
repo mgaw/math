@@ -296,8 +296,70 @@ Def..  m,n in NN, \; K  Körper.  A=(...)  ist  m times n\text{-Matrix}  mit Ein
 
 # Jan 10.
 
-Def..  M(m,n:K) := \{A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}\} pmatrix{hallo \\ hallo}  
+Def..  M(m,n:K) := \{A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}} : a_{ij} in K\}.  Das sind Matrizen mit **_m_ Zeilen** und **_n_ Spalten**.  a_{ij}  ist der Eintrag der **_i_-ten Zeile** und der **_j_-ten Spalte**. Zuerst Zeile, dann Spalte. Das macht Sinn, wenn man Vektoren mit Einträgen  v_i in K  als Spaltenvektoren, also einspaltige Matrizen betrachtet. Dann wird das  j,  also die Spaltenangabe weggelassen, da diese immer gleich 1 ist.
+
+Def..  M(n:K) := M(n,n:K).  
+
+Def..  I_n := pm{1&&0 \\& ddots& \\ 0&&1 } = (∂_{ij})_{smatrix{ 1 ≤ i ≤ n \\ 1 ≤ j ≤ n}}, \; ∂_{ij} := 1,  für  i=j, \; ∂_{ij} := 0,  sonst.  I_n  ist die **_n_-reihige Einheitsmatrix**.
+
+Bmk..  M(m,n:K)  ist ein *K*-Vektorraum isomorph zu  K^{mn}.  
+
+Def.. Sei  A in M(m,n:K), \; A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}.  Die **transponierte Matrix** ist  ^tA = (a_{ji})_{smatrix{ 1 ≤ j ≤ n \\ 1 ≤ i ≤ m }} in M(n,m:K).  
+
+Bmk..  ^tI_n = I_n.  
+
+Def.. Eine Matrix  A in M(m,n:K)  heißt **symmetrisch**, falls  A =    ^tA.  
+
+Def.. Sei  V  ein *K*-Vektorraum und  B=(v_1,...,v_n)  eine Basis. Sei der Isomorphismus von Vektorräumen  Phi_B : K^n simto V  gegeben durch  Phi_B(λ_1, ..., λ_n) := λ_1v_1 + ... + λ_nv_n.  Sei  v=sum_{i=1}^n λ_iv_i..  Dann heißen  [v]_B :=    ^t(Phi_B^{-1}(v)) = pm{λ_1 \\ vdots \\ λ_n}  die **Koordinaten von _v_ bzgl. _B_**.
+
+Def.. Sei  A = pm{a_{11} & cdots & a_{1n} \\ vdots & & vdots \\ a_{m1} & cdots & a_{mn}}  und  v=pm{v_1 \\ vdots \\ v_n} in K^n.  Definieren den Operator  cdot : M(m,n:K) times K^n to K^m  mit  A cdot v = pm{a_{11} & cdots & a_{1n} \\ vdots & & vdots \\ a_{m1} & cdots & a_{mn}} pm{v_1 \\ vdots \\ v_n} := pm{a_{11}v_1 + a_{12}v_2 + ... + a_{1n}v_n \\ vdots \\ a_{m1}v_1 + a_{m2}v_2 + ... + a_{mn}v_n}.  
+
+Satz..  A (v+w) = Av+Aw.. (A+B) = Av+Bv.  
+
+Def.. Sei  A in M(m,n:K).  Definieren  phi_A:K^n to K^m  mit  phi_A(v) := Av.  
+
+Satz..  phi_A  ist eine *K*-lineare Abbildung. Die Spalten der Matrix stellen dabei die Bilder der Elemente  (0,...,1,...,0)  der kanonischen Basis von  K^n  dar.
+
+Def.. Sei  f:V to W  eine *K*-lineare Abbildung,  B=(v_1, ..., v_n)  Basis von  V  und  C=(w_1,...,w_m)  Basis von  W.  Einträge  a_{ij}  seien gegeben durch  f(v_j) = a_{1j}w_1 + ... + a_{mj}w_m, 1 ≤ j ≤ n.  Definieren  M_B^C(f) := (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}.  
+
+Satz..  V, W, B, C, f  wie oben. Dann gilt für alle  v in V: [f(v)]_C = M_B^C(f) cdot [v]_B.  
+
+Satz.. (...?) Dann  Phi_B = M = Phi_{B'}  
 
 # Jan 15.
 
+Def..  A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}, \; B = (b_{jl})_{smatrix{ 1 ≤ j ≤ n \\ 1 ≤ l ≤ r}}.. AB := (c_{il})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ l ≤ r}}  mit  c_{il}:= sum_{j=1}^n a_{ij}b_{jl}  ("*i*-te Zeile von *A* mal *j*-te Spalte von *B*").
+
+Satz..  phi_A circ phi_B = phi_{AB}  
+
+**Rechenregeln**.. (1)  A(B+B') = AB+AB', \; (A+A')B = AB + A'B..  (2)  I_nA = A, \; AI_n = A..  (3)  ^t(AB) =    ^tB cdot    ^tA.  
+
+Satz.. Sei  \{u_1, ..., u_r\}  eine Basis von  Ker(f).  Wählt man  v_1, ..., v_s in V,  so dass  \{f(v_1), ..., f(v_s)\}  eine Basis von  Bild(f)  bilden, dann ist  B=\{u_1, ..., u_r, v_1, ..., v_s\}  eine Basis von  V.  
+
+Satz..  f:V to W, \; dim_K V, dim_K W < ∞.. dim_K Ker(f) + dim_K Bild(f).  
+
+Def..  rang(f) := dim_K Bild(f).  
+
+Kor.. Seien  V  und  W  endlich-dimensionale *K*-Vektorräume mit  dim_K(V)=dim_K(W).  Dann für eine lineare Abbildung  f:V to W  die Folgenden äquivalent.. (1)  f  injektiv.. (2)  f  surjektiv.. (3)  f  bijektiv.
+
+Def.. Sei  V  ein *K*-Vektorraum,  U ≤ V  Unterraum. **Faktorraum**  V/U := \{x+U : x in V\}.  
+
+Bmk..  x+U = y+U <=> x-y in U.  
+
+Satz..  V/U  ist *K*-Vektorraum.
+
 # Jan 17.
+
+**Isomorphiesatz**.. Sei  f:V to W  eine *K*-lineare Abbildung von *K*-Vektorräumen. Dann gibt es einen kanonischen Isomorphismus von *K*-Vektorräumen  tilde f:V/{Ker(f)} simto f(V) ≤ W  mit  tilde f(x+Ker(f)) := f(x), \; x in V.  
+
+(Bmk..  dim_K V/U = dim_K V - dim_K U.)  
+
+Def.. Eine Matrix  A in M(n,n:K)  heißt **invertierbar**, wenn es eine Matrix  B in M(n,n:K)  gibt mit  AB=BA=I_n.  
+
+Lemma.. Sei  A=(a_{ij})_{1 ≤ i,j ≤ n} in M(n,n:K).  Ist  A  invertierbar, dann ist die lineare Abbildung  Phi_A:K^n to K^n  mit  Phi_A(x) = Ax  ein Isomorphismus.
+
+Prop.. Seien  A,B in M(n:K)  mit  BA=I_n,  dann ist  AB=I_n  und  B  mit dieser Eigenschaft eindeutig.
+
+Bsp..  A = pm{a&b\\c&d} in M(2:K).  Sei  ad-bc=0.  Dann  A^{-1} = frac{1}{ad-bc}pm{d&-b\\-c&a}.  
+
+Satz.. Seien  V,W,U  Vektorräume,  f:V to W  und  g:W to U  lineare Abbildungen,  B,C,D  Basen von  V,W  bzw.  U.  Dann  M_C^D(g) cdot M_B^C(f) = M_B^D(g circ f).  
