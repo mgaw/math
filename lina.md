@@ -294,7 +294,7 @@ Satz..  f  injektiv  <=> ker(f) = \{0\}.
 
 Def..  m,n in NN, \; K  Körper.  A=(...)  ist  m times n\text{-Matrix}  mit Einträgen aus  K.  Matrix ist eine Abbildung  A:\{1..m\} times \{1..n\} to K.  
 
-# Jan 10.
+# Jan 10. Koordinaten eines Vektors, Matrix einer Abbildung
 
 Def..  M(m,n:K) := \{A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}} : a_{ij} in K\}.  Das sind Matrizen mit **_m_ Zeilen** und **_n_ Spalten**.  a_{ij}  ist der Eintrag der **_i_-ten Zeile** und der **_j_-ten Spalte**. Zuerst Zeile, dann Spalte. Das macht Sinn, wenn man Vektoren mit Einträgen  v_i in K  als Spaltenvektoren, also einspaltige Matrizen betrachtet. Dann wird das  j,  also die Spaltenangabe weggelassen, da diese immer gleich 1 ist.
 
@@ -326,7 +326,7 @@ Satz..  V, W, B, C, f  wie oben. Dann gilt für alle  v in V: [f(v)]_C = M_B^C(f
 
 Satz.. (...?) Dann  Phi_B = M = Phi_{B'}  
 
-# Jan 15.
+# Jan 15. Matrixmultiplikation, Faktorraum
 
 Def..  A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}, \; B = (b_{jl})_{smatrix{ 1 ≤ j ≤ n \\ 1 ≤ l ≤ r}}.. AB := (c_{il})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ l ≤ r}}  mit  c_{il}:= sum_{j=1}^n a_{ij}b_{jl}  ("*i*-te Zeile von *A* mal *j*-te Spalte von *B*").
 
@@ -336,7 +336,7 @@ Satz..  phi_A circ phi_B = phi_{AB}
 
 Satz.. Sei  \{u_1, ..., u_r\}  eine Basis von  Ker(f).  Wählt man  v_1, ..., v_s in V,  so dass  \{f(v_1), ..., f(v_s)\}  eine Basis von  Bild(f)  bilden, dann ist  B=\{u_1, ..., u_r, v_1, ..., v_s\}  eine Basis von  V.  
 
-Satz..  f:V to W, \; dim_K V, dim_K W < ∞.. dim_K Ker(f) + dim_K Bild(f).  
+Satz..  f:V to W, \; dim_K V, dim_K W < ∞.. Dann dim_K V = dim_K Ker(f) + dim_K Bild(f).  
 
 Def..  rang(f) := dim_K Bild(f).  
 
@@ -348,7 +348,7 @@ Bmk..  x+U = y+U <=> x-y in U.
 
 Satz..  V/U  ist *K*-Vektorraum.
 
-# Jan 17.
+# Jan 17. Isomorphiesatz
 
 **Isomorphiesatz**.. Sei  f:V to W  eine *K*-lineare Abbildung von *K*-Vektorräumen. Dann gibt es einen kanonischen Isomorphismus von *K*-Vektorräumen  tilde f:V/{Ker(f)} simto f(V) ≤ W  mit  tilde f(x+Ker(f)) := f(x), \; x in V.  
 
@@ -363,3 +363,19 @@ Prop.. Seien  A,B in M(n:K)  mit  BA=I_n,  dann ist  AB=I_n  und  B  mit dieser 
 Bsp..  A = pm{a&b\\c&d} in M(2:K).  Sei  ad-bc=0.  Dann  A^{-1} = frac{1}{ad-bc}pm{d&-b\\-c&a}.  
 
 Satz.. Seien  V,W,U  Vektorräume,  f:V to W  und  g:W to U  lineare Abbildungen,  B,C,D  Basen von  V,W  bzw.  U.  Dann  M_C^D(g) cdot M_B^C(f) = M_B^D(g circ f).  
+
+# Jan 22. Basiswechselmatrix
+
+Def.. Sei  V  *K*-Vektorraum,  B  und  B'  Basen von  V.  Dann heißt  M_{B'}^B(Id_V)  die **Basiswechselmatrix von _B_ nach _B'_**.
+
+Prop.. Die Matrix  T=M_{B'}^B(Id) in M(n:K)  ist invertierbar und es ist  T^{-1} = M_B^{B'}(Id).  
+
+Satz.. Sei  f:V to W  eine lineare Abbildung,  B, B'  Basen von  V  und  C, C'  Basen von  W.  Seien  T=M_{B'}^B(Id_V)  Basiswechselmatrix von  B  nach  B'  und  S=M_{C'}^C(Id_W)  Basiswechselmatrix von  C  nach  C'.  Dann gilt:  M_{B'}^{C'}(f) = S^{-1}M_B^C(f)T.  
+
+Def.. Sei  A = pm{a_{11} & ... & a_{1n} \\ vdots & & vdots \\ a_{m1} & ... & a_{mn}} in M(m,n:K).  Seien  v_j:=pm{a_{1j} \\ vdots \\ a_{mj}}, \; a ≤ j ≤ n  die Spaltenvektoren dieser Matrix. Definieren  Rang(A) := dim_K langle v_1, ..., v_n rangle.  
+
+Satz.. Sei  f: V to W  lineare Abbildung,  B  Basis von  V  und  C  Basis von  W.  Dann  Rang(M_B^C(f)) = dim_K Bild(f).  
+
+Kor.. Sei  A in M(n:K).  Dann ist  A  invertierbar genau dann, wenn  Rang(A) = n.  
+
+Prop..  A in M(m,n:K), \; B in M(n,r:K).  Dann  Rang(AB) ≤ min (Rang(A), Rang(B)).  
