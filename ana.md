@@ -255,7 +255,7 @@ Satz..  D sse CC, \; f_n, f : D to CC, n in NN.. (f_n)  konvergiere gleichmäßi
 
 Def.. Sei  (f_n)_{n in NN}  eine Folge von Funktionen  f_n : D sse CC to CC.  Die Funktionenreihe  sum_{n=0}^infty f_n  heißt **absolut** konvergent, falls für jedes  z in D  die Reihe  sum_{n=0}^infty f_n(z)  absolut konvergiert.
 
-Def..  sum_{n=0}^infty f_n  heißt **gleichmäßig** konvergent, falls die Folge der Partialsummen  s_n = sum_{k=0}^infty f_k : D to CC  gleichmäßig konvergiert.
+Def..  sum_{n=0}^infty f_n  heißt **gleichmäßig** konvergent, falls die Folge der Partialsummen  s_n = sum_{k=0}^n f_k : D to CC  gleichmäßig konvergiert.
 
 **Weierstraßkriterium für die Konvergenz einer Funktionenreihe**.. Sei  sum_{n=0}^infty f_n  eine Funktionenreihe wie oben. Gilt  sum_{n=0}^infty ||f_n||_D < infty,  dann ist  sum_{n=0}^infty f_n  absolut und gleichmäßig konvergent.
 
@@ -312,3 +312,17 @@ Def..  f:D to CC, \; D sse RR  Funktion.  x in D  sei **nicht isoliert in _D_**,
 Bmk..  frac{f(ξ)-f(x)}{ξ-x} = a  ist der Anstieg der Geraden durch die Punkte  (x, f(x))  und  (ξ,f(ξ)).  
 
 Bmk..  f'(x)  wird interpretiert als Anstieg der Tangenten an den Graphen von  f. \; f'(x)  heißt **Ableitung von _f_ in _x_**.
+
+# Jan 22. Ableitungsregeln
+
+Bsp..  c in CC, f: RR to CC..  (1)  f(x) = c => f'(x)=0..  (2)  f(x) = cx => f'(x) = c..  (3)  f:RR setminus \{0\} to RR, f(x) = frac 1 x => f'(x) = - frac{1}{x^2}..  (4)  exp'(x) = exp(x)..  (5)  f(x) = x^2 => f'(x) = 2x.  Allgemein:  n in NN, f(x) = x^n => f'(x) = n x^{n-1}..  (6)  f(x) = |x|  nicht diffbar in  x=0.  
+
+Def.. Sei  f:D to CC  Funktion,  x in D.  Dann heißt  f  von rechts (links) differenzierbar, falls  lim_{ξ down x} frac{f(ξ)-f(x)}{ξ-x}  existiert (bzw.  lim_{ξ up x} frac{f(ξ)-f(x)}{ξ-x}  existiert).
+
+Satz.. Sei  f: D to CC  Funktion,  x in D.  Dann ist  f  in  x  differenzierbar genau dann, wenn für alle  ξ in D  gilt:  f(ξ) = f(x) + c cdot (ξ-x) + phi(ξ)  für ein  c in D  und  phi: D to CC  mit  lim_{ξ to x} frac{phi(ξ)}{ξ-x} = 0.  
+
+Folgerung.. Ist  f:D to CC  in  x  differenzierbar, so ist  f  in  x  stetig. Ist  f  in allen  x in D  differenzierbar, so ist  f: D to CC  stetige Funktion.
+
+**Rechenregeln**..  f,g: D to CC  Funktionen,  λ in CC, x in D, f  und  g  in  x  differenzierbar. Dann sind  (f+g), (λ f), (f cdot g) : D to CC  differenzierbar in  x.  Ist  g(y) neq 0  für alle  y in D,  dann ist auch  (frac{f}{g}):D to CC  differenzierbar. Es gelten folgende Gesetze..  (λ f)'(x) = λ f'(x).. (f+g)'(x) = f'(x) + g'(x).. (f cdot g)'(x) = f'(x)g(x) + f(x)g'(x).. (frac f g)'(x) = frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}.  
+
+**Ableitung der Umkehrfunktion**..  I=[a,b] subset RR  sei abgeschlossenes Intervall. Sei  f:I to RR  streng monoton (wachsend oder fallend).  f  sei stetig. Dann ist  f(I) subset RR  wieder abgeschlossenes Intervall  J.  Sei  g:J to I  die Umkehrfunktion.. Ist  f  in  x  differenzierbar, so ist  g  in  y=f(x)  differenzierbar (und umgekehrt) und es gilt  g'(x) = frac{1}{f'(x)} = frac{1}{f'(g(y))}.  
