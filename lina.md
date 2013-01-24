@@ -379,3 +379,21 @@ Satz.. Sei  f: V to W  lineare Abbildung,  B  Basis von  V  und  C  Basis von  W
 Kor.. Sei  A in M(n:K).  Dann ist  A  invertierbar genau dann, wenn  Rang(A) = n.  
 
 Prop..  A in M(m,n:K), \; B in M(n,r:K).  Dann  Rang(AB) ≤ min (Rang(A), Rang(B)).  
+
+# Jan 24. Lineare Gleichungssysteme
+
+Def..  A in M(m,n:K), \; b = pm{b_1 \\ vdots \\ b_m} in K^m, \; x = pm{x_1 \\ vdots \\ x_n} in K^n.. Lös(A,b) := \{x in K^n : Ax=b \} = Phi_A^{-1}(b)  ist die Lösungsmenge des Systems aus den Gleichungen  a_{i1}x_1 + ... + a_{in}x_n = b_i, \; 1 ≤ i ≤ m.  
+
+Prop.. Gegeben ein lineares System  Ax=b.  Sei  r=Rang(A)..  (1)  Lös(A,0) ≤ K^n  ist Unterraum mit Dimension  n-r..  (2)  Lös(A,B)  ist entweder leer oder ein affiner Raum der Dimension  n-r,  das heißt ist  v in Lös(A,b),  dann  Lös(A,b) = v+Lös(A,0) sse K^n.  
+
+Notation.. Die erweiterte Koeffizientenmatrix  (A|b) := pm{a_{11} & ... & a_{1n} & | & b_1 \\ vdots & & vdots & | & vdots \\ a_{m1} & ... & a_{mn} & | & b_m} in M(m,n+1:K).  
+
+**Lösbarkeitskriterien**.. Sei  A in M(m,n:K), \; b in K^m.  Äquivalent sind dann folgende.. (1) Das System  Ax = b  ist lösbar.. (2)  b in Bild(Phi_A)..  (3)  Rang(A) = Rang(A|b).  
+
+Def..  A in M(m,n:K)  ist in **Zeilenstufenform**, wenn sie von der folgenden Form ist: (...).
+
+Def..  A in M(m,n:K).  Eine **elementare Zeilenumformung** ist eine der folgenden Vorgänge.. (1) Vertauschung zweier Zeilen.. (2) Multiplikation einer Zeile mit einem Skalar.. (3) Addition des  λ\text{-fachen}  einer Zeile zu einer anderen Zeile.
+
+Bmk..  Lös(A|b) = Lös(tilde A | tilde b)  (die mit elementaren Zeilenumformungen umgeformte Matrix).
+
+Satz.. Sei  A in M(m,n:K), \; Rang(A) = n.  Dann ist  Ax=b  eindeutig lösbar.
