@@ -315,7 +315,7 @@ Bmk..  f'(x)  wird interpretiert als Anstieg der Tangenten an den Graphen von  f
 
 # Jan 22. Ableitungsregeln
 
-Bsp..  c in CC, f: RR to CC..  (1)  f(x) = c => f'(x)=0..  (2)  f(x) = cx => f'(x) = c..  (3)  f:RR setminus \{0\} to RR, f(x) = frac 1 x => f'(x) = - frac{1}{x^2}..  (4)  exp'(x) = exp(x)..  (5)  f(x) = x^2 => f'(x) = 2x.  Allgemein:  n in NN, f(x) = x^n => f'(x) = n x^{n-1}..  (6)  f(x) = |x|  nicht diffbar in  x=0.  
+Bsp..  c in CC, f: RR to CC..  (1)  f(x) = c => f'(x)=0..  (2)  f(x) = cx => f'(x) = c..  (3)  f:RR setminus \{0\} to RR, f(x) = frac 1 x => f'(x) = - frac{1}{x^2}..  (4)  exp'(x) = exp(x)..  (5)  f(x) = x^2 => f'(x) = 2x.  Allgemein:  n in NN, f(x) = x^n => f'(x) = n x^{n-1}..  (6)  f(x) = |x|  nicht differenzierbar in  x=0.  
 
 Def.. Sei  f:D to CC  Funktion,  x in D.  Dann heißt  f  von rechts (links) differenzierbar, falls  lim_{ξ down x} frac{f(ξ)-f(x)}{ξ-x}  existiert (bzw.  lim_{ξ up x} frac{f(ξ)-f(x)}{ξ-x}  existiert).
 
@@ -326,3 +326,21 @@ Folgerung.. Ist  f:D to CC  in  x  differenzierbar, so ist  f  in  x  stetig. Is
 **Rechenregeln**..  f,g: D to CC  Funktionen,  λ in CC, x in D, f  und  g  in  x  differenzierbar. Dann sind  (f+g), (λ f), (f cdot g) : D to CC  differenzierbar in  x.  Ist  g(y) neq 0  für alle  y in D,  dann ist auch  (frac{f}{g}):D to CC  differenzierbar. Es gelten folgende Gesetze..  (λ f)'(x) = λ f'(x).. (f+g)'(x) = f'(x) + g'(x).. (f cdot g)'(x) = f'(x)g(x) + f(x)g'(x).. (frac f g)'(x) = frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}.  
 
 **Ableitung der Umkehrfunktion**..  I=[a,b] subset RR  sei abgeschlossenes Intervall. Sei  f:I to RR  streng monoton (wachsend oder fallend).  f  sei stetig. Dann ist  f(I) subset RR  wieder abgeschlossenes Intervall  J.  Sei  g:J to I  die Umkehrfunktion.. Ist  f  in  x  differenzierbar, so ist  g  in  y=f(x)  differenzierbar (und umgekehrt) und es gilt  g'(x) = frac{1}{f'(x)} = frac{1}{f'(g(y))}.  
+
+# Jan 24. Kettenregel, Satz von Rolle
+
+**Kettenregel**..  I, J subset RR, \; g : I to J, \; f: J to RR.  Sei  g  in  x_0  differenzierbar und  f  in  g(x_0)  differenzierbar. Dann ist  f circ g  in  x_0  differenzierbar und es gilt  (f circ g)'(x_0) = f'(g(x_0)) cdot g'(x_0).  
+
+Def..  I,J subset RR..  Jede Funktion  f: I to CC  ist **null mal differenzierbar**. Ihre nullte Ableitung,  f^{(0)},  ist  f  selbst:  f^{(0)} = f.. k in NN.  Eine Funktion,  f,  heißt **_k_ mal differenzierbar** in  x_0 in J,  falls  f  auf  J \; (k-1)  mal differenzierbar ist und  f^{(k-1)} : J to CC  in  x_0  differenzierbar ist.  f^{(k)} := (f^{(k-1)})'(x_0).  
+
+Def.. Sei  f: (a,b) to RR  Funktion. Dann nimmt  f  in  x_0 in (a,b)  ihr **lokales Minimum** bzw. **Maximum** an, falls für ein  ε > 0  und für alle  x in (x_0-ε, x_0+ε)  gilt:  f(x_0) ≤ f(x)  bzw.  f(x_0) ≥ f(x).  Gilt  (f(x)=f(x_0)) <=> (x=x_0)  oder  x not in (x_0-ε, x_0+ε),  dann nennen wir das Minimum/Maximum **strikt**. (Extremum ist Minimum oder Maximum.)
+
+Satz.. Hat  f:(a,b) to RR  in  x_0  ein lokales Extremum und ist dort differenzierbar, so ist  f'(x_0) = 0.  
+
+**Satz von Rolle**.. Sei  f:[a,b] to RR  stetig und  f: (a,b) to RR  differenzierbar. Ist  f(a)=f(b),  dann existiert ein  x in (a,b)  mit  f'(x)=0.  
+
+Satz..  f:[a,b] to RR  stetig,  f  differenzierbar auf  (a,b).  Dann existiert  x in (a,b),  so dass  f'(x) = frac{f(b)-f(a)}{b-a}.  
+
+Folgerung.. (1) Sei  f:[a,b] to RR  wie vorher und sei  m ≤ f'(x) ≤ M  für geeignete  m,M in RR  und *alle*  x in (a,b).  Dann  m ≤ frac{f(b)-f(a)}{b-a} ≤ M => m(b-a) ≤ f(b)-f(a) ≤ M(b-a)..  (2) Ist insbesondere  f'(x)=0  für alle  x in (a,b).  Dann  f  ist konstant. (Es gilt  frac{f(x)-f(b)}{b-a} = 0  für alle  x in (a,b).)  
+
+Satz..  c in RR  und  f:RR to RR  differenzierbar mit  f'(x) = c cdot f(x)  für alle  x.  Dann ist  f(x) = A cdot e^{cx}  für  A = f(0).  
