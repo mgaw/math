@@ -341,6 +341,24 @@ Satz.. Hat  f:(a,b) to RR  in  x_0  ein lokales Extremum und ist dort differenzi
 
 Satz..  f:[a,b] to RR  stetig,  f  differenzierbar auf  (a,b).  Dann existiert  x in (a,b),  so dass  f'(x) = frac{f(b)-f(a)}{b-a}.  
 
-Folgerung.. (1) Sei  f:[a,b] to RR  wie vorher und sei  m ≤ f'(x) ≤ M  für geeignete  m,M in RR  und *alle*  x in (a,b).  Dann  m ≤ frac{f(b)-f(a)}{b-a} ≤ M => m(b-a) ≤ f(b)-f(a) ≤ M(b-a)..  (2) Ist insbesondere  f'(x)=0  für alle  x in (a,b).  Dann  f  ist konstant. (Es gilt  frac{f(x)-f(b)}{b-a} = 0  für alle  x in (a,b).)  
+Folgerung.. (1) Sei  f:[a,b] to RR  wie vorher und sei  m ≤ f'(x) ≤ M  für geeignete  m,M in RR  und *alle*  x in (a,b).  Dann  m ≤ frac{f(b)-f(a)}{b-a} ≤ M => m(b-a) ≤ f(b)-f(a) ≤ M(b-a).  Daraus folgt, dass  f  Lipschitz-stetig ist.  L:= max \{|m|, |M|\}..  (2) Ist insbesondere  f'(x)=0  für alle  x in (a,b).  Dann  f  ist konstant. (Es gilt  frac{f(x)-f(b)}{b-a} = 0  für alle  x in (a,b).)  
 
 Satz..  c in RR  und  f:RR to RR  differenzierbar mit  f'(x) = c cdot f(x)  für alle  x.  Dann ist  f(x) = A cdot e^{cx}  für  A = f(0).  
+
+# Jan 29. Extremakriterien, Konvexität
+
+Satz..  f: [a,b] to RR  differenzierbar auf  (a,b).  Ist  f'(x) ≥ 0  für alle  x in (a,b),  dann ist  f  monoton wachsend, ist  f'(x) > 0  für alle  x in (a,b),  dann streng. Fallend analog.
+
+Satz.. Sei  f:(a,b) to RR  differenzierbar und  x_0 in (a,b).  Sei  f'(x_0) = 0  und  f''(x_0) > 0.  Dann hat  f  in  x_0  ein isoliertes lokales Minimum. Ist  f''(x_0) < 0  so hat  f  in  x_0  ein isoliertes lokales Maximum.
+
+Bmk..  f  besitzt in  x_0  lokales Minimum, genau dann wenn  f'(x_0) = 0  und  f'(x) < 0  für  x in (x_0-ε, x_0)  und  f'(x)>0  für  x in (x_0, x_0+ε)  für kleines  ε.  (Es genügt, dass  f  einmal auf  (a,b)  differenzierbar.)
+
+Def.. Sei  I subset RR  Intervall. Eine Funktion  f: I to RR  heißt **konvex**, falls für  x_0, x_1 in I  und  λ in (0,1)  gilt, dass  f(λ x_0+(1-λ)x_1) ≤ λ f(x_0) + (1-λ)f(x_1).  **Streng konvex**: Gleichheit gilt genau dann, wenn  x_0 = x_1.  **(Streng) konkav**: Kehre  ≤  in Ungleichung um.
+
+Satz.. Sei  I subset RR  offenes Intervall,  f: I to RR  zweimal differenzierbar auf  I.  Dann ist  f  konvex genau dann, wenn  f''(x) ≥ 0  für alle  x in I.  Ist  f''(x) >0  für alle  x in I,  so ist  f  sogar streng konvex.
+
+Bmk.. Es genügt einmal differenzierbar und Monotonie von  f':I to RR.  
+
+Bmk..  f:I to RR  konvex,  x_1, ..., x_n in I, \; λ_1, ..., λ_n > 0  mit  λ_1 + ... + λ_n = 1.  Dann gilt die **Jensensche Ungleichung**  f(λ_1x_1 + ... + λ_nx_n) ≤ λ_1f(x_1) + ... + lam_nf(x_n).. f  streng konvex, dann Gleichheit gilt genau dann wenn  x_1 = x_2 = ... = x_n.  
+
+Lemma.. Seien  p,q > 0  mit  frac 1 p + frac 1 q = 1.  Dann gilt für alle  x,y ≥ 0: x^{frac 1 p} y^{frac 1 q} ≤ frac x p + frac y q.  Gleichheit gilt genau dann wenn  x=y.  

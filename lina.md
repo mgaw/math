@@ -397,3 +397,11 @@ Def..  A in M(m,n:K).  Eine **elementare Zeilenumformung** ist eine der folgende
 Bmk..  Lös(A|b) = Lös(tilde A | tilde b)  (die mit elementaren Zeilenumformungen umgeformte Matrix).
 
 Satz.. Sei  A in M(m,n:K), \; Rang(A) = n.  Dann ist  Ax=b  eindeutig lösbar.
+
+# Jan 29. Spaltenrang ist Zeilenrang, Ermittlung der Inversen
+
+Satz.. Für jede  A in M(m, n:K)  gilt:  \text{Spaltenrang}(A) = \text{Zeilenrang}(A) = Rang(A).  
+
+Bmk..  dim_K V = n, \; dim_K W = m.  Ist  phi: V to W  eine lineare Abbildung und  r = rang(phi),  dann gibt es Basen  B  von  V  und  C  von  W  mit  M_B^C(phi) = pm{I_r & 0 \\ 0 & 0} in M(m,n:K).  
+
+Satz..  pm{A & I_n}  mit Gauß umformen ergibt  pm{I_n & A^{-1}}.  
