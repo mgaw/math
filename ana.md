@@ -362,3 +362,23 @@ Bmk.. Es genügt einmal differenzierbar und Monotonie von  f':I to RR.
 Bmk..  f:I to RR  konvex,  x_1, ..., x_n in I, \; λ_1, ..., λ_n > 0  mit  λ_1 + ... + λ_n = 1.  Dann gilt die **Jensensche Ungleichung**  f(λ_1x_1 + ... + λ_nx_n) ≤ λ_1f(x_1) + ... + lam_nf(x_n).. f  streng konvex, dann Gleichheit gilt genau dann wenn  x_1 = x_2 = ... = x_n.  
 
 Lemma.. Seien  p,q > 0  mit  frac 1 p + frac 1 q = 1.  Dann gilt für alle  x,y ≥ 0: x^{frac 1 p} y^{frac 1 q} ≤ frac x p + frac y q.  Gleichheit gilt genau dann wenn  x=y.  
+
+# Jan 31. *p*-Norm, Hölder, Minowski, Treppenfunktion
+
+Def..  x in CC^n  und  p in [1, ∞).  Dann  norm p _p := left( sum_{k=1}^n |x_k|^p right)^{frac 1 p} = sqrt[p]{|x_1|^p + ... + |x_p|^p}  heißt **_p_-Norm von _x_**.
+
+Bmk..  p=2.  Dann ist  norm x _2  die **euklidische Norm (Länge)** von  x.  
+
+**Höldersche Ungleichung**.. Für alle  x, y in CC^n  gilt:  sum_{k = 1}^n |x_k y_k| ≤ norm x _p norm y _q,  wobei  p, q > 1  mit  frac 1 p + frac 1 q = 1.  
+
+Bmk.. Im Fall  p=2  heißt sie **Cauchy-Schwarzsche Ungleichung** bzw. **Chauchy-Kowaelwskaya-Ungleichung**.
+
+**Minkowski-Ungleichung**.. Für  p in [1, ∞)  und beliebige  x,y in CC^n  gilt  norm{x+y}_p ≤ norm x _p + norm y _p.  (\*)
+
+Bmk.. (1) Mit  p=2  erhält man die Dreiecksungleichung im Euklidischen.. (2)  lam in CC, \; x in CC^n => norm{lam x}_p = |lam| norm{x}_p  (\*\*)..  (CC^n, norm cdot _p)  heißen **normierte Räume**, falls sie Vektorräume über  CC  oder  RR  sind,  norm x _p ≥ 0  für alle  x in CC^n,  "="  <=> x=0  und (\*) und (\*\*) sind erfüllt.
+
+Def.. (1) Sei  a < b.  Eine **Unterteilung**/**Partition** von  [a, b]  ist eine *endliche* reelle Folge  (x_k)_{k = 0}^n \; (n in NN, n ≥ 1)  mit  a = x_0 < ... < x_n = b..  (2) Eine **Treppenfunktion**  f : [a, b] to RR  ist eine Funktion, für die es eine Unterteilung  (x_k)_{k = 0}^n  von  [a, b]  gibt, so dass  f|_{(x_k, x_{k + 1})} equiv  konst. für alle  k = 0, ..., n - 1..  (3) Die Menge aller Treppenfunktionen sei mit  T[a, b]  bezeichnet.
+
+Satz..  T[a, b]  ist ein Unterverktorraum des  RR\text{-Vektorraums}  aller Funktionen auf  [a, b].  
+
+Def.. Sei  f in T[a, b].  Sei  (x_k)_{k = 0}^n  eine zugehörige Partition (das heißt  f|_{(x_k, x_{k + 1})}  sei konstant). Dann definieren wir  int_a^b f(x) dx := sum_{k = 0}^{n - 1} c_k (x_{k + 1} - x_k),  wobei  f|_{(x_k, x_{k + 1})} equiv c_k in RR.  
