@@ -405,3 +405,15 @@ Satz.. Für jede  A in M(m, n:K)  gilt:  \text{Spaltenrang}(A) = \text{Zeilenran
 Bmk..  dim_K V = n, \; dim_K W = m.  Ist  phi: V to W  eine lineare Abbildung und  r = rang(phi),  dann gibt es Basen  B  von  V  und  C  von  W  mit  M_B^C(phi) = pm{I_r & 0 \\ 0 & 0} in M(m,n:K).  
 
 Satz..  pm{A & I_n}  mit Gauß umformen ergibt  pm{I_n & A^{-1}}.  
+
+# Jan 31. Determinante
+
+Def..  A in M(2, 2: K).  Dann  det A = det pm{a & b \\ c & d} = vm{a & b \\ c & d} := ad - bc.  
+
+Satz.. Parallelogramm aufgespannt von  v = (a_1, a_2)  und  w = (b_1, b_2).  Dann Fläche  = det pm{a_1 & a_2 \\ b_1 & b_2}.  
+
+Satz.. Seien  v = (a, b) in RR^2  und  w = (c, d) in RR^2  Zeilenvektoren von  A,  schreiben  A = pm{v \\ w}..  (1)  det pm{lam v \\ w} = lam det pm{v \\ w} = det pm{v \\ lam w}..  (2)  det pm{v \\ w} = det pm{v \\ w + lam v}..  (3)  det pm{v \\ w} = 0 <=> v, w  linear unabhängig.. (4)  det pm{e_1 \\ e_2} = det pm{1 & 0 \\ 0 & 1} = 1.  
+
+Def.. Sei  K  Körper. Eine Abbildung  det : M(n, n: K) to K  heißt **Determinante** falls: (1)  det  ist linear in jeder Zeile:  a_i = a_i' + a_i'' => det pm{vdots \\ a_i \\ vdots} = det pm{vdots \\ a_i' \\ \small vdots} + det pm{vdots \\ a_i'' \\ vdots}  und  a_i = lam a_i' => det pm{vdots \\ a_i \\ vdots} = lam det pm{vdots \\ a_i' \\ vdots}..  (2)  det  ist **alternierend**, das heißt hat  A  zwei gleichen Zeilen, so ist  det A = 0..  (3)  det  ist **normiert**, das heißt  det I_n = 1.  
+
+Satz.. Eine Abbildung  det : M(n, n : K)  hat die folgenden weiteren Eigenschaften.. (4)  det(lam A) = lam^n det(A)..  (5) Ist eine Zeile von  A  gleich Null, so ist  det A = 0..  (6) Entsteht  B  aus  A  durch (genau eine) Zeilenvertauschung, so ist  det B = - det A..  (7) Ist  lam in K  und entsteht  B  aus  A  durch Addition der  lam\text{-fachen}  *j*-ten Zeile zur *i*-ten Zeile  (i neq j),  so ist  det B = det A..  (8) Ist  A  eine obere Dreiecksmatrix,  A = pm{lam_1 & & * \\ & ddots & \\ 0 & & lam_n},  so ist  det A = lam_1 cdot ... cdot lam_n..  (9) Sei  n ≥ 2  und  A in M(m, n : K)  von der Gestalt  A = pm{A_1 & C \\ 0 & A_2},  wobei  A_1, A_2  quadratisch. Dann gilt  det A = det(A_1) cdot det(A_2)..  (10)  det A = 0 <=> Rang(A) < n <=>  Zeilenvektoren sind linear unabhängig.
