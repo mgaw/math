@@ -382,3 +382,9 @@ Def.. (1) Sei  a < b.  Eine **Unterteilung**/**Partition** von  [a, b]  ist eine
 Satz..  T[a, b]  ist ein Unterverktorraum des  RR\text{-Vektorraums}  aller Funktionen auf  [a, b].  
 
 Def.. Sei  f in T[a, b].  Sei  (x_k)_{k = 0}^n  eine zugehörige Partition (das heißt  f|_{(x_k, x_{k + 1})}  sei konstant). Dann definieren wir  int_a^b f(x) dx := sum_{k = 0}^{n - 1} c_k (x_{k + 1} - x_k),  wobei  f|_{(x_k, x_{k + 1})} equiv c_k in RR.  
+
+# Feb 2. Riemann-integrierbar
+
+Satz.. (a) Die Abbildung  f in T[a, b] mapsto int_a^b f(x) dx  ist eine  RR\text{-lineare}  Abbildung.. (b)  phi, psi in T[a, b]  und  phi ≤ psi.  Dann ist  int_a^b phi(x) dx ≤ int_a^b psi(x) dx.  
+
+Def..  f : [a, b] to RR, \; a < b in RR, \; f  beschränkt.. **Oberintegral:**  int_a^{b*} f(x) dx = inf \{int_a^b psi(x) dx : psi in T[a, b], f ≤ psi \} in RR..  **Unterintegral:**  int_{a*}^b f(x) dx = sup \{int_a^b phi(x) dx : phi in T[a, b], f ≥ phi \} in RR.  
