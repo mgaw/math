@@ -7,11 +7,11 @@ Def.. Sei  (G, cdot)  eine Gruppe und  H ≤ G.  Die Teilmenge von  PP(G),  die 
 
 Lemma..  forall x, y in G : xH=yH <=> x^{-1}y in H.  
 
-Satz.. Die Relation  ~_l  mit  x~_ly <=> xH=yH  ist eine Äquivalenzrelation. Die Linksnebenklassen von  H  sind also Äquivalenzklassen, das heißt  overline x = xH.  
+Satz.. Die Relation  sim_l  mit  x sim_l y <=> xH=yH  ist eine Äquivalenzrelation. Die Linksnebenklassen von  H  sind also Äquivalenzklassen, das heißt  overline x = xH.  
 
 Bmk..  G  wirkt auf  (G/H)_l  durch Multiplikation von links, das heißt für  g, x in G : g(xH) = (gx)H in (G/H)_l.  
 
-Satz.. Multiplikation von links mit einem bestimmten Element  g in GG  definiert einen Gruppenhomomorphismus  L_g : (G/H)_l to (G/H)_l  mit  L_g(xH) := (gx)H.  
+Satz.. Multiplikation von links mit einem bestimmten Element  g in G  definiert einen Gruppenhomomorphismus  L_g : (G/H)_l to (G/H)_l  mit  L_g(xH) := (gx)H.  
 
 # Nov 13. Normalteiler, Faktorgruppe
 
@@ -35,13 +35,13 @@ Satz.. Ist  H unlhd G,  dann ist  ((G/H), cdot)  eine Gruppe. Man nennt sie **Fa
 
 Def.. Sei  H ≤ G.  Dann heißt  [G:H] := |(G/H)_l|  der **Index** von  H  in  G.  
 
-Satz von Lagrange. Sei  G  endliche Gruppe,  H ≤ G.  Dann  |G| = |H| cdot [G:H].  
+**Satz von Lagrange**.. Sei  G  endliche Gruppe,  H ≤ G.  Dann  |G| = |H| cdot [G:H].  
 
 Kor.. Die Ordnung einer Untergruppe teilt die Ordnung der Gruppe:  |H|\;|\;|G|.  
 
 # Nov 15. Kleiner Satz von Fermat
 
-Satz von Lagrange anders.  G  endliche Gruppe,  H ≤ G.  Dann gibt es eine Bijektion  (G/H)_l times 
+**Satz von Lagrange anders**..  G  endliche Gruppe,  H ≤ G.  Dann gibt es eine Bijektion  (G/H)_l times 
 H to G.  
 
 Bmk.. Die Anzahl der Links- und Rechtsnebenklassen ist gleich, d.h.  [G:H] = |(G/H)_l| = |(G/H)_r|.  
@@ -50,7 +50,7 @@ Kor.. Ist  G  endliche Gruppe,  n = |G|, x in G.  Dann  ord (x) \; | \; |G|,  d.
 
 Bsp..  overline a in ZZ/nZZ, \; 0 ≤ a ≤ n-1.  Dann  ord(overline x) = n <=> ggT(a,n) = 1.  
 
-Kleiner Satz von Fermat. Sei  p  Primzahl und  a in ZZ  mit  p not | \; a.  Dann gilt  a^{p-1}
+**Kleiner Satz von Fermat**.. Sei  p  Primzahl und  a in ZZ  mit  p not | \; a.  Dann gilt  a^{p-1}
 equiv 1 mod p.  Außerdem gilt für alle  a in ZZ : a^p equiv a mod p.  
 
 # Nov 20. Isomorphiesatz
@@ -66,13 +66,13 @@ Def..  sgn(sigma) = (-1)^{\#\{(i,j) \;:\; i<j \text{ und } sigma(i) > sigma(j)\}
 
 Lemma..  \forall sigma \in S_n : sgn(sigma) = (Produkt) \frac{sigma(j) - sigma(i)}{j-i}.  
 
-Def..  sigma in S_n  heißt **gerade**, falls  sgn(sigma) = 1. \; sigma heißt **ungerade**, falls  sgn(sigma) = -1. 
+Def..  sigma in S_n  heißt **gerade**, falls  sgn(sigma) = 1. \; sigma  heißt **ungerade**, falls  sgn(sigma) = -1.  
 
 Def..  ker(sgn) = A_n = \{ sigma in S_n : sgn(sigma) = 1 \}  heißt die **alternierende Gruppe**.
 
 Bmk..  A_n unlhd S_n.    |A_n| = \frac{n!}{2}.  
 
-Isomorphiesatz. Sei  phi : G to G'  Gruppenmorphismus, damit  ker(phi) unlhd G.  Dann gibt es einen kanonischen Isomorphismus von Gruppen  overline φ : G/ker(φ) \xrightarrow{\simeq} φ(G).  
+**Isomorphiesatz**.. Sei  phi : G to G'  Gruppenmorphismus, damit  ker(phi) unlhd G.  Dann gibt es einen kanonischen Isomorphismus von Gruppen  overline φ : G/ker(φ) simto φ(G).  
   (φ(G) ≤ G'  Untergruppe.)  phi = overline phi circ pi. \; pi  ist die Projektion, die ein Element aus  G  auf seine Nebenklasse abbildet. Eigentlich nur:  overline φ : G/ker(φ) to G'  ist injektiv. Aber wenn  phi(G)=G'  dann surjektiv und damit auch bijektiv.
 
 Bmk.. Falls  φ  surjektiv ist, d.h.  φ(G) = G',  dann bildet  overline φ  nach  G'  ab.
@@ -336,7 +336,7 @@ Satz..  phi_A circ phi_B = phi_{AB}
 
 Satz.. Sei  \{u_1, ..., u_r\}  eine Basis von  Ker(f).  Wählt man  v_1, ..., v_s in V,  so dass  \{f(v_1), ..., f(v_s)\}  eine Basis von  Bild(f)  bilden, dann ist  B=\{u_1, ..., u_r, v_1, ..., v_s\}  eine Basis von  V.  
 
-Satz..  f:V to W, \; dim_K V, dim_K W < ∞.. Dann dim_K V = dim_K Ker(f) + dim_K Bild(f).  
+Satz..  f:V to W, \; dim_K V, dim_K W < ∞..  Dann  dim_K V = dim_K Ker(f) + dim_K Bild(f).  
 
 Def..  rang(f) := dim_K Bild(f).  
 
@@ -384,7 +384,7 @@ Prop..  A in M(m,n:K), \; B in M(n,r:K).  Dann  Rang(AB) ≤ min (Rang(A), Rang(
 
 Def..  A in M(m,n:K), \; b = pm{b_1 \\ vdots \\ b_m} in K^m, \; x = pm{x_1 \\ vdots \\ x_n} in K^n.. Lös(A,b) := \{x in K^n : Ax=b \} = Phi_A^{-1}(b)  ist die Lösungsmenge des Systems aus den Gleichungen  a_{i1}x_1 + ... + a_{in}x_n = b_i, \; 1 ≤ i ≤ m.  
 
-Prop.. Gegeben ein lineares System  Ax=b.  Sei  r=Rang(A)..  (1)  Lös(A,0) ≤ K^n  ist Unterraum mit Dimension  n-r..  (2)  Lös(A,B)  ist entweder leer oder ein affiner Raum der Dimension  n-r,  das heißt ist  v in Lös(A,b),  dann  Lös(A,b) = v+Lös(A,0) sse K^n.  
+Prop.. Gegeben ein lineares System  Ax=b.  Sei  r=Rang(A)..  (1)  Lös(A,0) ≤ K^n  ist Unterraum mit Dimension  n-r..  (2)  Lös(A, b)  ist entweder leer oder ein affiner Raum der Dimension  n-r,  das heißt ist  v in Lös(A,b),  dann  Lös(A,b) = v+Lös(A,0) sse K^n.  
 
 Notation.. Die erweiterte Koeffizientenmatrix  (A|b) := pm{a_{11} & ... & a_{1n} & | & b_1 \\ vdots & & vdots & | & vdots \\ a_{m1} & ... & a_{mn} & | & b_m} in M(m,n+1:K).  
 
@@ -417,3 +417,41 @@ Satz.. Seien  v = (a, b) in RR^2  und  w = (c, d) in RR^2  Zeilenvektoren von  A
 Def.. Sei  K  Körper. Eine Abbildung  det : M(n, n: K) to K  heißt **Determinante** falls: (1)  det  ist linear in jeder Zeile:  a_i = a_i' + a_i'' => det pm{vdots \\ a_i \\ vdots} = det pm{vdots \\ a_i' \\ \small vdots} + det pm{vdots \\ a_i'' \\ vdots}  und  a_i = lam a_i' => det pm{vdots \\ a_i \\ vdots} = lam det pm{vdots \\ a_i' \\ vdots}..  (2)  det  ist **alternierend**, das heißt hat  A  zwei gleichen Zeilen, so ist  det A = 0..  (3)  det  ist **normiert**, das heißt  det I_n = 1.  
 
 Satz.. Eine Abbildung  det : M(n, n : K)  hat die folgenden weiteren Eigenschaften.. (4)  det(lam A) = lam^n det(A)..  (5) Ist eine Zeile von  A  gleich Null, so ist  det A = 0..  (6) Entsteht  B  aus  A  durch (genau eine) Zeilenvertauschung, so ist  det B = - det A..  (7) Ist  lam in K  und entsteht  B  aus  A  durch Addition der  lam\text{-fachen}  *j*-ten Zeile zur *i*-ten Zeile  (i neq j),  so ist  det B = det A..  (8) Ist  A  eine obere Dreiecksmatrix,  A = pm{lam_1 & & * \\ & ddots & \\ 0 & & lam_n},  so ist  det A = lam_1 cdot ... cdot lam_n..  (9) Sei  n ≥ 2  und  A in M(m, n : K)  von der Gestalt  A = pm{A_1 & C \\ 0 & A_2},  wobei  A_1, A_2  quadratisch. Dann gilt  det A = det(A_1) cdot det(A_2)..  (10)  det A = 0 <=> Rang(A) < n <=>  Zeilenvektoren sind linear unabhängig.
+
+# Feb 5. Permutationen
+
+Def..  S_n := \{sigma : \{1, ..., n\} to \{1, ..., n\} : sigma \text{ bijektive Abbildung} \}  heißt Menge der **Permutationen**.
+
+Bmk.. (1)  (S_n, circ)  ist Gruppe.. (2)  |S_n| = n!..  (3) Für  n ≥ 3  ist  S_n  nicht abelsch.
+
+Def.. Eine Permutation  tau in S_n  heißt **Transposition** falls  τ  zwei Elemente aus  \{1, ..., n\}  vertauscht und alle anderen fest lässt.
+
+Lemma.. Zu jedem  σ in S_n  gibt es Transpositionen  τ_1, ..., τ_k  in  S_n  mit  σ = τ_1 circ ... circ τ_k \; (n ≥ 2).  
+
+Bmk.. Die Zerlegung einer Permutation ist nicht eindeutig.
+
+Def.. Ist  sigma in S_n,  so nennt man jedes Paar  i, j in \{1, ..., n\}  mit  i < j  aber  σ(i) > σ(j)  einen **Fehlstand** von  σ.  Das **Signum** von  σ  ist definiert durch  sgn(σ) := 1,  falls  σ  gerade Anzahl von Fehlständen hat,  sgn(σ) := 0,  sonst.
+
+Lemma.. Für jedes  σ in S_n  gilt:  sgn(σ) = prod_{i < j} frac{σ(j) - σ(i)}{j - i} in \{±1\}.  
+
+Satz.. Die Abbildung  sgn : S_n to \{-1, +1\}  ist ein Gruppenhomomorphismus.
+
+Kor.. (1) Für jede Transposition  τ in S_n  gilt  sgn(τ) = -1..  (2) Ist  σ in S_n  und  σ = τ_1 circ ... circ τ_k  mit  τ_1, ..., τ_k in S_n  Transpositionen, dann  sgn(σ) = (-1)^k.  
+
+Kor..  det E_σ = det pm{e_{σ(1)} \\ vdots \\ e_{σ(n)}} = sgn(σ).  
+
+Def..  A_n := Ker(sgn) = \{σ in S_n : sgn(σ) = 1\}  heißt die **alternierende Gruppe**.
+
+Bmk..  τ in S_n, \; sgn(τ) = -1.  Dann  S_n = A_n overset . cup τ cdot A_n  (disjunkte Vereinigung).  (τ cdot A_n  ist die Linksnebenklasse  \{τ circ σ : σ in A_n\}.)  Insbesondere  |A_n| = frac{n!}{2}.  
+
+Theorem.. Ist  K  ein Körper und  n ≥ 1,  so gibt es genau eine Determinante  det : M(n, n : K) to K  und für  A = (a_{ij})  lautet sie  det A := sum_{σ in S_n} sgn(σ) a_{1σ(1)} cdot ... cdot a_{nσ(n)}.  
+
+# Feb 7
+
+Satz.. Sei  A in M(n, n : K).  Es gilt  det A = det A^t.  
+
+Folgerung.. Die Axiome für die Determinante lassen sich auch mit Spaltenvektoren formulieren.
+
+Def.. Sei  V  ein *K*-Vektorraum, dann heiße  Phi : V times ... times V_(m-\text{mal}) to K  eine **_m_-fache Linearform**, wenn für alle  i in \{q, ..., m\}  gilt:  Phi(v_1, ..., lam v_i' + v_i'', ..., v_m) = lam Phi(v_1, ..., v_i', ..., v_m) + Phi(v_1, ..., v_i'', ..., v_m).  
+
+Bmk.. Ist  dim V = n,  dann ist  det  *n*-fache Linearform. (?)
