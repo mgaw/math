@@ -1,5 +1,5 @@
 Titel: Lineare Algebra I*
-Vorlage: math
+Layout: parskip toc
 
 # Nov 8. Linksnebenklasse
 
@@ -416,7 +416,7 @@ Satz.. Seien  v = (a, b) in RR^2  und  w = (c, d) in RR^2  Zeilenvektoren von  A
 
 Def.. Sei  K  Körper. Eine Abbildung  det : M(n, n: K) to K  heißt **Determinante** falls: (1)  det  ist linear in jeder Zeile:  a_i = a_i' + a_i'' => det pm{vdots \\ a_i \\ vdots} = det pm{vdots \\ a_i' \\ \small vdots} + det pm{vdots \\ a_i'' \\ vdots}  und  a_i = lam a_i' => det pm{vdots \\ a_i \\ vdots} = lam det pm{vdots \\ a_i' \\ vdots}..  (2)  det  ist **alternierend**, das heißt hat  A  zwei gleichen Zeilen, so ist  det A = 0..  (3)  det  ist **normiert**, das heißt  det I_n = 1.  
 
-Satz.. Eine Abbildung  det : M(n, n : K)  hat die folgenden weiteren Eigenschaften.. (4)  det(lam A) = lam^n det(A)..  (5) Ist eine Zeile von  A  gleich Null, so ist  det A = 0..  (6) Entsteht  B  aus  A  durch (genau eine) Zeilenvertauschung, so ist  det B = - det A..  (7) Ist  lam in K  und entsteht  B  aus  A  durch Addition der  lam\text{-fachen}  *j*-ten Zeile zur *i*-ten Zeile  (i neq j),  so ist  det B = det A..  (8) Ist  A  eine obere Dreiecksmatrix,  A = pm{lam_1 & & * \\ & ddots & \\ 0 & & lam_n},  so ist  det A = lam_1 cdot ... cdot lam_n..  (9) Sei  n ≥ 2  und  A in M(m, n : K)  von der Gestalt  A = pm{A_1 & C \\ 0 & A_2},  wobei  A_1, A_2  quadratisch. Dann gilt  det A = det(A_1) cdot det(A_2)..  (10)  det A = 0 <=> Rang(A) < n <=>  Zeilenvektoren sind linear unabhängig.
+Satz.. Eine Abbildung  det : M(n, n : K)  hat die folgenden weiteren Eigenschaften.. (4)  det(lam A) = lam^n det(A)..  (5) Ist eine Zeile von  A  gleich Null, so ist  det A = 0..  (6) Entsteht  B  aus  A  durch (genau eine) Zeilenvertauschung, so ist  det B = - det A..  (7) Ist  lam in K  und entsteht  B  aus  A  durch Addition der  lam\text{-fachen}  *j*-ten Zeile zur *i*-ten Zeile  (i neq j),  so ist  det B = det A..  (8) Ist  A  eine obere Dreiecksmatrix,  A = pm{lam_1 & & * \\ & ddots & \\ 0 & & lam_n},  so ist  det A = lam_1 cdot ... cdot lam_n..  (9) Sei  n ≥ 2  und  A in M(m, n : K)  von der Gestalt  A = pm{A_1 & C \\ 0 & A_2},  wobei  A_1, A_2  quadratisch. Dann gilt  det A = det(A_1) cdot det(A_2)..  (10)  det A = 0 <=> Rang(A) < n <=>  Zeilenvektoren sind linear abhängig.
 
 # Feb 5. Permutationen
 

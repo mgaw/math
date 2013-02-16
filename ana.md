@@ -1,5 +1,5 @@
 Titel: Analysis I*
-Vorlage: math
+Layout: parskip toc
 
 # Okt 30. Angeordneter Körper
 
