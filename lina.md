@@ -1,34 +1,34 @@
 Titel: Lineare Algebra I*
-Layout: parskip toc
+Layout: parskip toc cm
 
 # Nov 8. Linksnebenklasse
 
-Def.. Sei  (G, cdot)  eine Gruppe und  H ≤ G.  Die Teilmenge von  PP(G),  die aus Elementen der Form  gH  besteht wird als  (G/H)_l  bezeichnet. Sie heißt Menge der **Linksnebenklassen** von  H.  
+Def.. Sei  (G, cdot)  eine Gruppe und  H ≤ G.  Die Teilmenge von  PP(G),  die aus Elementen der Form  g H  besteht wird als  (G/H)_l  bezeichnet. Sie heißt Menge der **Linksnebenklassen** von  H.  
 
-Lemma..  forall x, y in G : xH=yH <=> x^{-1}y in H.  
+Lemma..  forall x, y in G : x H=y H <=> x^{-1}y in H.  
 
-Satz.. Die Relation  sim_l  mit  x sim_l y <=> xH=yH  ist eine Äquivalenzrelation. Die Linksnebenklassen von  H  sind also Äquivalenzklassen, das heißt  overline x = xH.  
+Satz.. Die Relation  sim_l  mit  x sim_l y <=> x H = y H  ist eine Äquivalenzrelation. Die Linksnebenklassen von  H  sind also Äquivalenzklassen, das heißt  overline x = x H.  
 
-Bmk..  G  wirkt auf  (G/H)_l  durch Multiplikation von links, das heißt für  g, x in G : g(xH) = (gx)H in (G/H)_l.  
+Bmk..  G  wirkt auf  (G/H)_l  durch Multiplikation von links, das heißt für  g, x in G : g(x H) = (g x)H in (G/H)_l.  
 
-Satz.. Multiplikation von links mit einem bestimmten Element  g in G  definiert einen Gruppenhomomorphismus  L_g : (G/H)_l to (G/H)_l  mit  L_g(xH) := (gx)H.  
+Satz.. Multiplikation von links mit einem bestimmten Element  g in G  definiert einen Gruppenhomomorphismus  L_g : (G/H)_l to (G/H)_l  mit  L_g(x H) := (g x)H.  
 
 # Nov 13. Normalteiler, Faktorgruppe
 
-Bsp.. Sei  G  Gruppe,  H ≤ G.  Dann ist  (G/H)_l := \{gH : g in G\} sse P(G)  die Menge der
+Bsp.. Sei  G  Gruppe,  H ≤ G.  Dann ist  (G/H)_l := \{g H : g in G\} sse P(G)  die Menge der
 Linksnebenklassen von  H  in  G.  Haben Äquivalenzrelation auf *G*:
   x sim_l y :<=> x^{-1}y in H.  Dann ist  overline x = \{y in G : x sim_l y\} = \{y in G : x^{-1}y
-= h in H\} = \{y in G : y = xh, h in H\} = xH.  
+= h in H\} = \{y in G : y = x h, h in H\} = x H.  
 
 Def.. Eine Untergruppe  H  einer Gruppe  G  heißt **Normalteiler**, wenn  forall h in H, g in G:
-g^{-1}hg in H.  Dann schreibt man  H unlhd G.  
+g^{-1}h g in H.  Dann schreibt man  H unlhd G.  
 
 Bmk.. Für abelsche Gruppen gilt, dass jede Untergruppe ein Normalteiler ist.
 
-Satz.. Sei  H unlhd G,  dann kann man die Verknüpfung  (G/H)_l times (G/H)_l to (G/H)_l  mit  (xH,
-yH) mapsto xyH  definieren.
+Satz.. Sei  H unlhd G,  dann kann man die Verknüpfung  (G/H)_l times (G/H)_l to (G/H)_l  mit  (x H,
+y H) mapsto x y H  definieren.
 
-Bmk.. Sei  H ≤ G.  Dann ist  H unlhd G <=> gH=Hg, \; forall g in G.  Die Linksnebenklassen sind also
+Bmk.. Sei  H ≤ G.  Dann ist  H unlhd G <=> g H = H g, \; forall g in G.  Die Linksnebenklassen sind also
 die Rechtsnebenklassen sind die Nebenklassen.
 
 Satz.. Ist  H unlhd G,  dann ist  ((G/H), cdot)  eine Gruppe. Man nennt sie **Faktorgruppe**.
@@ -48,14 +48,14 @@ Bmk.. Die Anzahl der Links- und Rechtsnebenklassen ist gleich, d.h.  [G:H] = |(G
 
 Kor.. Ist  G  endliche Gruppe,  n = |G|, x in G.  Dann  ord (x) \; | \; |G|,  d.h.  x^n = e, \; forall x in G.  
 
-Bsp..  overline a in ZZ/nZZ, \; 0 ≤ a ≤ n-1.  Dann  ord(overline x) = n <=> ggT(a,n) = 1.  
+Bsp..  overline a in ZZ/n ZZ, \; 0 ≤ a ≤ n-1.  Dann  ord(overline x) = n <=> ggT(a,n) = 1.  
 
 **Kleiner Satz von Fermat**.. Sei  p  Primzahl und  a in ZZ  mit  p not | \; a.  Dann gilt  a^{p-1}
 equiv 1 mod p.  Außerdem gilt für alle  a in ZZ : a^p equiv a mod p.  
 
 # Nov 20. Isomorphiesatz
 
-Prop.. Seien  a, b in ZZ, \; d = \text{ggT}(a, b).  Dann gibt es  x, y \in ZZ,  so dass  d=xa+yb.  
+Prop.. Seien  a, b in ZZ, \; d = \text{ggT}(a, b).  Dann gibt es  x, y \in ZZ,  so dass  d = x a + y b.  
 
 Bmk.. Der  ggT(a, b)  ist die kleinste natürliche Zahl, die als lineare Kombination von a und b
 darstellbar ist.
@@ -137,7 +137,7 @@ Bmk.. Jeder Körper ist Integritätsbereich.
 
 Lemma.. Ein Integritätsbereich mit endlich vielen Elementen ist ein Körper.
 
-Bmk.. Sei  k  Primzahl. Dann ist  ZZ/pZZ  Körper und wird mit  FF_2  bezeichnet.
+Bmk.. Sei  k  Primzahl. Dann ist  ZZ/p ZZ  Körper und wird mit  FF_2  bezeichnet.
 
 Def.. Sei  R  ein Ring mit 1. Dann heißt  char(R) := 0  falls  n cdot 1_R neq 0_R  für alle  n in NN_{>0}  und  char(R) := min \{n in NN_{>0} : n cdot 1_R = 0_R\}  die **Charakteristik** von  R.  
 
@@ -157,11 +157,11 @@ Satz..  (K[t])  ist mit den folgenden Operationen  +  und  cdot  ein Ring. Sei  
 
 Bmk.. Für den Grad der Polynome gilt  deg(f+g) ≤ max (deg f, deg g)  und  deg(f cdot g) = deg f + deg g,  wobei  -infty + n := -infty  und  max (-infty, n) := n.  
 
-Satz.. Seien  f, g in K[t]  mit  g neq 0.  Dann existieren eindeutig bestimmte  q, r in K[t],  so dass  f=qg+r  ist und  deg(r) < deg(g).  
+Satz.. Seien  f, g in K[t]  mit  g neq 0.  Dann existieren eindeutig bestimmte  q, r in K[t],  so dass  f = q g + r  ist und  deg(r) < deg(g).  
 
 # Dez 4. Polynomteiler, Vielfachheit von Nullstellen
 
-**Division mit Rest**.. Sei  K  Körper,  f,g in K[t]  Polynome. Dann existieren  q(t), r(t)  eindeutig bestimmt in  f=gq+r  mit  deg(r) < deg(g).  
+**Division mit Rest**.. Sei  K  Körper,  f,g in K[t]  Polynome. Dann existieren  q(t), r(t)  eindeutig bestimmt in  f=g q + r  mit  deg(r) < deg(g).  
 
 Def.. Sei  f in K[t]. \; lam in K  heißt **Nullstelle**, falls  f(lam) = 0.  
 
@@ -169,15 +169,15 @@ Kor..  lam in K  Nullstelle von  f <=> (t-lam) | f :<=> exists q in K[t]  mit  f
 
 Satz.. Sei  K  Körper,  f in K[t], \; f neq 0, \; deg(f) = n.  Dann besitzt  f  höchstens  n  Nullstellen.
 
-Def..  f in K[t], \; f neq 0, \; lam in K  Nullstelle. Die **Vielfachheit** von  lam,  ausgedrückt durch  mü(f, lam),  ist die größte natürliche Zahl  r  mit  (t-lam)^r | f.  
+Def..  f in K[t], \; f neq 0, \; lam in K  Nullstelle. Die **Vielfachheit** von  lam,  ausgedrückt durch  mu(f, lam),  ist die größte natürliche Zahl  r  mit  (t-lam)^r | f.  
 
-Bmk..  mü(f, lam) ≥ 1  heißt, dass  lam  Nullstelle ist.
+Bmk..  mu(f, lam) ≥ 1  heißt, dass  lam  Nullstelle ist.
 
-Kor..  f in K[t]  Polynom,  lam_1, ..., lam_s  die verschiedenen Nullstelllen von  f,  das heißt  r_i = mü(f, lam) ≥ 1.  Dann gibt es ein  g in K[t]  mit  f=(t-lam_1)^{r_1} cdot (t-lam_2)^{r_2} cdot ... cdot (t-lam_s)^{r_s} cdot g.  Anders ausgedrückt: Produkt von i=1 bis s  (t-lam_i)^{r_i} | f.  
+Kor..  f in K[t]  Polynom,  lam_1, ..., lam_s  die verschiedenen Nullstelllen von  f,  das heißt  r_i = mu(f, lam) ≥ 1.  Dann gibt es ein  g in K[t]  mit  f=(t-lam_1)^{r_1} cdot (t-lam_2)^{r_2} cdot ... cdot (t-lam_s)^{r_s} cdot g.  Anders ausgedrückt: Produkt von i=1 bis s  (t-lam_i)^{r_i} | f.  
 
 Satz..  sin(alpha+beta) = sin alpha cos beta + sin beta cos alpha.  
 
-Satz.. Sei  w=re^{i theta} in CC.  Dann besitzt das Polynom  z^n-w in CC[z] \; n  verschiedene Nullstellen, das heißt es existieren  n  verschiedene komplexe Zahlen  z_1, ..., z_n  mit  z_i^n = w.  Schreiben  sqrt[n] w := \{z_1, z_2, ..., z_n\}.  
+Satz.. Sei  w = r e^{i theta} in CC.  Dann besitzt das Polynom  z^n-w in CC[z] \; n  verschiedene Nullstellen, das heißt es existieren  n  verschiedene komplexe Zahlen  z_1, ..., z_n  mit  z_i^n = w.  Schreiben  sqrt[n] w := \{z_1, z_2, ..., z_n\}.  
 
 # Dez 4. Ideal (Übung)
 
@@ -187,13 +187,13 @@ Def.. Sei  (X, +, cdot)  ein Ring. Eine Menge  I sse X  heißt **rechtes (linkes
 
 # Dez 6. Fundamentalsatz der Algebra, Vektorraum
 
-Satz..  z=re^{i theta} in CC. \; z^n = w <=> z = sqrt[n] w = \{sqrt[n]r (cos frac{theta + 2k pi} n + i sin frac{theta + 2k pi} n) : k in \{0, 1, ..., n-1\} \}.  
+Satz..  z = r e^{i theta} in CC. \; z^n = w <=> z = sqrt[n] w = \{sqrt[n]r (cos frac{theta + 2k pi} n + i sin frac{theta + 2k pi} n) : k in \{0, 1, ..., n-1\} \}.  
 
 Folgerung.. Für  n=2  gilt  sqrt w = \{sqrt r (cos frac theta 2 + i sin frac theta 2), \; -sqrt r (cos frac theta 2 + i sin frac theta 2)\}  (wegen  cos (x + pi) = -cos x).  
 
-Satz.. Sei  az^2 + bz + c=0, \; a neq 0.  Dann  z=-frac{b +- sqrt{b^2-4ac}}{2a}.  
+Satz.. Sei  a z^2 + b z + c=0, \; a neq 0.  Dann  z=-frac{b +- sqrt{b^2 - 4a c}}{2a}.  
 
-Prop.. Ist  f in RR[t]  ein *reelles* Polynom und  lam in CC  eine Nullstelle von  f.  Dann ist  overline lam in CC  eine Nullstelle von  f.  Es gilt sogar  mü(f, lam) = mü(f, overline lam).  
+Prop.. Ist  f in RR[t]  ein *reelles* Polynom und  lam in CC  eine Nullstelle von  f.  Dann ist  overline lam in CC  eine Nullstelle von  f.  Es gilt sogar  mu(f, lam) = mu(f, overline lam).  
 
 **Fundamentalsatz der Algebra**.. Jedes Polynom  f in CC[t]  mit  deg(f) > 0  hat mindestens eine Nullstelle.
 
@@ -201,7 +201,7 @@ Kor.. Jedes Polynom  f in CC[t]  zerfällt in Linearfaktoren, das heißt es gibt
 
 Prop.. Sei  K  unendlicher Körper. Dann ist die Abbildung  K[t] to Abb(K, K)  injektiv.
 
-Def.. Sei  K  ein Körper. Eine Menge  V  mit einer inneren Verknüpfung  +:V times V to V  und einer äußeren Verknüpfung  cdot : K times V to V  heißt **K-Vektorraum**, wenn gilt: (1)  (V, +)  ist abelsche Gruppe mit neutralem Element  0 in V.  (2) Verträglichkeiten für  lam, mü in K, \; v, w in V,  nämlich (i)  (lam + mü)v = lam v + mü v,  (ii)  lam(v+w) = lam v + lam w,  (iii)  lam(mü v) = (lam mü) v  und (iv)  1v = v.  
+Def.. Sei  K  ein Körper. Eine Menge  V  mit einer inneren Verknüpfung  +:V times V to V  und einer äußeren Verknüpfung  cdot : K times V to V  heißt **K-Vektorraum**, wenn gilt: (1)  (V, +)  ist abelsche Gruppe mit neutralem Element  0 in V.  (2) Verträglichkeiten für  lam, mu in K, \; v, w in V,  nämlich (i)  (lam + mu)v = lam v + mu v,  (ii)  lam(v+w) = lam v + lam w,  (iii)  lam(mu v) = (lam mu) v  und (iv)  1v = v.  
 
 # Dez 11. Untervektorraum, lineare Unabhängigkeit
 
@@ -224,25 +224,25 @@ Def.. Sei  M sse V  eine Teilmenge. Die Menge aller Linearkombinationen von *end
 
 Satz.. Sei  V  ein Vektorraum und  M sse V  eine Teilmenge. Dann ist  langle M rangle  der kleinste UVR von  V,  der  M  enthält, das heißt (a)  langle M rangle  ist ein UVR und (b) Ist  W ≤ V  ein UVR mit  M sse W,  so gilt  langle M rangle sse W.  
 
-Def.. Sei  V  ein Vekorraum. Eine endliche Familie  (v_1, ..., v_k)  von Vektoren in  V  heißt **linear unabhängig**, wenn für alle  lam_1, ..., lam_r in K  gilt:  (lam_1v_1 + ... + lam_rv_r = 0) \;=>\; (lam_1 = ... = lam_r = 0),  das heißt der Nullvektor lässt sich nur auf *eine* (triviale) Art als Linearkombination der  v_i  schreiben. Eine unendliche Familie  (v_i)_{i in I}  heißt linear unabhängig, wenn jede endliche Teilfamilie linear unabhängig ist. Eine Familie, die nicht linear unabhängig ist, heißt **linear abhängig**.
+Def.. Sei  V  ein Vekorraum. Eine endliche Familie  (v_1, ..., v_k)  von Vektoren in  V  heißt **linear unabhängig**, wenn für alle  lam_1, ..., lam_r in K  gilt:  (lam_1v_1 + ... + lam_r v_r = 0) \;=>\; (lam_1 = ... = lam_r = 0),  das heißt der Nullvektor lässt sich nur auf *eine* (triviale) Art als Linearkombination der  v_i  schreiben. Eine unendliche Familie  (v_i)_{i in I}  heißt linear unabhängig, wenn jede endliche Teilfamilie linear unabhängig ist. Eine Familie, die nicht linear unabhängig ist, heißt **linear abhängig**.
 
 Lemma.. (a)  \{v\}  ist genau dann linear unabhängig, wenn  v = 0.  (b) Jede Familie, die den Nullvektor enthält, ist linear abhängig. (c) Eine Familie, die einen Vektor doppelt enthält, ist linear abhängig. (d) Zwei oder mehr Vektoren  v_1, ..., v_r  sind genau dann linear abhängig, wenn einer davon im Spann der anderen liegt.
 
 # Dez 11. Maximales Ideal, Primideal (Übung)
 
-Prop.. Seien  p, q in NN^*.  Dann  pZZ + qZZ = ggT(p,q)ZZ.  
+Prop.. Seien  p, q in NN^*.  Dann  p ZZ + q ZZ = ggT(p,q)ZZ.  
 
-Theorem.. Seien  p, q in NN^*  und  d = ggT(p,q).  Dann existieren  s, t in ZZ  so, dass  sp+tq = d.  
+Theorem.. Seien  p, q in NN^*  und  d = ggT(p,q).  Dann existieren  s, t in ZZ  so, dass  s p + t q = d.  
 
 Def.. Zwei Ideale  A, B  eines Ringes  R  heißen **fremd**, falls  A+B=R.  
 
-Kor..  pZZ  und  qZZ  sind genau dann fremde Ideale, wenn  ggT(p,q)=1.  
+Kor..  p ZZ  und  q ZZ  sind genau dann fremde Ideale, wenn  ggT(p, q) = 1.  
 
-Def.. Sei  (X, +, cdot)  ein kommutativer Ring. Ein Ideal  I sse X  heißt **Primideal**, falls  xy in I => x in I  oder  y in I. \; I  heißt **maximal**, falls  J  Ideal von  X  und  I sse J sse X \;=>\; J = I  oder  J = X.  
+Def.. Sei  (X, +, cdot)  ein kommutativer Ring. Ein Ideal  I sse X  heißt **Primideal**, falls  x y in I => x in I  oder  y in I. \; I  heißt **maximal**, falls  J  Ideal von  X  und  I sse J sse X \;=>\; J = I  oder  J = X.  
 
-Satz..  pZZ  ist genau dann Primideal von  ZZ,  wenn  p  Primzahl ist.
+Satz..  p ZZ  ist genau dann Primideal von  ZZ,  wenn  p  Primzahl ist.
 
-Satz.. Sei  I sse ZZ, x in X setminus I.  Dann gilt  J := displaystyle bigcap_{tilde J \text{ Ideal, } I cup \{x\} sse tilde J} = \{i+kx : i in I, k in ZZ\} =: H.  
+Satz.. Sei  I sse ZZ, x in X setminus I.  Dann gilt  J := displaystyle bigcap_{tilde J \text{ Ideal, } I cup \{x\} sse tilde J} = \{i+k x : i in I, k in ZZ\} =: H.  
 
 Satz.. Sei  I  ein maximales Ideal von  ZZ.  Dann ist  I  Primideal.
 
@@ -252,7 +252,7 @@ Def.. Sei  V  ein *K*-Vektorraum. Eine Familie  B = (e_i)_{i in I} sse V  heißt
 
 Satz.. Für eine Teilmenge  B=(e_i)_{i in I} sse V  sind die folgenden Bedingungen äquivalent: (1)  B  ist Basis. (2)  B  ist ein *minimales* Erzeugendensystem von  V,  das heißt:  A sse B  ist Erz.sys.  => A=B.  (3)  B  ist eine *maximale* linear unabhängige Teilmenge von  V,  das heißt:  B ssne B' sse V => B'  ist linear unabhängig.
 
-**Austauschlemma**.. Sei  V  *K*-Vektorraum,  B = \{e_1, ..., e_r\}  Basis von  V  und  v=lam_1e_1 + ... + lam_re_r in V.  Ist  lam_k neq 0 \;(1 ≤ k ≤ r),  dann ist  B':=\{e_1, ..., e_{k-1}, v, e_{k+1}, ..., e_r\}  wieder Basis von  V.  
+**Austauschlemma**.. Sei  V  *K*-Vektorraum,  B = \{e_1, ..., e_r\}  Basis von  V  und  v=lam_1e_1 + ... + lam_r e_r in V.  Ist  lam_k neq 0 \;(1 ≤ k ≤ r),  dann ist  B':=\{e_1, ..., e_{k-1}, v, e_{k+1}, ..., e_r\}  wieder Basis von  V.  
 
 # Dez 20. Dimension
 
@@ -282,7 +282,7 @@ Satz.. Seien  U_1, U_2 <= V  Teilräume,  U := U_1 + U_2.  Dann sind die folgend
 
 Def.. Seien  V, W  zwei *K*-Vektorräume.  f:V to W  heißt **linear**, falls folgendes gilt.. (1)  f(v+v') = f(v) + f(v'), \; v, v' in V..  (2)  f(lam v) = lam f(v), \; lam in K, \; v in V..  Ist  V=W,  dann ist  f:V to W  **Endomorphismus**.
 
-Prop.. Sei  f:V to W  *K*-lineare Abbildung.. (1)  f(lam_1v_1 + ... + lam_nv_n)=lam_1f(v_1) + ... + lam_nf(v_n) \; forall v_1, ..., v_n in V, \; lam_1, ..., lam_n in K..  (2) Ist die Familie  \{v_i\}_{i in I}  in  V  linear abhängig, so ist  \{f(v_i)\}_{i in I}  linear abhängig in  W..  (3)  f(V) <= W..  (4)  dim f(V) <= dim W.  
+Prop.. Sei  f:V to W  *K*-lineare Abbildung.. (1)  f(lam_1 v_1 + ... + lam_n v_n) = lam_1 f(v_1) + ... + lam_n f(v_n) \; forall v_1, ..., v_n in V, \; lam_1, ..., lam_n in K..  (2) Ist die Familie  \{v_i\}_{i in I}  in  V  linear abhängig, so ist  \{f(v_i)\}_{i in I}  linear abhängig in  W..  (3)  f(V) <= W..  (4)  dim f(V) <= dim W.  
 
 Def..  Hom_K(V, W) := \{f:V to W : f \text{ ist }K\text{-lineare Abbildung}\}.  
 
@@ -300,23 +300,23 @@ Def..  M(m,n:K) := \{A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}} : a
 
 Def..  M(n:K) := M(n,n:K).  
 
-Def..  I_n := pm{1&&0 \\& ddots& \\ 0&&1 } = (∂_{ij})_{smatrix{ 1 ≤ i ≤ n \\ 1 ≤ j ≤ n}}, \; ∂_{ij} := 1,  für  i=j, \; ∂_{ij} := 0,  sonst.  I_n  ist die **_n_-reihige Einheitsmatrix**.
+Def..  I_n := mat{1&&0 \\& ddots& \\ 0&&1 } = (∂_{ij})_{smatrix{ 1 ≤ i ≤ n \\ 1 ≤ j ≤ n}}, \; ∂_{ij} := 1,  für  i=j, \; ∂_{ij} := 0,  sonst.  I_n  ist die **_n_-reihige Einheitsmatrix**.
 
 Bmk..  M(m,n:K)  ist ein *K*-Vektorraum isomorph zu  K^{mn}.  
 
-Def.. Sei  A in M(m,n:K), \; A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}.  Die **transponierte Matrix** ist  ^tA = (a_{ji})_{smatrix{ 1 ≤ j ≤ n \\ 1 ≤ i ≤ m }} in M(n,m:K).  
+Def.. Sei  A in M(m,n:K), \; A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}.  Die **transponierte Matrix** ist  ^t A = (a_{ji})_{smatrix{ 1 ≤ j ≤ n \\ 1 ≤ i ≤ m }} in M(n,m:K).  
 
-Bmk..  ^tI_n = I_n.  
+Bmk..  ^t I_n = I_n.  
 
-Def.. Eine Matrix  A in M(m,n:K)  heißt **symmetrisch**, falls  A =    ^tA.  
+Def.. Eine Matrix  A in M(m,n:K)  heißt **symmetrisch**, falls  A =    ^t A.  
 
-Def.. Sei  V  ein *K*-Vektorraum und  B=(v_1,...,v_n)  eine Basis. Sei der Isomorphismus von Vektorräumen  Phi_B : K^n simto V  gegeben durch  Phi_B(λ_1, ..., λ_n) := λ_1v_1 + ... + λ_nv_n.  Sei  v=sum_{i=1}^n λ_iv_i..  Dann heißen  [v]_B :=    ^t(Phi_B^{-1}(v)) = pm{λ_1 \\ vdots \\ λ_n}  die **Koordinaten von _v_ bzgl. _B_**.
+Def.. Sei  V  ein *K*-Vektorraum und  B=(v_1,...,v_n)  eine Basis. Sei der Isomorphismus von Vektorräumen  Phi_B : K^n simto V  gegeben durch  Phi_B(λ_1, ..., λ_n) := λ_1v_1 + ... + λ_n v_n.  Sei  v=sum_{i=1}^n λ_i v_i..  Dann heißen  [v]_B :=    ^t(Phi_B^{-1}(v)) = mat{λ_1 \\ vdots \\ λ_n}  die **Koordinaten von _v_ bzgl. _B_**.
 
-Def.. Sei  A = pm{a_{11} & cdots & a_{1n} \\ vdots & & vdots \\ a_{m1} & cdots & a_{mn}}  und  v=pm{v_1 \\ vdots \\ v_n} in K^n.  Definieren den Operator  cdot : M(m,n:K) times K^n to K^m  mit  A cdot v = pm{a_{11} & cdots & a_{1n} \\ vdots & & vdots \\ a_{m1} & cdots & a_{mn}} pm{v_1 \\ vdots \\ v_n} := pm{a_{11}v_1 + a_{12}v_2 + ... + a_{1n}v_n \\ vdots \\ a_{m1}v_1 + a_{m2}v_2 + ... + a_{mn}v_n}.  
+Def.. Sei  A = mat{a_{11} & cdots & a_{1n} \\ vdots & & vdots \\ a_{m1} & cdots & a_{mn}}  und  v=mat{v_1 \\ vdots \\ v_n} in K^n.  Definieren den Operator  cdot : M(m,n:K) times K^n to K^m  mit  A cdot v = mat{a_{11} & cdots & a_{1n} \\ vdots & & vdots \\ a_{m1} & cdots & a_{mn}} mat{v_1 \\ vdots \\ v_n} := mat{a_{11}v_1 + a_{12}v_2 + ... + a_{1n}v_n \\ vdots \\ a_{m1}v_1 + a_{m2}v_2 + ... + a_{mn}v_n}.  
 
-Satz..  A (v+w) = Av+Aw.. (A+B) = Av+Bv.  
+Satz..  A (v+w) = A v + A w.. (A+B) = A v + B v.  
 
-Def.. Sei  A in M(m,n:K).  Definieren  phi_A:K^n to K^m  mit  phi_A(v) := Av.  
+Def.. Sei  A in M(m,n:K).  Definieren  phi_A : K^n to K^m  mit  phi_A(v) := A v.  
 
 Satz..  phi_A  ist eine *K*-lineare Abbildung. Die Spalten der Matrix stellen dabei die Bilder der Elemente  (0,...,1,...,0)  der kanonischen Basis von  K^n  dar.
 
@@ -328,11 +328,11 @@ Satz.. (...?) Dann  Phi_B = M = Phi_{B'}
 
 # Jan 15. Matrixmultiplikation, Faktorraum
 
-Def..  A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}, \; B = (b_{jl})_{smatrix{ 1 ≤ j ≤ n \\ 1 ≤ l ≤ r}}.. AB := (c_{il})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ l ≤ r}}  mit  c_{il}:= sum_{j=1}^n a_{ij}b_{jl}  ("*i*-te Zeile von *A* mal *j*-te Spalte von *B*").
+Def..  A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}, \; B = (b_{jl})_{smatrix{ 1 ≤ j ≤ n \\ 1 ≤ l ≤ r}}.. A B := (c_{il})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ l ≤ r}}  mit  c_{il}:= sum_{j=1}^n a_{ij}b_{jl}  ("*i*-te Zeile von *A* mal *j*-te Spalte von *B*").
 
-Satz..  phi_A circ phi_B = phi_{AB}  
+Satz..  phi_A circ phi_B = phi_{A B}  
 
-**Rechenregeln**.. (1)  A(B+B') = AB+AB', \; (A+A')B = AB + A'B..  (2)  I_nA = A, \; AI_n = A..  (3)  ^t(AB) =    ^tB cdot    ^tA.  
+**Rechenregeln**.. (1)  A(B+B') = A B+A B', \; (A+A')B = A B + A'B..  (2)  I_n A = A, \; A I_n = A..  (3)  ^t(A B) =    ^t B cdot    ^t A.  
 
 Satz.. Sei  \{u_1, ..., u_r\}  eine Basis von  Ker(f).  Wählt man  v_1, ..., v_s in V,  so dass  \{f(v_1), ..., f(v_s)\}  eine Basis von  Bild(f)  bilden, dann ist  B=\{u_1, ..., u_r, v_1, ..., v_s\}  eine Basis von  V.  
 
@@ -354,13 +354,15 @@ Satz..  V/U  ist *K*-Vektorraum.
 
 (Bmk..  dim_K V/U = dim_K V - dim_K U.)  
 
-Def.. Eine Matrix  A in M(n,n:K)  heißt **invertierbar**, wenn es eine Matrix  B in M(n,n:K)  gibt mit  AB=BA=I_n.  
+Def.. Eine Matrix  A in M(n,n:K)  heißt **invertierbar**, wenn es eine Matrix  B in M(n,n:K)  gibt mit  A B = B A = I_n.  
 
-Lemma.. Sei  A=(a_{ij})_{1 ≤ i,j ≤ n} in M(n,n:K).  Ist  A  invertierbar, dann ist die lineare Abbildung  Phi_A:K^n to K^n  mit  Phi_A(x) = Ax  ein Isomorphismus.
+Lemma.. Sei  A=(a_{ij})_{1 ≤ i,j ≤ n} in M(n,n:K).  Ist  A  invertierbar, dann ist die lineare Abbildung  Phi_A:K^n to K^n  mit  Phi_A(x) = A x  ein Isomorphismus.
 
-Prop.. Seien  A,B in M(n:K)  mit  BA=I_n,  dann ist  AB=I_n  und  B  mit dieser Eigenschaft eindeutig.
+Prop.. Seien  A, B in M(n:K)  mit  B A = I_n,  dann ist  A B = I_n  und  B  mit dieser Eigenschaft eindeutig.
 
-Bsp..  A = pm{a&b\\c&d} in M(2:K).  Sei  ad-bc=0.  Dann  A^{-1} = frac{1}{ad-bc}pm{d&-b\\-c&a}.  
+Bsp..  A = mat{a&b\\c&d} in M(2:K).  Sei  a d - b c = 0.  Dann  A^{-1} = frac{1}{a d-b c}mat{d&-b\\-c&a}.  
+
+
 
 Satz.. Seien  V,W,U  Vektorräume,  f:V to W  und  g:W to U  lineare Abbildungen,  B,C,D  Basen von  V,W  bzw.  U.  Dann  M_C^D(g) cdot M_B^C(f) = M_B^D(g circ f).  
 
@@ -372,23 +374,23 @@ Prop.. Die Matrix  T=M_{B'}^B(Id) in M(n:K)  ist invertierbar und es ist  T^{-1}
 
 Satz.. Sei  f:V to W  eine lineare Abbildung,  B, B'  Basen von  V  und  C, C'  Basen von  W.  Seien  T=M_{B'}^B(Id_V)  Basiswechselmatrix von  B  nach  B'  und  S=M_{C'}^C(Id_W)  Basiswechselmatrix von  C  nach  C'.  Dann gilt:  M_{B'}^{C'}(f) = S^{-1}M_B^C(f)T.  
 
-Def.. Sei  A = pm{a_{11} & ... & a_{1n} \\ vdots & & vdots \\ a_{m1} & ... & a_{mn}} in M(m,n:K).  Seien  v_j:=pm{a_{1j} \\ vdots \\ a_{mj}}, \; a ≤ j ≤ n  die Spaltenvektoren dieser Matrix. Definieren  Rang(A) := dim_K langle v_1, ..., v_n rangle.  
+Def.. Sei  A = mat{a_{11} & ... & a_{1n} \\ vdots & & vdots \\ a_{m1} & ... & a_{mn}} in M(m,n:K).  Seien  v_j:=mat{a_{1j} \\ vdots \\ a_{mj}}, \; a ≤ j ≤ n  die Spaltenvektoren dieser Matrix. Definieren  Rang(A) := dim_K langle v_1, ..., v_n rangle.  
 
 Satz.. Sei  f: V to W  lineare Abbildung,  B  Basis von  V  und  C  Basis von  W.  Dann  Rang(M_B^C(f)) = dim_K Bild(f).  
 
 Kor.. Sei  A in M(n:K).  Dann ist  A  invertierbar genau dann, wenn  Rang(A) = n.  
 
-Prop..  A in M(m,n:K), \; B in M(n,r:K).  Dann  Rang(AB) ≤ min (Rang(A), Rang(B)).  
+Prop..  A in M(m,n:K), \; B in M(n,r:K).  Dann  Rang(A B) ≤ min (Rang(A), Rang(B)).  
 
 # Jan 24. Lineare Gleichungssysteme
 
-Def..  A in M(m,n:K), \; b = pm{b_1 \\ vdots \\ b_m} in K^m, \; x = pm{x_1 \\ vdots \\ x_n} in K^n.. Lös(A,b) := \{x in K^n : Ax=b \} = Phi_A^{-1}(b)  ist die Lösungsmenge des Systems aus den Gleichungen  a_{i1}x_1 + ... + a_{in}x_n = b_i, \; 1 ≤ i ≤ m.  
+Def..  A in M(m,n:K), \; b = mat{b_1 \\ vdots \\ b_m} in K^m, \; x = mat{x_1 \\ vdots \\ x_n} in K^n.. Lös(A,b) := \{x in K^n : A x=b \} = Phi_A^{-1}(b)  ist die Lösungsmenge des Systems aus den Gleichungen  a_{i1}x_1 + ... + a_{in}x_n = b_i, \; 1 ≤ i ≤ m.  
 
-Prop.. Gegeben ein lineares System  Ax=b.  Sei  r=Rang(A)..  (1)  Lös(A,0) ≤ K^n  ist Unterraum mit Dimension  n-r..  (2)  Lös(A, b)  ist entweder leer oder ein affiner Raum der Dimension  n-r,  das heißt ist  v in Lös(A,b),  dann  Lös(A,b) = v+Lös(A,0) sse K^n.  
+Prop.. Gegeben ein lineares System  A x=b.  Sei  r=Rang(A)..  (1)  Lös(A,0) ≤ K^n  ist Unterraum mit Dimension  n-r..  (2)  Lös(A, b)  ist entweder leer oder ein affiner Raum der Dimension  n-r,  das heißt ist  v in Lös(A,b),  dann  Lös(A,b) = v+Lös(A,0) sse K^n.  
 
-Notation.. Die erweiterte Koeffizientenmatrix  (A|b) := pm{a_{11} & ... & a_{1n} & | & b_1 \\ vdots & & vdots & | & vdots \\ a_{m1} & ... & a_{mn} & | & b_m} in M(m,n+1:K).  
+Notation.. Die erweiterte Koeffizientenmatrix  (A|b) := mat{a_{11} & ... & a_{1n} & | & b_1 \\ vdots & & vdots & | & vdots \\ a_{m1} & ... & a_{mn} & | & b_m} in M(m,n+1:K).  
 
-**Lösbarkeitskriterien**.. Sei  A in M(m,n:K), \; b in K^m.  Äquivalent sind dann folgende.. (1) Das System  Ax = b  ist lösbar.. (2)  b in Bild(Phi_A)..  (3)  Rang(A) = Rang(A|b).  
+**Lösbarkeitskriterien**.. Sei  A in M(m,n:K), \; b in K^m.  Äquivalent sind dann folgende.. (1) Das System  A x = b  ist lösbar.. (2)  b in Bild(Phi_A)..  (3)  Rang(A) = Rang(A|b).  
 
 Def..  A in M(m,n:K)  ist in **Zeilenstufenform**, wenn sie von der folgenden Form ist: (...).
 
@@ -396,27 +398,27 @@ Def..  A in M(m,n:K).  Eine **elementare Zeilenumformung** ist eine der folgende
 
 Bmk..  Lös(A|b) = Lös(tilde A | tilde b)  (die mit elementaren Zeilenumformungen umgeformte Matrix).
 
-Satz.. Sei  A in M(m,n:K), \; Rang(A) = n.  Dann ist  Ax=b  eindeutig lösbar.
+Satz.. Sei  A in M(m,n:K), \; Rang(A) = n.  Dann ist  A x=b  eindeutig lösbar.
 
 # Jan 29. Spaltenrang ist Zeilenrang, Ermittlung der Inversen
 
 Satz.. Für jede  A in M(m, n:K)  gilt:  \text{Spaltenrang}(A) = \text{Zeilenrang}(A) = Rang(A).  
 
-Bmk..  dim_K V = n, \; dim_K W = m.  Ist  phi: V to W  eine lineare Abbildung und  r = rang(phi),  dann gibt es Basen  B  von  V  und  C  von  W  mit  M_B^C(phi) = pm{I_r & 0 \\ 0 & 0} in M(m,n:K).  
+Bmk..  dim_K V = n, \; dim_K W = m.  Ist  phi: V to W  eine lineare Abbildung und  r = rang(phi),  dann gibt es Basen  B  von  V  und  C  von  W  mit  M_B^C(phi) = mat{I_r & 0 \\ 0 & 0} in M(m,n:K).  
 
-Satz..  pm{A & I_n}  mit Gauß umformen ergibt  pm{I_n & A^{-1}}.  
+Satz..  mat{A & I_n}  mit Gauß umformen ergibt  mat{I_n & A^{-1}}.  
 
 # Jan 31. Determinante
 
-Def..  A in M(2, 2: K).  Dann  det A = det pm{a & b \\ c & d} = vm{a & b \\ c & d} := ad - bc.  
+Def..  A in M(2, 2: K).  Dann  det A = det mat{a & b \\ c & d} = vm{a & b \\ c & d} := a d - b c.  
 
-Satz.. Parallelogramm aufgespannt von  v = (a_1, a_2)  und  w = (b_1, b_2).  Dann Fläche  = det pm{a_1 & a_2 \\ b_1 & b_2}.  
+Satz.. Parallelogramm aufgespannt von  v = (a_1, a_2)  und  w = (b_1, b_2).  Dann Fläche  = det mat{a_1 & a_2 \\ b_1 & b_2}.  
 
-Satz.. Seien  v = (a, b) in RR^2  und  w = (c, d) in RR^2  Zeilenvektoren von  A,  schreiben  A = pm{v \\ w}..  (1)  det pm{lam v \\ w} = lam det pm{v \\ w} = det pm{v \\ lam w}..  (2)  det pm{v \\ w} = det pm{v \\ w + lam v}..  (3)  det pm{v \\ w} = 0 <=> v, w  linear unabhängig.. (4)  det pm{e_1 \\ e_2} = det pm{1 & 0 \\ 0 & 1} = 1.  
+Satz.. Seien  v = (a, b) in RR^2  und  w = (c, d) in RR^2  Zeilenvektoren von  A,  schreiben  A = mat{v \\ w}..  (1)  det mat{lam v \\ w} = lam det mat{v \\ w} = det mat{v \\ lam w}..  (2)  det mat{v \\ w} = det mat{v \\ w + lam v}..  (3)  det mat{v \\ w} = 0 <=> v, w  linear unabhängig.. (4)  det mat{e_1 \\ e_2} = det mat{1 & 0 \\ 0 & 1} = 1.  
 
-Def.. Sei  K  Körper. Eine Abbildung  det : M(n, n: K) to K  heißt **Determinante** falls: (1)  det  ist linear in jeder Zeile:  a_i = a_i' + a_i'' => det pm{vdots \\ a_i \\ vdots} = det pm{vdots \\ a_i' \\ \small vdots} + det pm{vdots \\ a_i'' \\ vdots}  und  a_i = lam a_i' => det pm{vdots \\ a_i \\ vdots} = lam det pm{vdots \\ a_i' \\ vdots}..  (2)  det  ist **alternierend**, das heißt hat  A  zwei gleichen Zeilen, so ist  det A = 0..  (3)  det  ist **normiert**, das heißt  det I_n = 1.  
+Def.. Sei  K  Körper. Eine Abbildung  det : M(n, n: K) to K  heißt **Determinante** falls: (1)  det  ist linear in jeder Zeile:  a_i = a_i' + a_i'' => det mat{vdots \\ a_i \\ vdots} = det mat{vdots \\ a_i' \\ \small vdots} + det mat{vdots \\ a_i'' \\ vdots}  und  a_i = lam a_i' => det mat{vdots \\ a_i \\ vdots} = lam det mat{vdots \\ a_i' \\ vdots}..  (2)  det  ist **alternierend**, das heißt hat  A  zwei gleichen Zeilen, so ist  det A = 0..  (3)  det  ist **normiert**, das heißt  det I_n = 1.  
 
-Satz.. Eine Abbildung  det : M(n, n : K)  hat die folgenden weiteren Eigenschaften.. (4)  det(lam A) = lam^n det(A)..  (5) Ist eine Zeile von  A  gleich Null, so ist  det A = 0..  (6) Entsteht  B  aus  A  durch (genau eine) Zeilenvertauschung, so ist  det B = - det A..  (7) Ist  lam in K  und entsteht  B  aus  A  durch Addition der  lam\text{-fachen}  *j*-ten Zeile zur *i*-ten Zeile  (i neq j),  so ist  det B = det A..  (8) Ist  A  eine obere Dreiecksmatrix,  A = pm{lam_1 & & * \\ & ddots & \\ 0 & & lam_n},  so ist  det A = lam_1 cdot ... cdot lam_n..  (9) Sei  n ≥ 2  und  A in M(m, n : K)  von der Gestalt  A = pm{A_1 & C \\ 0 & A_2},  wobei  A_1, A_2  quadratisch. Dann gilt  det A = det(A_1) cdot det(A_2)..  (10)  det A = 0 <=> Rang(A) < n <=>  Zeilenvektoren sind linear abhängig.
+Satz.. Eine Abbildung  det : M(n, n : K)  hat die folgenden weiteren Eigenschaften.. (4)  det(lam A) = lam^n det(A)..  (5) Ist eine Zeile von  A  gleich Null, so ist  det A = 0..  (6) Entsteht  B  aus  A  durch (genau eine) Zeilenvertauschung, so ist  det B = - det A..  (7) Ist  lam in K  und entsteht  B  aus  A  durch Addition der  lam\text{-fachen}  *j*-ten Zeile zur *i*-ten Zeile  (i neq j),  so ist  det B = det A..  (8) Ist  A  eine obere Dreiecksmatrix,  A = mat{lam_1 & & * \\ & ddots & \\ 0 & & lam_n},  so ist  det A = lam_1 cdot ... cdot lam_n..  (9) Sei  n ≥ 2  und  A in M(m, n : K)  von der Gestalt  A = mat{A_1 & C \\ 0 & A_2},  wobei  A_1, A_2  quadratisch. Dann gilt  det A = det(A_1) cdot det(A_2)..  (10)  det A = 0 <=> Rang(A) < n <=>  Zeilenvektoren sind linear abhängig.
 
 # Feb 5. Permutationen
 
@@ -438,7 +440,7 @@ Satz.. Die Abbildung  sgn : S_n to \{-1, +1\}  ist ein Gruppenhomomorphismus.
 
 Kor.. (1) Für jede Transposition  τ in S_n  gilt  sgn(τ) = -1..  (2) Ist  σ in S_n  und  σ = τ_1 circ ... circ τ_k  mit  τ_1, ..., τ_k in S_n  Transpositionen, dann  sgn(σ) = (-1)^k.  
 
-Kor..  det E_σ = det pm{e_{σ(1)} \\ vdots \\ e_{σ(n)}} = sgn(σ).  
+Kor..  det E_σ = det mat{e_{σ(1)} \\ vdots \\ e_{σ(n)}} = sgn(σ).  
 
 Def..  A_n := Ker(sgn) = \{σ in S_n : sgn(σ) = 1\}  heißt die **alternierende Gruppe**.
 
