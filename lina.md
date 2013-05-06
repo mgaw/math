@@ -55,22 +55,22 @@ equiv 1 mod p.  Außerdem gilt für alle  a in ZZ : a^p equiv a mod p.
 
 # Nov 20. Isomorphiesatz
 
-Prop.. Seien  a, b in ZZ, \; d = \text{ggT}(a, b).  Dann gibt es  x, y \in ZZ,  so dass  d = x a + y b.  
+Prop.. Seien  a, b in ZZ, \; d = text{ggT}(a, b).  Dann gibt es  x, y in ZZ,  so dass  d = x a + y b.  
 
 Bmk.. Der  ggT(a, b)  ist die kleinste natürliche Zahl, die als lineare Kombination von a und b
 darstellbar ist.
 
-Lemma.. Sei  f:G \to G'  Gruppenmorphismus. Dann ist  N:=ker(f) unlhd G.  
+Lemma.. Sei  f:G to G'  Gruppenmorphismus. Dann ist  N:=ker(f) unlhd G.  
 
-Def..  sgn(sigma) = (-1)^{\#\{(i,j) \;:\; i<j \text{ und } sigma(i) > sigma(j)\}}.  
+Def..  sgn(sigma) = (-1)^{\#\{(i,j) \;:\; i<j text{ und } sigma(i) > sigma(j)\}}.  
 
-Lemma..  \forall sigma \in S_n : sgn(sigma) = (Produkt) \frac{sigma(j) - sigma(i)}{j-i}.  
+Lemma..  forall sigma in S_n : sgn(sigma) = (Produkt) frac{sigma(j) - sigma(i)}{j-i}.  
 
 Def..  sigma in S_n  heißt **gerade**, falls  sgn(sigma) = 1. \; sigma  heißt **ungerade**, falls  sgn(sigma) = -1.  
 
 Def..  ker(sgn) = A_n = \{ sigma in S_n : sgn(sigma) = 1 \}  heißt die **alternierende Gruppe**.
 
-Bmk..  A_n unlhd S_n.    |A_n| = \frac{n!}{2}.  
+Bmk..  A_n unlhd S_n.    |A_n| = frac{n!}{2}.  
 
 **Isomorphiesatz**.. Sei  phi : G to G'  Gruppenmorphismus, damit  ker(phi) unlhd G.  Dann gibt es einen kanonischen Isomorphismus von Gruppen  overline φ : G/ker(φ) simto φ(G).  
   (φ(G) ≤ G'  Untergruppe.)  phi = overline phi circ pi. \; pi  ist die Projektion, die ein Element aus  G  auf seine Nebenklasse abbildet. Eigentlich nur:  overline φ : G/ker(φ) to G'  ist injektiv. Aber wenn  phi(G)=G'  dann surjektiv und damit auch bijektiv.
@@ -125,7 +125,7 @@ Satz.. Seien  x, y in CC.  Dann folgt: (1)  overline{x+y} = overline x + overlin
 
 Def..  x in CC.  Dann  |x|:=sqrt{x cdot overline x}.  
 
-Satz..  x, y in CC. \;|x + y| ≤ |x| + |y|. \;|x cdot y| = |x| cdot |y|. \; x = |x| cdot cos phi + i|x| sin phi = |x|(cos phi + i sin phi) = |x|e^{i phi} = |x|e^{i cdot \arg(x)}.  Bisher gilt  e^{i phi} := cos phi + i sin phi.  
+Satz..  x, y in CC. \;|x + y| ≤ |x| + |y|. \;|x cdot y| = |x| cdot |y|. \; x = |x| cdot cos phi + i|x| sin phi = |x|(cos phi + i sin phi) = |x|e^{i phi} = |x|e^{i cdot arg(x)}.  Bisher gilt  e^{i phi} := cos phi + i sin phi.  
 
 Def.. Sei  R  ein Ring. Ein Element  x in R^*  heißt **Nullteiler**, falls es ein  y in R*  gibt, so dass  x cdot y = 0_R  ist. Ein Ring ohne Nullteiler heißt **nullteilerfrei**.
 
@@ -242,7 +242,7 @@ Def.. Sei  (X, +, cdot)  ein kommutativer Ring. Ein Ideal  I sse X  heißt **Pri
 
 Satz..  p ZZ  ist genau dann Primideal von  ZZ,  wenn  p  Primzahl ist.
 
-Satz.. Sei  I sse ZZ, x in X setminus I.  Dann gilt  J := displaystyle bigcap_{tilde J \text{ Ideal, } I cup \{x\} sse tilde J} = \{i+k x : i in I, k in ZZ\} =: H.  
+Satz.. Sei  I sse ZZ, x in X setminus I.  Dann gilt  J := displaystyle bigcap_{tilde J text{ Ideal, } I cup \{x\} sse tilde J} = \{i+k x : i in I, k in ZZ\} =: H.  
 
 Satz.. Sei  I  ein maximales Ideal von  ZZ.  Dann ist  I  Primideal.
 
@@ -284,7 +284,7 @@ Def.. Seien  V, W  zwei *K*-Vektorräume.  f:V to W  heißt **linear**, falls fo
 
 Prop.. Sei  f:V to W  *K*-lineare Abbildung.. (1)  f(lam_1 v_1 + ... + lam_n v_n) = lam_1 f(v_1) + ... + lam_n f(v_n) \; forall v_1, ..., v_n in V, \; lam_1, ..., lam_n in K..  (2) Ist die Familie  \{v_i\}_{i in I}  in  V  linear abhängig, so ist  \{f(v_i)\}_{i in I}  linear abhängig in  W..  (3)  f(V) <= W..  (4)  dim f(V) <= dim W.  
 
-Def..  Hom_K(V, W) := \{f:V to W : f \text{ ist }K\text{-lineare Abbildung}\}.  
+Def..  Hom_K(V, W) := \{f:V to W : f text{ ist }K text{-lineare Abbildung}\}.  
 
 Satz..  Hom_K(V,W) <= Abb(V, W).  
 
@@ -292,19 +292,19 @@ Def..  f in Hom_K(V,W). \; ker(f) := f^{-1}(0).
 
 Satz..  f  injektiv  <=> ker(f) = \{0\}.  
 
-Def..  m,n in NN, \; K  Körper.  A=(...)  ist  m times n\text{-Matrix}  mit Einträgen aus  K.  Matrix ist eine Abbildung  A:\{1..m\} times \{1..n\} to K.  
+Def..  m,n in NN, \; K  Körper.  A=(...)  ist  m times n text{-Matrix}  mit Einträgen aus  K.  Matrix ist eine Abbildung  A:\{1..m\} times \{1..n\} to K.  
 
 # Jan 10. Koordinaten eines Vektors, Matrix einer Abbildung
 
-Def..  M(m,n:K) := \{A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}} : a_{ij} in K\}.  Das sind Matrizen mit **_m_ Zeilen** und **_n_ Spalten**.  a_{ij}  ist der Eintrag der **_i_-ten Zeile** und der **_j_-ten Spalte**. Zuerst Zeile, dann Spalte. Das macht Sinn, wenn man Vektoren mit Einträgen  v_i in K  als Spaltenvektoren, also einspaltige Matrizen betrachtet. Dann wird das  j,  also die Spaltenangabe weggelassen, da diese immer gleich 1 ist.
+Def..  M(m,n:K) := \{A = (a_{i j})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}} : a_{i j} in K\}.  Das sind Matrizen mit **_m_ Zeilen** und **_n_ Spalten**.  a_{i j}  ist der Eintrag der **_i_-ten Zeile** und der **_j_-ten Spalte**. Zuerst Zeile, dann Spalte. Das macht Sinn, wenn man Vektoren mit Einträgen  v_i in K  als Spaltenvektoren, also einspaltige Matrizen betrachtet. Dann wird das  j,  also die Spaltenangabe weggelassen, da diese immer gleich 1 ist.
 
 Def..  M(n:K) := M(n,n:K).  
 
-Def..  I_n := mat{1&&0 \\& ddots& \\ 0&&1 } = (∂_{ij})_{smatrix{ 1 ≤ i ≤ n \\ 1 ≤ j ≤ n}}, \; ∂_{ij} := 1,  für  i=j, \; ∂_{ij} := 0,  sonst.  I_n  ist die **_n_-reihige Einheitsmatrix**.
+Def..  I_n := mat{1&&0 \\& ddots& \\ 0&&1 } = (∂_{i j})_{smatrix{ 1 ≤ i ≤ n \\ 1 ≤ j ≤ n}}, \; ∂_{i j} := 1,  für  i=j, \; ∂_{i j} := 0,  sonst.  I_n  ist die **_n_-reihige Einheitsmatrix**.
 
-Bmk..  M(m,n:K)  ist ein *K*-Vektorraum isomorph zu  K^{mn}.  
+Bmk..  M(m,n:K)  ist ein *K*-Vektorraum isomorph zu  K^{m n}.  
 
-Def.. Sei  A in M(m,n:K), \; A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}.  Die **transponierte Matrix** ist  ^t A = (a_{ji})_{smatrix{ 1 ≤ j ≤ n \\ 1 ≤ i ≤ m }} in M(n,m:K).  
+Def.. Sei  A in M(m,n:K), \; A = (a_{i j})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}.  Die **transponierte Matrix** ist  ^t A = (a_{j i})_{smatrix{ 1 ≤ j ≤ n \\ 1 ≤ i ≤ m }} in M(n,m:K).  
 
 Bmk..  ^t I_n = I_n.  
 
@@ -312,7 +312,7 @@ Def.. Eine Matrix  A in M(m,n:K)  heißt **symmetrisch**, falls  A =    ^t A.
 
 Def.. Sei  V  ein *K*-Vektorraum und  B=(v_1,...,v_n)  eine Basis. Sei der Isomorphismus von Vektorräumen  Phi_B : K^n simto V  gegeben durch  Phi_B(λ_1, ..., λ_n) := λ_1v_1 + ... + λ_n v_n.  Sei  v=sum_{i=1}^n λ_i v_i..  Dann heißen  [v]_B :=    ^t(Phi_B^{-1}(v)) = mat{λ_1 \\ vdots \\ λ_n}  die **Koordinaten von _v_ bzgl. _B_**.
 
-Def.. Sei  A = mat{a_{11} & cdots & a_{1n} \\ vdots & & vdots \\ a_{m1} & cdots & a_{mn}}  und  v=mat{v_1 \\ vdots \\ v_n} in K^n.  Definieren den Operator  cdot : M(m,n:K) times K^n to K^m  mit  A cdot v = mat{a_{11} & cdots & a_{1n} \\ vdots & & vdots \\ a_{m1} & cdots & a_{mn}} mat{v_1 \\ vdots \\ v_n} := mat{a_{11}v_1 + a_{12}v_2 + ... + a_{1n}v_n \\ vdots \\ a_{m1}v_1 + a_{m2}v_2 + ... + a_{mn}v_n}.  
+Def.. Sei  A = mat{a_{11} & cdots & a_{1n} \\ vdots & & vdots \\ a_{m1} & cdots & a_{m n}}  und  v=mat{v_1 \\ vdots \\ v_n} in K^n.  Definieren den Operator  cdot : M(m,n:K) times K^n to K^m  mit  A cdot v = mat{a_{11} & cdots & a_{1n} \\ vdots & & vdots \\ a_{m1} & cdots & a_{m n}} mat{v_1 \\ vdots \\ v_n} := mat{a_{11}v_1 + a_{12}v_2 + ... + a_{1n}v_n \\ vdots \\ a_{m1}v_1 + a_{m2}v_2 + ... + a_{m n}v_n}.  
 
 Satz..  A (v+w) = A v + A w.. (A+B) = A v + B v.  
 
@@ -320,7 +320,7 @@ Def.. Sei  A in M(m,n:K).  Definieren  phi_A : K^n to K^m  mit  phi_A(v) := A v.
 
 Satz..  phi_A  ist eine *K*-lineare Abbildung. Die Spalten der Matrix stellen dabei die Bilder der Elemente  (0,...,1,...,0)  der kanonischen Basis von  K^n  dar.
 
-Def.. Sei  f:V to W  eine *K*-lineare Abbildung,  B=(v_1, ..., v_n)  Basis von  V  und  C=(w_1,...,w_m)  Basis von  W.  Einträge  a_{ij}  seien gegeben durch  f(v_j) = a_{1j}w_1 + ... + a_{mj}w_m, 1 ≤ j ≤ n.  Definieren  M_B^C(f) := (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}.  
+Def.. Sei  f:V to W  eine *K*-lineare Abbildung,  B=(v_1, ..., v_n)  Basis von  V  und  C=(w_1,...,w_m)  Basis von  W.  Einträge  a_{i j}  seien gegeben durch  f(v_j) = a_{1j}w_1 + ... + a_{m j}w_m, 1 ≤ j ≤ n.  Definieren  M_B^C(f) := (a_{i j})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}.  
 
 Satz..  V, W, B, C, f  wie oben. Dann gilt für alle  v in V: [f(v)]_C = M_B^C(f) cdot [v]_B.  
 
@@ -328,7 +328,7 @@ Satz.. (...?) Dann  Phi_B = M = Phi_{B'}
 
 # Jan 15. Matrixmultiplikation, Faktorraum
 
-Def..  A = (a_{ij})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}, \; B = (b_{jl})_{smatrix{ 1 ≤ j ≤ n \\ 1 ≤ l ≤ r}}.. A B := (c_{il})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ l ≤ r}}  mit  c_{il}:= sum_{j=1}^n a_{ij}b_{jl}  ("*i*-te Zeile von *A* mal *j*-te Spalte von *B*").
+Def..  A = (a_{i j})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ j ≤ n}}, \; B = (b_{j l})_{smatrix{ 1 ≤ j ≤ n \\ 1 ≤ l ≤ r}}.. A B := (c_{i l})_{smatrix{ 1 ≤ i ≤ m \\ 1 ≤ l ≤ r}}  mit  c_{i l}:= sum_{j=1}^n a_{i j}b_{j l}  ("*i*-te Zeile von *A* mal *j*-te Spalte von *B*").
 
 Satz..  phi_A circ phi_B = phi_{A B}  
 
@@ -356,7 +356,7 @@ Satz..  V/U  ist *K*-Vektorraum.
 
 Def.. Eine Matrix  A in M(n,n:K)  heißt **invertierbar**, wenn es eine Matrix  B in M(n,n:K)  gibt mit  A B = B A = I_n.  
 
-Lemma.. Sei  A=(a_{ij})_{1 ≤ i,j ≤ n} in M(n,n:K).  Ist  A  invertierbar, dann ist die lineare Abbildung  Phi_A:K^n to K^n  mit  Phi_A(x) = A x  ein Isomorphismus.
+Lemma.. Sei  A=(a_{i j})_{1 ≤ i,j ≤ n} in M(n,n:K).  Ist  A  invertierbar, dann ist die lineare Abbildung  Phi_A:K^n to K^n  mit  Phi_A(x) = A x  ein Isomorphismus.
 
 Prop.. Seien  A, B in M(n:K)  mit  B A = I_n,  dann ist  A B = I_n  und  B  mit dieser Eigenschaft eindeutig.
 
@@ -374,7 +374,7 @@ Prop.. Die Matrix  T=M_{B'}^B(Id) in M(n:K)  ist invertierbar und es ist  T^{-1}
 
 Satz.. Sei  f:V to W  eine lineare Abbildung,  B, B'  Basen von  V  und  C, C'  Basen von  W.  Seien  T=M_{B'}^B(Id_V)  Basiswechselmatrix von  B  nach  B'  und  S=M_{C'}^C(Id_W)  Basiswechselmatrix von  C  nach  C'.  Dann gilt:  M_{B'}^{C'}(f) = S^{-1}M_B^C(f)T.  
 
-Def.. Sei  A = mat{a_{11} & ... & a_{1n} \\ vdots & & vdots \\ a_{m1} & ... & a_{mn}} in M(m,n:K).  Seien  v_j:=mat{a_{1j} \\ vdots \\ a_{mj}}, \; a ≤ j ≤ n  die Spaltenvektoren dieser Matrix. Definieren  Rang(A) := dim_K langle v_1, ..., v_n rangle.  
+Def.. Sei  A = mat{a_{11} & ... & a_{1n} \\ vdots & & vdots \\ a_{m1} & ... & a_{m n}} in M(m,n:K).  Seien  v_j:=mat{a_{1j} \\ vdots \\ a_{m j}}, \; a ≤ j ≤ n  die Spaltenvektoren dieser Matrix. Definieren  Rang(A) := dim_K langle v_1, ..., v_n rangle.  
 
 Satz.. Sei  f: V to W  lineare Abbildung,  B  Basis von  V  und  C  Basis von  W.  Dann  Rang(M_B^C(f)) = dim_K Bild(f).  
 
@@ -384,17 +384,17 @@ Prop..  A in M(m,n:K), \; B in M(n,r:K).  Dann  Rang(A B) ≤ min (Rang(A), Rang
 
 # Jan 24. Lineare Gleichungssysteme
 
-Def..  A in M(m,n:K), \; b = mat{b_1 \\ vdots \\ b_m} in K^m, \; x = mat{x_1 \\ vdots \\ x_n} in K^n.. Lös(A,b) := \{x in K^n : A x=b \} = Phi_A^{-1}(b)  ist die Lösungsmenge des Systems aus den Gleichungen  a_{i1}x_1 + ... + a_{in}x_n = b_i, \; 1 ≤ i ≤ m.  
+Def..  A in M(m,n:K), \; b = mat{b_1 \\ vdots \\ b_m} in K^m, \; x = mat{x_1 \\ vdots \\ x_n} in K^n.. Lös(A,b) := \{x in K^n : A x=b \} = Phi_A^{-1}(b)  ist die Lösungsmenge des Systems aus den Gleichungen  a_{i1}x_1 + ... + a_{i n}x_n = b_i, \; 1 ≤ i ≤ m.  
 
 Prop.. Gegeben ein lineares System  A x=b.  Sei  r=Rang(A)..  (1)  Lös(A,0) ≤ K^n  ist Unterraum mit Dimension  n-r..  (2)  Lös(A, b)  ist entweder leer oder ein affiner Raum der Dimension  n-r,  das heißt ist  v in Lös(A,b),  dann  Lös(A,b) = v+Lös(A,0) sse K^n.  
 
-Notation.. Die erweiterte Koeffizientenmatrix  (A|b) := mat{a_{11} & ... & a_{1n} & | & b_1 \\ vdots & & vdots & | & vdots \\ a_{m1} & ... & a_{mn} & | & b_m} in M(m,n+1:K).  
+Notation.. Die erweiterte Koeffizientenmatrix  (A|b) := mat{a_{11} & ... & a_{1n} & | & b_1 \\ vdots & & vdots & | & vdots \\ a_{m1} & ... & a_{m n} & | & b_m} in M(m,n+1:K).  
 
 **Lösbarkeitskriterien**.. Sei  A in M(m,n:K), \; b in K^m.  Äquivalent sind dann folgende.. (1) Das System  A x = b  ist lösbar.. (2)  b in Bild(Phi_A)..  (3)  Rang(A) = Rang(A|b).  
 
 Def..  A in M(m,n:K)  ist in **Zeilenstufenform**, wenn sie von der folgenden Form ist: (...).
 
-Def..  A in M(m,n:K).  Eine **elementare Zeilenumformung** ist eine der folgenden Vorgänge.. (1) Vertauschung zweier Zeilen.. (2) Multiplikation einer Zeile mit einem Skalar.. (3) Addition des  λ\text{-fachen}  einer Zeile zu einer anderen Zeile.
+Def..  A in M(m,n:K).  Eine **elementare Zeilenumformung** ist eine der folgenden Vorgänge.. (1) Vertauschung zweier Zeilen.. (2) Multiplikation einer Zeile mit einem Skalar.. (3) Addition des  λ text{-fachen}  einer Zeile zu einer anderen Zeile.
 
 Bmk..  Lös(A|b) = Lös(tilde A | tilde b)  (die mit elementaren Zeilenumformungen umgeformte Matrix).
 
@@ -402,7 +402,7 @@ Satz.. Sei  A in M(m,n:K), \; Rang(A) = n.  Dann ist  A x=b  eindeutig lösbar.
 
 # Jan 29. Spaltenrang ist Zeilenrang, Ermittlung der Inversen
 
-Satz.. Für jede  A in M(m, n:K)  gilt:  \text{Spaltenrang}(A) = \text{Zeilenrang}(A) = Rang(A).  
+Satz.. Für jede  A in M(m, n:K)  gilt:  text{Spaltenrang}(A) = text{Zeilenrang}(A) = Rang(A).  
 
 Bmk..  dim_K V = n, \; dim_K W = m.  Ist  phi: V to W  eine lineare Abbildung und  r = rang(phi),  dann gibt es Basen  B  von  V  und  C  von  W  mit  M_B^C(phi) = mat{I_r & 0 \\ 0 & 0} in M(m,n:K).  
 
@@ -418,11 +418,11 @@ Satz.. Seien  v = (a, b) in RR^2  und  w = (c, d) in RR^2  Zeilenvektoren von  A
 
 Def.. Sei  K  Körper. Eine Abbildung  det : M(n, n: K) to K  heißt **Determinante** falls: (1)  det  ist linear in jeder Zeile:  a_i = a_i' + a_i'' => det mat{vdots \\ a_i \\ vdots} = det mat{vdots \\ a_i' \\ \small vdots} + det mat{vdots \\ a_i'' \\ vdots}  und  a_i = lam a_i' => det mat{vdots \\ a_i \\ vdots} = lam det mat{vdots \\ a_i' \\ vdots}..  (2)  det  ist **alternierend**, das heißt hat  A  zwei gleichen Zeilen, so ist  det A = 0..  (3)  det  ist **normiert**, das heißt  det I_n = 1.  
 
-Satz.. Eine Abbildung  det : M(n, n : K)  hat die folgenden weiteren Eigenschaften.. (4)  det(lam A) = lam^n det(A)..  (5) Ist eine Zeile von  A  gleich Null, so ist  det A = 0..  (6) Entsteht  B  aus  A  durch (genau eine) Zeilenvertauschung, so ist  det B = - det A..  (7) Ist  lam in K  und entsteht  B  aus  A  durch Addition der  lam\text{-fachen}  *j*-ten Zeile zur *i*-ten Zeile  (i neq j),  so ist  det B = det A..  (8) Ist  A  eine obere Dreiecksmatrix,  A = mat{lam_1 & & * \\ & ddots & \\ 0 & & lam_n},  so ist  det A = lam_1 cdot ... cdot lam_n..  (9) Sei  n ≥ 2  und  A in M(m, n : K)  von der Gestalt  A = mat{A_1 & C \\ 0 & A_2},  wobei  A_1, A_2  quadratisch. Dann gilt  det A = det(A_1) cdot det(A_2)..  (10)  det A = 0 <=> Rang(A) < n <=>  Zeilenvektoren sind linear abhängig.
+Satz.. Eine Abbildung  det : M(n, n : K)  hat die folgenden weiteren Eigenschaften.. (4)  det(lam A) = lam^n det(A)..  (5) Ist eine Zeile von  A  gleich Null, so ist  det A = 0..  (6) Entsteht  B  aus  A  durch (genau eine) Zeilenvertauschung, so ist  det B = - det A..  (7) Ist  lam in K  und entsteht  B  aus  A  durch Addition der  lam text{-fachen}  *j*-ten Zeile zur *i*-ten Zeile  (i neq j),  so ist  det B = det A..  (8) Ist  A  eine obere Dreiecksmatrix,  A = mat{lam_1 & & * \\ & ddots & \\ 0 & & lam_n},  so ist  det A = lam_1 cdot ... cdot lam_n..  (9) Sei  n ≥ 2  und  A in M(m, n : K)  von der Gestalt  A = mat{A_1 & C \\ 0 & A_2},  wobei  A_1, A_2  quadratisch. Dann gilt  det A = det(A_1) cdot det(A_2)..  (10)  det A = 0 <=> Rang(A) < n <=>  Zeilenvektoren sind linear abhängig.
 
 # Feb 5. Permutationen
 
-Def..  S_n := \{sigma : \{1, ..., n\} to \{1, ..., n\} : sigma \text{ bijektive Abbildung} \}  heißt Menge der **Permutationen**.
+Def..  S_n := \{sigma : \{1, ..., n\} to \{1, ..., n\} : sigma text{ bijektive Abbildung} \}  heißt Menge der **Permutationen**.
 
 Bmk.. (1)  (S_n, circ)  ist Gruppe.. (2)  |S_n| = n!..  (3) Für  n ≥ 3  ist  S_n  nicht abelsch.
 
@@ -446,7 +446,7 @@ Def..  A_n := Ker(sgn) = \{σ in S_n : sgn(σ) = 1\}  heißt die **alternierende
 
 Bmk..  τ in S_n, \; sgn(τ) = -1.  Dann  S_n = A_n overset . cup τ cdot A_n  (disjunkte Vereinigung).  (τ cdot A_n  ist die Linksnebenklasse  \{τ circ σ : σ in A_n\}.)  Insbesondere  |A_n| = frac{n!}{2}.  
 
-Theorem.. Ist  K  ein Körper und  n ≥ 1,  so gibt es genau eine Determinante  det : M(n, n : K) to K  und für  A = (a_{ij})  lautet sie  det A := sum_{σ in S_n} sgn(σ) a_{1σ(1)} cdot ... cdot a_{nσ(n)}.  
+Theorem.. Ist  K  ein Körper und  n ≥ 1,  so gibt es genau eine Determinante  det : M(n, n : K) to K  und für  A = (a_{i j})  lautet sie  det A := sum_{σ in S_n} sgn(σ) a_{1σ(1)} cdot ... cdot a_{n σ(n)}.  
 
 # Feb 7
 
@@ -454,6 +454,6 @@ Satz.. Sei  A in M(n, n : K).  Es gilt  det A = det A^t.
 
 Folgerung.. Die Axiome für die Determinante lassen sich auch mit Spaltenvektoren formulieren.
 
-Def.. Sei  V  ein *K*-Vektorraum, dann heiße  Phi : V times ... times V_(m-\text{mal}) to K  eine **_m_-fache Linearform**, wenn für alle  i in \{q, ..., m\}  gilt:  Phi(v_1, ..., lam v_i' + v_i'', ..., v_m) = lam Phi(v_1, ..., v_i', ..., v_m) + Phi(v_1, ..., v_i'', ..., v_m).  
+Def.. Sei  V  ein *K*-Vektorraum, dann heiße  Phi : V times ... times V_(m-text{mal}) to K  eine **_m_-fache Linearform**, wenn für alle  i in \{q, ..., m\}  gilt:  Phi(v_1, ..., lam v_i' + v_i'', ..., v_m) = lam Phi(v_1, ..., v_i', ..., v_m) + Phi(v_1, ..., v_i'', ..., v_m).  
 
 Bmk.. Ist  dim V = n,  dann ist  det  *n*-fache Linearform. (?)
