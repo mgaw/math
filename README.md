@@ -1,3 +1,3 @@
-Analysis I\*: http://dl.dropbox.com/u/13600509/ana.pdf  
-Lineare Algebra I\*: http://dl.dropbox.com/u/13600509/lina.pdf  
-Logik: http://dl.dropbox.com/u/13600509/logik.pdf
+Analysis I\*: http://www.math.hu-berlin.de/~gawrisch/ana.pdf  
+Lineare Algebra I\*: http://www.math.hu-berlin.de/~gawrisch/lina.pdf  
+Logik: http://mgaw.github.io/logik.pdf
