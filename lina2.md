@@ -263,4 +263,20 @@ Def.. Ein Koordinatensystem  K = \{0, b_1, ..., b_n\}  eines affinen Raumes hei�
 
 # Mittwoch 19. Juni (21)
 
-ON-Verfahren etc.
+**Gram-Schmidtsche Orthonormalisierungsverfahren** ...
+
+Def.. Seien  V, W  eukl. VR. Eine lin. Abb.  f : V to W  heißt **orthogonale Abbildung**, falls für alle  u, v in V  gilt, dass  f(u) f(v) = u v.  
+
+Satz.. Jede orthogonale Abbildung ist injektiv, eine orthogonale Abbildung  f : V to V  ist ein Isomorphismus.
+
+Bezeichnungen..  O(V)  ist die Menge aller orthogonalen Abb.  V to V.. O(n)  ist die Menge aller orthogonalen Abb. in  RR^n  bzgl. des Standardskalarprodukts.. Als **orthogonale Matrizen** bezeichnen wir Matrizen orthogonaler Abb. bzgl. des Standardskalarprodukts.
+
+Satz.. Jede betragstreue lin. Abb., d.h. jede lin. Abb. mit  f : V to W  mit  |f(u)| = |u|  f.a.  u in V,  ist eine orthogonale Abbildung.
+
+Satz.. Sind  V, W  eukl. VR und  B = \{b_1, ..., b_n\}  eine ON-Basis von  V,  so ist eine lineare Abb.  f : V to W  genau dann orthogonal, falls  \{f(b_1), ..., f(b_n)\}  ein ON-System in  W  und damit eine ON-Basis von  Im f.  
+
+Folgerung.. Eine  n times n  -Matrix ist genau orthogonal, wenn die *Spalten* ein ON-System bilden.
+
+Folgerung.. (i) Ist  A  eine orthogonal Matrix, so gilt  A^T cdot A = E_n..  (ii)  A^{-1} = A^T..  (iii)  det A = +- 1.  
+
+Def.. Orthogonale Abbildungen, die durch orthogonale Matrizen mit positiver Determinante (1) beschrieben werden, heißten **ordnungserhaltend**, solche mit  det A = -1  **ungleichsinnig**.
