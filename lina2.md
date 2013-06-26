@@ -1,8 +1,8 @@
 Titel: Lina 2
-Layout: cm toc
+Layout: cm
 Format: html
 
-# Montag 8. April (1)
+# Montag 8. April
 
 Def.. Ein Schema der Form ... heißt **Matrix** reeller Zahlen mit  m  Zeilen und  n  Spalten, kurz:  m times n  -Matrix,  i  ist Zeilenindex,  j  Spaltenindex, Spaltenvektoren, Zeilenvektoren. Menge aller reellen  m times n  -Matrizen:  RR^{m times n}.  
 
@@ -16,13 +16,13 @@ Def.. **Zeilenrang**, **Spaltenrang**.
 
 Folgerung.. Der Spaltenraum einer Matrix ist gleich der Dimension des von den Spaltenvektoren erzeugten linearen Unterraums  span(a_{s 1}, ..., a_{s n}).  
 
-# Mittwoch 10. April (2)
+# Mittwoch 10. April
 
 Satz.. Vektoren sind linear unabhängig  <==>  Lineare Hülle hat "volle" Dimension  <==>  Linearkombinations-Vektorgleichung ist eindeutig lösbar  <==>  Linearkombinations-Vektorgleichung hat nur die triviale Lösung  <==>  Bei Gauß-Verfahrens-Matrix  mat{... & | & 0 \\ ... & | & 0}  verschwindet *keine* Zeile  <==>  Matrix hat vollen Rang  <==>  Kern der Abbildung ist  \{varnothing\} <==>  Abbildung ist invertierbar  <==>  Determinante ist nicht Null.
 
 (Umformungen ändern den Z/S-Rang nicht.)
 
-# Montag 15. April (3)
+# Montag 15. April
 
 Satz.. Zeilenrang = Spaltenrang.
 
@@ -32,7 +32,7 @@ wo? Satz..  (A B) v = A (B v).. lam (A B) = (lam A) B = A (lam B) = (A B) lam.
 
 wo? Satz..  (A B)^T = B^T A^T.  
 
-# Mittwoch 17. April (4)
+# Mittwoch 17. April
 
 Bmk.. Kann nur multiplizieren, wenn Spalten links = Zeilen rechts. Also  A in RR^{l times m} cdot B in RR^{m times n}  geht.
 
@@ -40,11 +40,11 @@ Satz.. Matrizenmultiplikation ist *nicht* nullteilerfrei.
 
 Satz.. Das Produkt regulärer Matrizen (voller Rang) ist wieder reguläre Matrix, also insbesondere nullteilerfrei.
 
-# Montag 22. April (5)
+# Montag 22. April
 
 ?
 
-# Mittwoch 24. April (6)
+# Mittwoch 24. April
 
 Def.. Elementarmatrix  S_i(lam) :=  "passende" Einheitsmatrix mit  a_{i i} = lam.  
 
@@ -66,7 +66,7 @@ Satz.. Jede reguläre Matrix lässt sich als Produkt von Elementarmatrizen darst
 
 Satz.. Alle vier Elementarmatrizen sind invertierbar und ihre Inversen sind Produkte von Elementarmatrizen.
 
-# Montag 29. April (7)
+# Montag 29. April
 
 Satz..  (RR^{n times m}, +, cdot)  ist Vektorraum.
 
@@ -94,7 +94,7 @@ Def.. Der von den Zeilen einer Matrix aufgespannte VR heißt **Zeilenraum**. Ana
 
 Satz.. Zeilenumformungen ändern nicht den Zeilenrang, aber möglicherweise den Spaltenrang.
 
-# Montag 6. Mai (8)
+# Montag 6. Mai
 
 Def..  f : V to W  linear, falls Additivität und Homogenität.
 
@@ -104,23 +104,23 @@ Def.. Lineare Abbildung heißt **Monomorphismus**, falls injektiv. **Epimorphism
 
 Satz.. VR  V, \; W  und  f : V to W  linear.. (i) Lineare Abbildungen respektieren Linearkombinationen:  f(sum_{i = 1}^k lam_i u_i) = sum_{i = 1}^k lam_i f(u_i)..  (ii) Sind  u_i, ..., u_k  linear abhängig, so sind auch  f(u_1), ..., f(u_k)  linear abhängig.. (iii)  U ≤ V \;=>\; f(U) ≤ W..  (iv)  f(span(u_1, ..., u_k)) = span(f(u_1), ..., f(u_k)).  
 
-# Mittwoch 8. Mai (9)
+# Mittwoch 8. Mai
 
 **Hauptsatz über lin. Abb**.. Seien  V, W  VR,  B = \{b_1, ..., b_n\}  eine Basis von  V  sowie  w_1, ..., w_n  beliebige Vektoren von  W.  Dann existiert *genau eine* lineare Abbildung  f : V to W  mit  f(b_i) = w_i  für  i = 1, ..., n.  
 
-# Montag 13. Mai (10)
+# Montag 13. Mai
 
 Matrizielle Darstellung lin. Abb.
 
 Def..  A^f_{B C} cdot [v]_B = [f(v)]_C.  
 
-# Mittwoch 15. Mai (11)
+# Mittwoch 15. Mai
 
 Satz.. Nacheinandersausführung linearer Abbildungen ist wieder linear.
 
 (Pfingsmontag)
 
-# Mittwoch 22. Mai (12)
+# Mittwoch 22. Mai
 
 Satz.. Die Menge der Isomorphismen  f : V -> V  ist eine Gruppe bzgl. Nacheinanderausführung.. Die Menge der regulären  n times n  -Matrizen ist eine Gruppe bzgl. Maultiplikation.. Diese beiden Gruppen sind isomoprh (bzgl. einer festgelegten Basis von  V).  
 
@@ -139,9 +139,11 @@ Bsp..  T_B^{B'} = mat{frac{1}{sqrt 2} \;& -frac{1}{sqrt 2} \\ frac{1}{sqrt 2} & 
 Satz..  (t_B^{B'})^{-1} = T_{B'}^B.  
 
 
-# Montag 27. Mai (13)
+# Montag 27. Mai
 
-# Mittwoch 29. Mai (15)
+?
+
+# Mittwoch 29. Mai
 
 Def.. Zwei Matrizen  A  und  B  heißen **ähnlich**, falls es eine Matrix  S  gibt, so dass  A = S^{-1} A S.  Schreiben  A sim B.  
 
@@ -163,9 +165,11 @@ Satz.. Matrix  A  regulär gdw.  det A != 0.
 
 Satz..  A  Matrix.  det A = det A^T.  
 
-# Montag 3. Juni (16)
+# Montag 3. Juni
 
-# Mittwoch 5. Juni (17)
+?
+
+# Mittwoch 5. Juni
 
 Def..   K  Körper,  V  *K*-Vektorraum,  f : V to V  lineare Abbildung.  lam in K  heißt **Eigenwert von _f_**, falls es  v in V, \; v != 0  gibt, so dass  f(v) = lam v..  Diese  v  heißen **Eigenwerte zu**  lam.  
 
@@ -201,7 +205,7 @@ Satz..  lam  ist EW zu  f  genau dann, wenn  det(f - lam Id) = 0.
 
 Def..  f  Endomorphismus.  A  Matrix von  f  zu beliebiger Basis. Dann  det f := det A.  (Determinante ist unabhängig von Basis.)
 
-# Montag 10. Juni (18)
+# Montag 10. Juni
 
 Def.. Wird  f  bzgl. einer Basis von  V  durch die Matrix  A  beschrieben, so ist  P_f(lam) = P_A(lam) = det(f - lam Id_V)  das **charakteristische Polynom** von  f.  
 
@@ -209,7 +213,7 @@ Satz.. Das charakteristische Polynom eines Endomorphismus  f  ist unabhängig vo
 
 Satz.. Es gibt Koeffizienten  a_0, ..., a_{n - 1},  so dass  P_f(lam) = (-1)^n lam^n + a_{n-1} lam^{n-1} + ... + a_1 lam + a_0..  Die Eigenwerte einer linearen Abbildung bzw. einer Matrix sind die Nullstellen des charakteristischen Polynoms.
 
-# Mittwoch 12. Juni (19)
+# Mittwoch 12. Juni
 
 Def.. Sei  f in L(V, V)  und  lam_0  sei ein EW von  f,  d.h.  lam_0  ist Nullstelle des char. Polynoms  P_f(lam) = det(f - lam Id)..  Dann ist  (lam - lam_0)  ein Teiler von  P_f(lam).  Der maximale ganzzahlige Exponent  alpha_{lam_0}  mit  (lam - lam_0)^{alpha_{lam_0}} | P_f(lam)  heißt **algebraische Vielfachheit** des EW  lam_0.  
 
@@ -239,7 +243,7 @@ Def.. Es sei  u in V  (eukl. VR mit SP). Dann heißt  |u| := sqrt{u cdot u}  der
 
 **Cauchy-Schwarz-Ungleichung**.. Für beliebige Vektoren  u, v  eines eukl. VR gilt, dass  |u cdot v| ≤ |u| cdot |v|.  Gleichheit gilt gdw.  u  und  v  lin. abhängig.
 
-# Montag 17. Juni (20)
+# Montag 17. Juni
 
 % Wir benutzen Transformationsmatrizen, um das Skalarprodukt zu berechnen.  =>  Gramsche Matrix eines SP bzgl.  B  bzw.  B'.  
 
@@ -261,7 +265,7 @@ Def.. Es sei  (V, .)  ein eukl. VR. Eine Basis  B = \{b_1, ..., b_n\}  von  V  h
 
 Def.. Ein Koordinatensystem  K = \{0, b_1, ..., b_n\}  eines affinen Raumes heißt **karthesisches Koordinatensystem**, falls  \{b_1, ..., b_n\}  eine ON-Basis ist.
 
-# Mittwoch 19. Juni (21)
+# Mittwoch 19. Juni
 
 **Gram-Schmidtsche Orthonormalisierungsverfahren** ...
 
@@ -277,6 +281,28 @@ Satz.. Sind  V, W  eukl. VR und  B = \{b_1, ..., b_n\}  eine ON-Basis von  V,  s
 
 Folgerung.. Eine  n times n  -Matrix ist genau orthogonal, wenn die *Spalten* ein ON-System bilden.
 
-Folgerung.. (i) Ist  A  eine orthogonal Matrix, so gilt  A^T cdot A = E_n..  (ii)  A^{-1} = A^T..  (iii)  det A = +- 1.  
+Folgerung.. (i) Ist  A  eine orthogonale Matrix, so gilt  A^T cdot A = E_n..  (ii)  A^{-1} = A^T..  (iii)  det A = +- 1.  
 
 Def.. Orthogonale Abbildungen, die durch orthogonale Matrizen mit positiver Determinante (1) beschrieben werden, heißten **ordnungserhaltend**, solche mit  det A = -1  **ungleichsinnig**.
+
+# Mittwoch 26. Juni
+
+Def..  times : RR^3 times RR^3 to RR^3  mit  x times y = (x_2 y_3 - y_2 x_3) e_1 + (x_3 y_1 - y_3 x_1) e_2 + (x_2 y_1 - y_1 x_2) e_3  heißt **Vektorprodukt**  (\{e_1, e_2, e_3\}  Standardbasis. Merken mit: "det"  mat{e_1 & e_2 & e_3 \\ x_1 & x_2 & x_3 \\ y_1 & y_2 & y_3}).  
+
+Satz.. (i)  (x + x') times y = x times y + x' times y  und  x times (y + y') = x times y + x times y'  (Distributivität).. (ii)  y times x = -x times y  ("Anti-Kommutativität").. (iii)  x times y = 0 <=> x, y  sind linear unabhängig.
+
+**Zusammenhänge zw. Vektor- und Skalarprdukt**.. Für beliebige  x, y, z in RR^3  gilt:: (i)  (x times y) cdot z = det mat{x_1 & x_2 & x_3 \\ y_1 & y_2 & y_3 \\ z_1 & z_2 & z_3}.  Unmittelbare Folgerungen:  (x times y) cdot y = 0  und  (x times y) · x = 0..  (ii)  |x times y|^2 = |x|^2 · |y|^2 - (x · y)^2.  Folgerung:  |x times y| = |x| · |y| · |sin sa (x, y)|.  
+
+Folgerung.. Der Betrag des Vektorprodukts zweier Vektoren entspricht dem Flächeninhalt des von ihnen aufgespannten Parallelogramms.
+
+Satz..  (u times v) · w  ist das Volumen des Spats aufgespannt aus  u, v, w in RR^3.  
+
+Folgerung..  RR^3.. det A_{E_3 E_3}^f = frac{V(f(e_1), f(e_2), f(e_3))}{V(e_2, e_2, e_3)},  wobei  V(x, y, z)  das Volumen des von  x, y, z in RR^3  aufgespannten Spats.
+
+---
+
+Def.. Eine **Ellipse** ist die Menge ("der geometrische Ort") aller Punkte, für die die Summe der Abstände zu zwei vorgegebenen (festen) Punkten gleich ist. Diese beiden festen Punkte heißen **Brennpunkte**  F_1  und  F_2.  Die Gerade (machnmal auch: Strecke) durch  F_1  und  F_2  heißt **Hauptachse**  a.  Der Mittelpunkt von  overline{F_1 F_2}  heißt **Mittelpunkt** der Ellipse  M.  Die Senkrechte zur Hauptachse durch den Mittelpunkt heißt **Nebenachse**  b.  Die Schnittpunkte der Ellipse mit Haupt- bzw. Nebenachse heißen **Haupt-** bzw. **Nebenscheitel**  S_1, ..., S_4.  **Lineare Exzentrizität**  e  mit  2e = |F_1 F_2|.  
+
+Def.. Eine **Hyperbel** ist die Menge aller Punkte, für die die *Differenz* der Abstände zu zwei vorgegebenen Punkten gleich ist.
+
+Satz.. (i) Für jeden Punkt  P  einer Ellipse mit den beiden Brennpunkte  F_1, F_2  sowie der Länge  2a  der Hauptachse gilt  |F_1 P| + |F_2 P| = 2a..  (ii)  a^2 = b^2 + e^2.  
