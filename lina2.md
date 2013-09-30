@@ -14,7 +14,7 @@ Def.. Matrix **symmetrisch**, falls  A = A^T.
 
 Def.. **Zeilenrang**, **Spaltenrang**.
 
-Folgerung.. Der Spaltenraum einer Matrix ist gleich der Dimension des von den Spaltenvektoren erzeugten linearen Unterraums  span(a_{s 1}, ..., a_{s n}).  
+Folgerung.. Der Spaltenrang einer Matrix ist gleich der Dimension des von den Spaltenvektoren erzeugten linearen Unterraums  spn(a_{s 1}, ..., a_{s n}).  
 
 # Mittwoch 10. April
 
@@ -102,11 +102,11 @@ Bsp..  f : RR^2 to RR^2, \; mat{x \\ y} mapsto mat{a x + b y \\ c x + d y}  ist 
 
 Def.. Lineare Abbildung heißt **Monomorphismus**, falls injektiv. **Epimorphismus**, falls surjektiv. **Isomorphismus**, falls bijektiv. **Automorphismus**, falls bijektiv und  f : V to V.  
 
-Satz.. VR  V, \; W  und  f : V to W  linear.. (i) Lineare Abbildungen respektieren Linearkombinationen:  f(sum_{i = 1}^k lam_i u_i) = sum_{i = 1}^k lam_i f(u_i)..  (ii) Sind  u_i, ..., u_k  linear abhängig, so sind auch  f(u_1), ..., f(u_k)  linear abhängig.. (iii)  U ≤ V \;=>\; f(U) ≤ W..  (iv)  f(span(u_1, ..., u_k)) = span(f(u_1), ..., f(u_k)).  
+Satz.. VR  V, \; W  und  f : V to W  linear.. (i) Lineare Abbildungen respektieren Linearkombinationen:  f(sum_{i = 1}^k lam_i u_i) = sum_{i = 1}^k lam_i f(u_i)..  (ii) Sind  u_i, ..., u_k  linear abhängig, so sind auch  f(u_1), ..., f(u_k)  linear abhängig.. (iii)  U ≤ V \;=>\; f(U) ≤ W..  (iv)  f(spn(u_1, ..., u_k)) = spn(f(u_1), ..., f(u_k)).  
 
 # Mittwoch 8. Mai
 
-**Hauptsatz über lin. Abb**.. Seien  V, W  VR,  B = \{b_1, ..., b_n\}  eine Basis von  V  sowie  w_1, ..., w_n  beliebige Vektoren von  W.  Dann existiert *genau eine* lineare Abbildung  f : V to W  mit  f(b_i) = w_i  für  i = 1, ..., n.  
+**Hauptsatz über lin. Abb**.. Seien  V, W  VR,  B = \{b_1, ..., b_n\}  eine Basis von  V  sowie  w_1, ..., w_n  beliebige Vektoren von  W.  Dann existiert *genau eine* lineare Abbildung  f : V to W  mit  f(b_i) = w_i  für  1 <= i <= n.  
 
 # Montag 13. Mai
 
@@ -116,19 +116,19 @@ Def..  A^f_{B C} cdot [v]_B = [f(v)]_C.
 
 # Mittwoch 15. Mai
 
-Satz.. Nacheinandersausführung linearer Abbildungen ist wieder linear.
+Satz.. Nacheinanderausführung linearer Abbildungen ist wieder linear.
 
 (Pfingsmontag)
 
 # Mittwoch 22. Mai
 
-Satz.. Die Menge der Isomorphismen  f : V -> V  ist eine Gruppe bzgl. Nacheinanderausführung.. Die Menge der regulären  n times n  -Matrizen ist eine Gruppe bzgl. Maultiplikation.. Diese beiden Gruppen sind isomoprh (bzgl. einer festgelegten Basis von  V).  
+Satz.. Die Menge der Isomorphismen  f : V -> V  ist eine Gruppe bzgl. Nacheinanderausführung.. Die Menge der regulären  n times n  -Matrizen ist eine Gruppe bzgl. Multiplikation.. Diese beiden Gruppen sind isomorph (bzgl. einer festgelegten Basis von  V).  
 
 Def..  V  Vektorraum,  B, B'  Basen von  V,, v in V.  **Transformationsmatrix** ist die Matrix  T_B^{B'},  so dass  T_B^{B'} cdot [v]_B = [v]_{B'}.  
 
 **Berechnung von**  T_B^{B'}..  Es seien  B = (b_1, ..., b_n)  und  B' = (b_1', ..., b_n')  zwei Basen von VR  V..  Die Elemente von  B'  als Linearkombination bzgl.  B  schreiben:  b_j' = sum_{i = 1}^n t_{i j} b_i..  Das schreibe ich in die Spalten der Matrix:  T_B^{B'} := (t_{i j})_{1 ≤ i, j ≤ n}.  (In den Spalten von  T_B^{B'}  stehen die Basisvektoren von  B'  bzgl. der Basisvektoren von  B.)  
 
-Satz..  T_B^{B'} = A_{B B}^f  mit  f : V to V,, f(b_i) = b_i',, i = 1..n.  
+Satz..  T_B^{B'} = A_{B B}^f  mit  f : V to V,, f(b_i) = b_i',, 1 <= i <= n.  
 
 Satz..  T_B^{B'} = A_{B' B}^{Id}.  (?)
 
@@ -136,7 +136,7 @@ Bsp..  T_B^{B'} = mat{frac{1}{sqrt 2} \;& -frac{1}{sqrt 2} \\ frac{1}{sqrt 2} & 
 
 **Basistransformationsformel**..  A^f_{B' B'} = T^B_{B'} cdot A^f_{B B} cdot T^{B'}_B.  (?)
 
-Satz..  (t_B^{B'})^{-1} = T_{B'}^B.  
+Satz..  (T_B^{B'})^{-1} = T_{B'}^B.  
 
 
 # Montag 27. Mai
@@ -177,11 +177,11 @@ Def..   K  Körper,  V  *K*-Vektorraum,  f : V to V  lineare Abbildung.  lam in 
 
 % (Identifizieren  f  mit Matrix zu einer Basis  B.  Ziel: Basis finden, so dass die Matrix der Abbildung diagonal ist.)
 
-Lemma.. Sei  A  die Matrix von  f : V to V  bzgl. einer Basis  (v_1, ..., v_n)  von  V,  dann hat  A  Diagonalgestalt, d.h.  A = mat{lam_1 & & 0 \\ & ddots & \\ 0 & & lam_n},  wenn  v_i  Eigenvektor zum Eigenwert  lam_i  ist  (i = 1, ..., n).  
+Lemma.. Sei  A  die Matrix von  f : V to V  bzgl. einer Basis  (v_1, ..., v_n)  von  V,  dann hat  A  Diagonalgestalt, d.h.  A = mat{lam_1 & & 0 \\ & ddots & \\ 0 & & lam_n},  wenn  v_i  Eigenvektor zum Eigenwert  lam_i  ist  (1 <= i <= n).  
 
 % Satz..  V  endlichdimensional,  A  eine zu  f  gehörige Matrix.  f(v) = lam v <=> A x = lam x <=> A x = lam E x <=> (A - lam E)x = 0.  
 
-Lemma.. Ein Vektor  v in V \ \{0\}  ist genau dann Eigenvektor von  f : V to V  zum Eigenwert  lam in KK,  wenn  v in ker(f - lam Id).  
+Lemma.. Ein Vektor  v in V setminus \{0\}  ist genau dann Eigenvektor von  f : V to V  zum Eigenwert  lam in KK,  wenn  v in ker(f - lam Id).  
 
 Def.. Ist  lam  ein Eigenwert von  f,  dann heißt der Untervektorraum  E_lam := ker(f - lam Id)  von  V  der **Eigenraum** von  f  zum Eigenwert  lam,  und  beta_lam := dim E_lam  heißt **geometrische Vielfachheit von**  lam.  
 
@@ -221,7 +221,7 @@ Satz.. Die geometrische Vielfachheit eines EW ist  ≤  der algebraischen Vielfa
 
 Def.. Ein Endomorphismus  f in L(V, V)  heißt **diagonalisierbar**, falls  V  eine Basis besitzt, die vollständig aus EV von  f  besteht.
 
-Def.. Eine Matrix  A in RR^{n times n}  heißt **diagonalisierbar**, falls eine *invertierbare* Matrix  S in RR^{n times n}  existiert, so dass  S{^-1} A S  eine Diagonalmatrix ist.
+Def.. Eine Matrix  A in RR^{n times n}  heißt **diagonalisierbar**, falls eine (invertierbare) Matrix  S in RR^{n times n}  existiert, so dass  S^{-1} A S  eine Diagonalmatrix ist.
 
 Satz.. Eigenvektoren zu versch. EW sind lin. unabhängig.
 
@@ -237,7 +237,7 @@ Satz.. Für die positiv definite BLF eines Vektors  x  mit einer Linearkombinati
 
 Def.. Wir nennen positiv definite BLF in Zukunft **Skalarprodukte** und schreiben dafür  a cdot b  oder  langle a, b rangle.  
 
-Satz..  V  sei euklidischer VR mit Skalarprodukt  `cdot´  und  B = \{b_1, ..., b_n\}  eine Basis von V. Wenn alle Skalarprodukte  b_i cdot b_j \;(i, j = 1..n)  der Basisvektoren gegeben sind, so ist das Skalarprodukt zweier beliebiger Vektoren von  V  eindeutig bestimmt.
+Satz..  V  sei euklidischer VR mit Skalarprodukt  `cdot´  und  B = \{b_1, ..., b_n\}  eine Basis von V. Wenn alle Skalarprodukte  b_i cdot b_j \;(1 <= i, j <= n)  der Basisvektoren gegeben sind, so ist das Skalarprodukt zweier beliebiger Vektoren von  V  eindeutig bestimmt.
 
 Def.. Es sei  u in V  (eukl. VR mit SP). Dann heißt  |u| := sqrt{u cdot u}  der **Betrag** von  u.  Sind  P  und  Q  zwei Elemente eines affinen Raumes, so nennt man den Betrag des Vektors  ora{P Q}  ihren **Abstand**.
 
@@ -261,7 +261,7 @@ Def.. Es seien  u, v  zwei versch. Vektoren eines eukl. VR. Als **Winkelmaß** d
 
 % Bsp.. Beweis Kosinussatz: In jedem bel. Dreieck gilt  a^2 = b^2 + c^2 - 2 b c cos alpha.  
 
-Def.. Es sei  (V, .)  ein eukl. VR. Eine Basis  B = \{b_1, ..., b_n\}  von  V  heißt **Orthonormalbasis**, falls:: (i) Alle Basisvektoren sind Einheitsvektoren, d.h.  |b_1| = ... = |b_n| = 1..  (ii) Alle Basisvektoren sind paarweise orthogonal zueinander, d.h.  b_i b_j = 0  für  i neq j, \; i, j = 1..n.  
+Def.. Es sei  (V, cdot)  ein eukl. VR. Eine Basis  B = \{b_1, ..., b_n\}  von  V  heißt **Orthonormalbasis**, falls:: (i) Alle Basisvektoren sind Einheitsvektoren, d.h.  |b_1| = ... = |b_n| = 1..  (ii) Alle Basisvektoren sind paarweise orthogonal zueinander, d.h.  b_i b_j = 0  für  i neq j, \; 1 <= i, j <= n.  
 
 Def.. Ein Koordinatensystem  K = \{0, b_1, ..., b_n\}  eines affinen Raumes heißt **karthesisches Koordinatensystem**, falls  \{b_1, ..., b_n\}  eine ON-Basis ist.
 
@@ -275,7 +275,7 @@ Satz.. Jede orthogonale Abbildung ist injektiv, eine orthogonale Abbildung  f : 
 
 Bezeichnungen..  O(V)  ist die Menge aller orthogonalen Abb.  V to V.. O(n)  ist die Menge aller orthogonalen Abb. in  RR^n  bzgl. des Standardskalarprodukts.. Als **orthogonale Matrizen** bezeichnen wir Matrizen orthogonaler Abb. bzgl. des Standardskalarprodukts.
 
-Satz.. Jede betragstreue lin. Abb., d.h. jede lin. Abb. mit  f : V to W  mit  |f(u)| = |u|  f.a.  u in V,  ist eine orthogonale Abbildung.
+Satz.. Jede betragstreue lin. Abb., d.h. jede lin. Abb. mit  f : V to W  mit  |f(u)| = |u|  für alle  u in V,  ist eine orthogonale Abbildung.
 
 Satz.. Sind  V, W  eukl. VR und  B = \{b_1, ..., b_n\}  eine ON-Basis von  V,  so ist eine lineare Abb.  f : V to W  genau dann orthogonal, falls  \{f(b_1), ..., f(b_n)\}  ein ON-System in  W  und damit eine ON-Basis von  Im f.  
 
