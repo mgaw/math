@@ -1,5 +1,5 @@
 Titel: Lina 2
-Layout: cm
+Layout: cm std
 Format: html
 
 # Montag 8. April
@@ -18,7 +18,7 @@ Folgerung.. Der Spaltenrang einer Matrix ist gleich der Dimension des von den Sp
 
 # Mittwoch 10. April
 
-Satz.. Vektoren sind linear unabhängig  <==>  Lineare Hülle hat "volle" Dimension  <==>  Linearkombinations-Vektorgleichung ist eindeutig lösbar  <==>  Linearkombinations-Vektorgleichung hat nur die triviale Lösung  <==>  Bei Gauß-Verfahrens-Matrix  mat{... & | & 0 \\ ... & | & 0}  verschwindet *keine* Zeile  <==>  Matrix hat vollen Rang  <==>  Kern der Abbildung ist  \{varnothing\} <==>  Abbildung ist invertierbar  <==>  Determinante ist nicht Null.
+Satz.. Vektoren sind linear unabhängig  <==>  Lineare Hülle hat "volle" Dimension  <==>  Linearkombinations-Vektorgleichung ist eindeutig lösbar  <==>  Linearkombinations-Vektorgleichung hat nur die triviale Lösung  <==>  Bei Gauß-Verfahrens-Matrix  mat{... & | & 0 \\ ... & | & 0}  verschwindet *keine* Zeile  <==>  Matrix ist regulär, d.h. hat vollen Rang  <==>  Kern der Abbildung ist  \{varnothing\} <==>  Abbildung ist invertierbar, d.h. ist bijektiv  <==>  Determinante ist *nicht* Null  <==>  Matrix ist invertierbar.
 
 (Umformungen ändern den Z/S-Rang nicht.)
 
@@ -26,7 +26,7 @@ Satz.. Vektoren sind linear unabhängig  <==>  Lineare Hülle hat "volle" Dimens
 
 Satz.. Zeilenrang = Spaltenrang.
 
-Def.. Eine quadratische  n times n  -Matrix heißt regulär, falls  rg A = n.  
+Def.. Eine quadratische  n times n  -Matrix heißt **regulär**, falls  rg A = n.  
 
 wo? Satz..  (A B) v = A (B v).. lam (A B) = (lam A) B = A (lam B) = (A B) lam.  
 
@@ -112,7 +112,9 @@ Satz.. VR  V, \; W  und  f : V to W  linear.. (i) Lineare Abbildungen respektier
 
 Matrizielle Darstellung lin. Abb.
 
-Def..  A^f_{B C} cdot [v]_B = [f(v)]_C.  
+Def.. Sei  V  VR,  v in V,, B = \{b_1, ..., b_n\}  Basis von  V.  Die **Koordinaten von _v_ bzgl. _B_** ist der Spaltenvektor  [v]_B = mat{lam_1 \\ vdots \\ lam_n},  so dass gilt  lam_1 b_1 + ... + lam_n b_n = v.  
+
+Def.. Sei  f : V to W,, B  Basis von  V,, C  Basis von  W.  Die **Abbildungsmatrix von _f_ bzgl. _B_ und _C_** ist die Matrix  A^f_{B C},  so dass gilt  A^f_{B C} cdot [v]_B = [f(v)]_C.  
 
 # Mittwoch 15. Mai
 
@@ -124,15 +126,15 @@ Satz.. Nacheinanderausführung linearer Abbildungen ist wieder linear.
 
 Satz.. Die Menge der Isomorphismen  f : V -> V  ist eine Gruppe bzgl. Nacheinanderausführung.. Die Menge der regulären  n times n  -Matrizen ist eine Gruppe bzgl. Multiplikation.. Diese beiden Gruppen sind isomorph (bzgl. einer festgelegten Basis von  V).  
 
-Def..  V  Vektorraum,  B, B'  Basen von  V,, v in V.  **Transformationsmatrix** ist die Matrix  T_B^{B'},  so dass  T_B^{B'} cdot [v]_B = [v]_{B'}.  
+Def..  V  Vektorraum,  B, B'  Basen von  V,, v in V.  **Transformationsmatrix von _B_ nach _B'_** ist die Matrix  T_{B'}^B,  so dass  T_{B'}^B cdot [v]_B = [v]_{B'}.  
 
-**Berechnung von**  T_B^{B'}..  Es seien  B = (b_1, ..., b_n)  und  B' = (b_1', ..., b_n')  zwei Basen von VR  V..  Die Elemente von  B'  als Linearkombination bzgl.  B  schreiben:  b_j' = sum_{i = 1}^n t_{i j} b_i..  Das schreibe ich in die Spalten der Matrix:  T_B^{B'} := (t_{i j})_{1 ≤ i, j ≤ n}.  (In den Spalten von  T_B^{B'}  stehen die Basisvektoren von  B'  bzgl. der Basisvektoren von  B.)  
+**Berechnung von**  T_{B'}^B..  Es seien  B = (b_1, ..., b_n)  und  B' = (b_1', ..., b_n')  zwei Basen von VR  V..  Die Elemente von  B  als Linearkombination bzgl.  B'  schreiben:  b_j = sum_{i = 1}^n t_{i j} b_i'..  Das schreibe ich in die Spalten der Matrix:  T_{B'}^B := (t_{i j})_{1 ≤ i, j ≤ n}.  (In den Spalten von  T_{B'}^B  stehen die Koordinaten der Elemente von  B  bzgl.  B'.)  
 
-Satz..  T_B^{B'} = A_{B B}^f  mit  f : V to V,, f(b_i) = b_i',, 1 <= i <= n.  
+Satz..  T_{B'}^B = A_{B B'}^f  mit  f : V to V,, f(b_i) = b_i',, 1 <= i <= n.  
 
-Satz..  T_B^{B'} = A_{B' B}^{Id}.  (?)
+Satz..  T_{B'}^B = A_{B B'}^{Id}.  
 
-Bsp..  T_B^{B'} = mat{frac{1}{sqrt 2} \;& -frac{1}{sqrt 2} \\ frac{1}{sqrt 2} & frac{1}{sqrt 2}}  ist die Drehmatrix um 45 Grad.
+Bsp..  T_{B'}^B = mat{frac{1}{sqrt 2} \;& -frac{1}{sqrt 2} \\ frac{1}{sqrt 2} & frac{1}{sqrt 2}}  ist die Drehmatrix um 45 Grad.
 
 **Basistransformationsformel**..  A^f_{B' B'} = T^B_{B'} cdot A^f_{B B} cdot T^{B'}_B.  (?)
 
@@ -171,7 +173,7 @@ Satz..  A  Matrix.  det A = det A^T.
 
 # Mittwoch 5. Juni
 
-Def..   K  Körper,  V  *K*-Vektorraum,  f : V to V  lineare Abbildung.  lam in K  heißt **Eigenwert von _f_**, falls es  v in V, \; v != 0  gibt, so dass  f(v) = lam v..  Diese  v  heißen **Eigenwerte zu**  lam.  
+Def..   K  Körper,  V  *K*-Vektorraum,  f : V to V  lineare Abbildung.  lam in K  heißt **Eigenwert von _f_**, falls es  v in V, \; v != 0  gibt, so dass  f(v) = lam v..  Diese  v  heißen **Eigenvektoren zu**  lam.  
 
 %. \; \{v in V : f(v) = lam v \} = ker(f - lam Id)  heißt **Eigenraum zu**  lam.  
 
@@ -197,13 +199,13 @@ Def.. Ist  lam  ein Eigenwert von  f,  dann heißt der Untervektorraum  E_lam :=
 
 % Satz.. Eine *n*-dimensionale Matrix  A  ist genau dann diagonalisierbar, wenn es  n  linear unabhängige Eigenvektoren von  A  gibt (eine Basis aus Eigenvektoren).
 
-Lemma.. Seien  v_1, ..., v_r  Eigenvektoren zu Eigenwerten  lam_1, ..., lam_r  von  f  und gelte  lam_i != lam_j  für  i != j,  dann ist  (v_1, ..., v_r)  linear unabhängig.
+Lemma.. Seien  v_1, ..., v_r  Eigenvektoren zu Eigenwerten  lam_1, ..., lam_r  von  f  und gelte  lam_i != lam_j  für  i != j,  dann ist  (v_1, ..., v_r)  linear unabhängig (EV zu paarweise verschiedenen EW sind lin. unabh.).
 
 Folgerung..  f : V to V  Endomorphismus mit  dim V = n  über  KK,, lam_1, ..., lam_r  seien die EW und  n_1, ..., n_r  seien die geom. Vielfachheiten, d.h.  n_i = dim E_{lam_i}.  Sei jeweils  (v_1^{(i)}, ..., v_{n_i}^{(i)})  Basis von  E_{lam_i}..  Dann ist auch  (v_1^{(1)}..v_{n_1}^{(1)}, ..., v_1^{(r)}..v_{n_r}^{(r)})  linear unabhängig (d.h. Menge von EV zu versch. EW sind lin. unabh.).. Insbesondere ist  n_1 + ... + n_r ≤ n quad  und  quad f  diagonalisierbar  <=> n_1 + ... + n_r = n.  
 
-Satz..  lam  ist EW zu  f  genau dann, wenn  det(f - lam Id) = 0.  
-
 Def..  f  Endomorphismus.  A  Matrix von  f  zu beliebiger Basis. Dann  det f := det A.  (Determinante ist unabhängig von Basis.)
+
+Satz..  lam  ist EW zu  f  genau dann, wenn  det(f - lam Id) = 0.  
 
 # Montag 10. Juni
 
@@ -221,9 +223,9 @@ Satz.. Die geometrische Vielfachheit eines EW ist  ≤  der algebraischen Vielfa
 
 Def.. Ein Endomorphismus  f in L(V, V)  heißt **diagonalisierbar**, falls  V  eine Basis besitzt, die vollständig aus EV von  f  besteht.
 
-Def.. Eine Matrix  A in RR^{n times n}  heißt **diagonalisierbar**, falls eine (invertierbare) Matrix  S in RR^{n times n}  existiert, so dass  S^{-1} A S  eine Diagonalmatrix ist.
+Def.. Eine Matrix  A in RR^{n times n}  heißt **diagonalisierbar**, falls eine ähnliche Diagonalmatrix  D  existiert, das heißt es gibt eine (invertierbare) Matrix  S in RR^{n times n},  so dass  S^{-1} A S = D.  
 
-Satz.. Eigenvektoren zu versch. EW sind lin. unabhängig.
+Satz.. Eine solches Matrix  S  ist gegeben durch eine Basis aus EV. (?)
 
 Satz..  f in L(V, V)  ist diagonalisierbar gdw. für jeden EW die algebraische und geometrische Vielfachheit übereinstimmen. Insbesondere ist jeder Endomorphismus mit  n = dim V  paarweise verschiedenen EW diagonalisierbar.
 
