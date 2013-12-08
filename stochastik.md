@@ -1,6 +1,24 @@
 Layout: math
 
-Zur Notation: Ich verzichte auf  mlq PP(X >= k) mrq,  da ich es wichtig finde, nicht zu verschleiern, dass  X  eine Funktion ist. Leider ist  mlq PP(\{om mid X(om) >= k\}) mrq  sehr unübersichtlich. Ich werde daher zum einen manchmal einstellige Funktionsanwendungen ohne Klammern schreiben, wie es etwa bei  mlq sin x mrq  oder  mlq EE X mrq  ohnehin üblich ist. Außerdem definiere ich für Ausdrücke  phi  mit genau einer freien Variablen *x*:  \{phi\} := \{x mid phi\}.  Wir können dann  mlq PP\{X(om) >= k\} mrq  schreiben. Für  mlq PP(X = k) mrq  wird  mlq p_X(k) mrq  benutzt. Weiterhin  NN := \{0, 1, 2, ...\}  und  NN^* := NN setminus \{0\} = ZZ^+.  
+Def.. Sei  X : A to B  und  k in B.  Dann steht der Ausdruck  mlq X = k mrq  abkürzend für die Menge  \{om in A mid X(om) = k\}.  Analog für  mlq\! ≤ \!mrq.  
+
+# Oct. 23
+
+Satz.. Mit Wiederholung, mit Reihenfolge:  n^r..  Mit Wiederholung, *ohne* Reihenfolge:  binom{n+r-1}{r}..  *Ohne* Wiederholung, mit Reihenfolge:  frac{n!}{(n-r)!}..  Ohne Wiederholung, *ohne* Reihenfolge:  binom n r.  
+
+Def.. Eine Folge von Ereignissen  (E_n)  heißt **paarweise disjunkt**, falls für alle  i neq j  gilt:  E_i schnitt E_j = leer.  
+
+Def.. Sei  A  eine nicht-leere Menge. Dann heißt  B sse Pp(A)  eine  sigma  -**Algebra auf**  A,  falls gilt:: (i) Die *Grundmenge ist enthalten*, das heißt:  A in B, quad  (ii)  B  ist *abgeschlossen gegenüber Komplementbildung*, das heißt für alle  M in B  gilt:  M^C in B quad  und (iii)  B  ist *abgeschlossen gegenüber Vereinigung*, das heißt für jede Folge  (M_n)  mit  M_n in B  gilt:  left(Verein_{n in N} M_n right) in B.  
+
+Def.. Sei  Om  nicht-leer und  Ff  eine  sigma  -Algebra auf  Om.  Eine Funktion  PP : Ff to [0, 1]  heißt **Wahrscheinlichkeitsmaß auf**  Om,  falls gilt:: (i)  PP  ist *normiert*, das heißt:  PP(Om) = 1 quad  und (ii)  PP  ist  sigma  -*additiv*, das heißt für jede Folge paarweise disjunkter Ereignisse  (E_n)  gilt:  PP(Verein_{n in NN} E_n) = sum_{n in NN} PP(E_n).  
+
+Prop..  PP(leer) = 0.. PP  ist endlich additiv, das heißt für beliebige paarweise disjunkte  E_1, ..., E_n in Ff  gilt:  PP(Verein_{i = 1}^n E_i) = sum_{i = 1}^n PP (E_i).  
+
+Prop.. Sei  E in Ff.  Dann  PP(E^C) = 1 - PP(E).  
+
+Prop.. Für  E, F in Ff  mit  E sse F  gilt:  PP(E) ≤ PP(F).  
+
+Prop.. Seien  E, F in Ff.  Dann gilt:  PP(E verin F) = PP(E) + PP(F) - PP(E schnitt F).  
 
 # Nov. 11
 
@@ -33,7 +51,7 @@ Def.. Sei  X  eine Zufallsvariable auf  (Om, Ff, PP).  Dann heißt  F_X : RR to 
 Prop.. Es gilt (i)  F  ist monoton wachsend, (ii)  lim_{b to infty} F(b) = 1,  (iii)  lim{b to -infty} = 0  und (iv)  F  ist rechtsseitig stetig.
 
 % Folgen von Zufallsvariablen, die Indikatorfunktionen sind
-Def.. Eine Zufallsvariable  X  heißt **(_n_, _p_)-binominalverteilt**, wenn sie die Anzahl der Erfolge (Eintritt mit W'keit *p*) in einer Versuchsreihe der Länge  n  misst. Also  Om = \{0, 1\}^n  und  X(om) = sum om.  Schreiben dann  X sim B(n, p).  
+Def.. Eine Zufallsvariable  X  heißt  (n, p)  -**binominalverteilt**, wenn sie die Anzahl der Erfolge (Eintritt mit W'keit *p*) in einer Versuchsreihe der Länge  n  misst. Also  Om = \{0, 1\}^n  und  X(om) = sum om.  Schreiben dann  X sim B(n, p).  
 
 Bmk.. Für binomialverteilte Zufallsvariablen  X  gilt  X(Om) aus NN.  
 
@@ -56,7 +74,7 @@ Def..  phi(x) := frac{1}{sqrt{2 pi}} e^{-frac{x^2}{2}}  für  x in RR.
 
 **Satz von deMoivre/Laplace**.. Sei  p = frac 1 2.  Sei  X_n sim B(n, p)  für alle  n in NN.  Dann gilt für  a, b in RR  mit  a < b,  dass  lim_{n to infty} PP \{a <= X_n^*(om) <= b\} = int_a^b phi(x) d x.  
 
-Bmk.. (i)  int_{-infty}^infty = 1..  (ii) Theorem gilt auch für  p in (0, 1).  
+Bmk.. (i)  int_{-infty}^infty phi(x) = 1..  (ii) Theorem gilt auch für  p in (0, 1).  
 
 Def.. Für Folgen  (a_n)  und  (b_n)  schreiben wir  a_n sim b_n,  falls  lim_{n to infty} frac{a_n}{b_n} = 1.  
 
