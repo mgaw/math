@@ -1,6 +1,6 @@
-Layout: math
+Layout: std palatino
 
-Def.. Sei  X : A to B  und  k in B.  Dann steht der Ausdruck  mlq X = k mrq  abkürzend für die Menge  \{om in A mid X(om) = k\}.  Analog für  mlq\! ≤ \!mrq.  
+Def.. Sei  X : A to B  und  k in B.  Dann steht der Ausdruck  glqq X = k grqq  abkürzend für die Menge  \{om in A mid X(om) = k\}.  Analog für  glqq\! ≤ \!grqq.  
 
 # Oct. 23
 
@@ -26,56 +26,153 @@ Prop.. Seien  E, F in Ff.  Dann gilt:  PP(E verin F) = PP(E) + PP(F) - PP(E schn
 
 %Bmk.. Für diskrete Grundräume  Omega = \{omega_i\}  wählen wir  Ff = Pp(Omega),  und Messbarkeit ist automatisch erfüllt. Für  Omega aus RR^n  wählen wir  Ff = Bb(RR^n),  und  X  ist Prinzip ?? in Analysis I  (f to X.. f(x) to X(omega)).  
 
-Def.. Sei  (Omega, Ff, PP)  ein W'keitsraum. Eine **Zufallsvariable** ist eine Abbildung  X : Om to RR..  
+Def.. Sei  (Omega, Ff, PP)  ein W'keitsraum. Eine **Zufallsvariable** ist eine Abbildung  X : Om to RR.  
 
-Bmk.. Für Zufallsvariablen  X  gilt  X^{-1}(k) in Ff  für alle  k in RR.  
+Bmk.. Für Zufallsvariablen  X  gilt  (X = k) := set{om : X(om) = k} in Ff  für alle  k in RR.  
 
 Def.. Eine Zufallsvariable  X  heißt **diskret**, falls  X(Om)  endlich oder abzählbar unendlich.
 
-Def.. Sei  X  eine diskrete Zufallsvariable auf  (Om, Ff, PP).  Dann heißt  p_X : RR to [0, 1]  mit  p_X(k) := PP(X^-1(k))  die **Massenfunktion von _X_**.
+Def.. Sei  X  eine diskrete Zufallsvariable auf  (Om, Ff, PP).  Dann heißt  p_X : RR to [0, 1]  mit  p_X(k) := PP(X = k)  die **Massenfunktion von _X_**.
 
-> Bsp.. Wir haben eine Urne mit 20 nummerierten Kugeln. Wir ziehen 3x ohne Zurücklegen. Wir suchen die Wkt, dass wir eine Kugel mit Nr.  >= 17  ziehen. Haben also Laplace-Experiment mit  Om = \{1, ..., 20\}^3.  Wählen die Zufallsvariable  X  mit  X(om) = max om.  Suchen also die Wkt  PP\{X(om) >= 17\} = p_X(17) + ... + p_X(20).  Berechnen zuerst  p_X(20).  Die Gegenwkt ist  frac{19}{20} cdot frac{18}{19} cdot frac{17}{18} = frac{17}{20}.  Also  p_X(20) = 1 - frac{17}{20} = frac{3}{20}.  Ein alternativer Rechenweg stellt fest, dass dieses Ereignis aus  binom{19}{2}  günstigen Realisierungen besteht, bei  binom{20}{3}  möglichen Realisierungen. Also  p_X(20) = frac{binom{19}{2}}{binom{20}{3}} = frac{3}{20}.  Analog gilt für  i in \{17, 18, 19\},  dass  p_X(i) = frac{binom{i - 1}{2}}{binom{20}{3}}.  
+%> Bsp.. Wir haben eine Urne mit 20 nummerierten Kugeln. Wir ziehen 3x ohne Zurücklegen. Wir suchen die Wkt, dass wir eine Kugel mit Nr.  >= 17  ziehen. Haben also Laplace-Experiment mit  Om = \{1, ..., 20\}^3.  Wählen die Zufallsvariable  X  mit  X(om) = max om.  Suchen also die Wkt  PP\{X(om) >= 17\} = p_X(17) + ... + p_X(20).  Berechnen zuerst  p_X(20).  Die Gegenwkt ist  frac{19}{20} cdot frac{18}{19} cdot frac{17}{18} = frac{17}{20}.  Also  p_X(20) = 1 - frac{17}{20} = frac{3}{20}.  Ein alternativer Rechenweg stellt fest, dass dieses Ereignis aus  binom{19}{2}  günstigen Realisierungen besteht, bei  binom{20}{3}  möglichen Realisierungen. Also  p_X(20) = frac{binom{19}{2}}{binom{20}{3}} = frac{3}{20}.  Analog gilt für  i in \{17, 18, 19\},  dass  p_X(i) = frac{binom{i - 1}{2}}{binom{20}{3}}.  
 
-> Bsp.. Wir werfen eine Münze so lange, bis "Kopf" erscheint, maximal jedoch _n_-mal. "Kopf" erscheint mit Wkt  p in (0, 1).  Sei  X(om)  die Anzahl der Würfe. Wir suchen  p_X(m)  für  m = 1, ..., n.  Da wir für das Ereignis  \{X(om) = m\}  zuerst  m - 1  Mal "Zahl" geworfen (Wkt.  1 - p)  haben müssen, und daraufhin "Kopf" (Wkt  p),  gilt  p_X(m) = (1 - p)^{m - 1}.  Allerdings nicht für den Fall  m = n,  denn dort brauchen als letzten Wurf nicht unbedingt "Kopf". Also  p_X(n) = (1 - p)^{n - 1}..  Es gilt dann  PP(bigcup_{i = 1}^n \{X(om) = i\}) = sum_{i = 1}^n PP\{X(om) = i\} = 1.  
+%> Bsp.. Wir werfen eine Münze so lange, bis "Kopf" erscheint, maximal jedoch _n_-mal. "Kopf" erscheint mit Wkt  p in (0, 1).  Sei  X(om)  die Anzahl der Würfe. Wir suchen  p_X(m)  für  m = 1, ..., n.  Da wir für das Ereignis  \{X(om) = m\}  zuerst  m - 1  Mal "Zahl" geworfen (Wkt.  1 - p)  haben müssen, und daraufhin "Kopf" (Wkt  p),  gilt  p_X(m) = (1 - p)^{m - 1}.  Allerdings nicht für den Fall  m = n,  denn dort brauchen als letzten Wurf nicht unbedingt "Kopf". Also  p_X(n) = (1 - p)^{n - 1}..  Es gilt dann  PP(bigcup_{i = 1}^n \{X(om) = i\}) = sum_{i = 1}^n PP\{X(om) = i\} = 1.  
 
-> Bsp.. Es gibt  N  unterscheidbare Coupons. Wir sammeln diese (unabhängig). Sei  T(om)  die Anzahl der Coupons, die wir gesammelt haben, bis wir ein vollständiges Set von  N  verschiedenen Coupons haben. Wir suchen  PP\{T(om) = n\}  für  n = N, N + 1, ...  . Es ist einfacher  PP \{T(om) > n\}  zu berechnen. (Es gilt dann  PP\{T(om) = n\} = PP\{T(om) > n - 1\} - PP\{T(om) > n\}.)  Es sei  A_j  das Ereignis, dass sich kein *j*-Coupon unter den ersten  n  Versuchen befindet. Dann gilt  PP\{T(om) > n\} = PP(bigcup_{j = 1}^N A_j) = ... = N(frac{N - 1}{N})^n - binom N 2 (frac{N - 2}{N})^n + ... + (-1)^N binom{N}{N - 1}(frac{N - (N - 1)}{N})^n + 0.  
+%> Bsp.. Es gibt  N  unterscheidbare Coupons. Wir sammeln diese (unabhängig). Sei  T(om)  die Anzahl der Coupons, die wir gesammelt haben, bis wir ein vollständiges Set von  N  verschiedenen Coupons haben. Wir suchen  PP\{T(om) = n\}  für  n = N, N + 1, ...  . Es ist einfacher  PP \{T(om) > n\}  zu berechnen. (Es gilt dann  PP\{T(om) = n\} = PP\{T(om) > n - 1\} - PP\{T(om) > n\}.)  Es sei  A_j  das Ereignis, dass sich kein *j*-Coupon unter den ersten  n  Versuchen befindet. Dann gilt  PP\{T(om) > n\} = PP(bigcup_{j = 1}^N A_j) = ... = N(frac{N - 1}{N})^n - binom N 2 (frac{N - 2}{N})^n + ... + (-1)^N binom{N}{N - 1}(frac{N - (N - 1)}{N})^n + 0.  
 
 Def.. Sei  X  eine diskrete Zufallsvariable auf  (Om, Ff, PP).  Dann heißt  EE(X) = sum_{x in X(Om)} x cdot p_X(x)  der **Erwartungswert von _X_**, falls diese Reihe absolut konvergiert, das heißt  sum_{x in X(Om)} |x| cdot p_X(x) < infty.  
 
-> Bsp.. Sei  A aus Om.  Wir definieren als Zufallsvariable die Indikatorfunktion  I_A : Om to \{0, 1\}  mit  I_A(om) = 1,  falls  om in A  und  I_A(om) = 0,  sonst. Dann gilt  p_{I_A}(0) = PP(A^C) = 1 - PP(A)  und  p_{I_A}(1) = PP(A).  Also nach Definition  EE I_A = 0 cdot (1 - PP(A)) + 1 cdot PP(A) = PP(A).  
+%> Bsp.. Sei  A aus Om.  Wir definieren als Zufallsvariable die Indikatorfunktion  I_A : Om to \{0, 1\}  mit  I_A(om) = 1,  falls  om in A  und  I_A(om) = 0,  sonst. Dann gilt  p_{I_A}(0) = PP(A^C) = 1 - PP(A)  und  p_{I_A}(1) = PP(A).  Also nach Definition  EE I_A = 0 cdot (1 - PP(A)) + 1 cdot PP(A) = PP(A).  
 
 # Nov. 20
 
-Def.. Sei  X  eine Zufallsvariable auf  (Om, Ff, PP).  Dann heißt  F_X : RR to [0, 1]  mit  F_X(k) := PP \{X(om) <= k\}  die **Verteilungsfunktion von _X_**.
+Def.. Sei  X  eine Zufallsvariable auf  (Om, Ff, PP)  (also  X : Om to RR).  Dann heißt die Funktion  F_X : RR to [0, 1]  mit  F_X(k) := PP(X <= k)  die **Verteilungsfunktion von _X_**.
 
-Prop.. Es gilt (i)  F  ist monoton wachsend, (ii)  lim_{b to infty} F(b) = 1,  (iii)  lim{b to -infty} = 0  und (iv)  F  ist rechtsseitig stetig.
+Prop.. Die Verteilungsfunktion einer ZV  X  ist monoton wachsend und rechtsseitig stetig mit  lim_{x to infty} F_X(x) = 1  und  lim_{x to -infty} F_X(x) = 0.  
 
 % Folgen von Zufallsvariablen, die Indikatorfunktionen sind
-Def.. Eine Zufallsvariable  X  heißt  (n, p)  -**binominalverteilt**, wenn sie die Anzahl der Erfolge (Eintritt mit W'keit *p*) in einer Versuchsreihe der Länge  n  misst. Also  Om = \{0, 1\}^n  und  X(om) = sum om.  Schreiben dann  X sim B(n, p).  
+
+%Def.. Sei  n in NN  und  p in (0, 1).  Eine Zufallsvariable  X  heißt  (n, p)  -**binominalverteilt**, falls für jedes  k in NN  gilt::  PP(X = k) = binom n k p^k (1-p)^{n-k}..  Schreiben dann  quine{X ~ B(n, p)}.  
+Def.. Sei  n in NN  und  p in (0, 1).  Eine Zufallsvariable  X  mit der Massenfunktion  p_X(k) = binom n k p^k (1-p)^{n-k}  heißt  (n, p)  -**binominalverteilt**.. Schreiben dann  quine{X ~ B(n, p)}.  
+
+Bmk..  X ~ B(n, p) \; <=> \; F_X(x) = sum_{k=0}^x binom n k p^k (1-p)^{n-k}.  
+
+Satz.. Für  X ~ B(n, p)  gilt  EE(X) = n  und  Var(X) = n p (1-p).  
+
+Satz.. Sei  X  die Zufallsvariable, die die Anzahl der Erfolge (Eintritt mit W'keit  p)  in einer Versuchsreihe der Länge  n  misst, d.h.  Om = set{0, 1}^n  und  X(om) = sum om.  Dann gilt  X ~ B(n, p).  
 
 Bmk.. Für binomialverteilte Zufallsvariablen  X  gilt  X(Om) aus NN.  
 
-Prop.. Sei  X  eine Zufallsvariable mit  X sim B(n, p).  Sei  k in NN.  Dann gilt  PP\{X(om) = k\} = binom n k p^k (1-p)^{n-k}.  Außerdem gilt  EE X = n p  und  Var X = n p (1-p).  
-
-Prop.. Gelte  X sim B(n, p).  Dann ist  p_X  monoton wachsend für  k <= (n + 1)p  und monoton fallend für  k >= (n + 1)p.  
+Prop.. Für  X sim B(n, p)  ist die Massenfunktion  p_X  monoton wachsend auf  [0, (n + 1)p]  und monoton fallend auf  [(n + 1)p, infty).  
 
 % Binomialverteilungen mit großem n und kleinem p
-Def.. Sei  lam > 0.  Eine Zufallsvariable  X  mit Werten in  ZZ^+  und Massenfunktion  p_X(k) = e^{-lam} frac{lam^k}{k!}  heißt **Poisson-verteilt** mit Parameter  lam.  Schreiben  X sim pi(lam).  
+Def.. Sei  lam > 0.  Eine Zufallsvariable  X  mit der Massenfunktion  p_X(k) = exp(-lam) frac{lam^k}{k!}  heißt **Poisson-verteilt** mit Parameter  lam..  Schreiben dann  quine{X sim pi(lam)}.  
+
+% Stimmt das? Genauer: Kann ich das wirklich in die Bemerkung verschieben, oder muss das in die Definition rein?
+Bmk..  X ~ pi(lam) => X(Om) sse ZZ^+.  
 
 # Nov. 25
 
-Prop.. Für  n p_n overset{n to infty}{longrightarrow} lam  gilt  binom n k p_n^k (1-p_n)^{n-k} overset{n to infty}{longrightarrow} e^{-lam} frac{lam^k}{k!}.  Man kann also Binomialverteilungen für große  n  durch die Poisson-Verteilung approximieren.
+Prop.. Für  n p_n overset{n to infty}{longrightarrow} lam  gilt  binom n k p_n^k (1-p_n)^{n-k} overset{n to infty}{longrightarrow} exp(-lam) frac{lam^k}{k!}.  Man kann also Binomialverteilungen für große  n  durch die Poisson-Verteilung approximieren.
 
-Lemma.. Sei  X sim pi(lam).  Dann gilt  EE X = Var X = lam.  
+Lemma.. Für  X sim pi(lam)  gilt  EE(X) = Var(X) = lam.  
 
 Def.. Sei  n in NN  und  X_n sim B(n, p).  Dann definieren wir  X_n^* := frac{X_n - n p}{sqrt{n p (1-p)}}.  
 
 Def..  phi(x) := frac{1}{sqrt{2 pi}} e^{-frac{x^2}{2}}  für  x in RR.  
 
-**Satz von deMoivre/Laplace**.. Sei  p = frac 1 2.  Sei  X_n sim B(n, p)  für alle  n in NN.  Dann gilt für  a, b in RR  mit  a < b,  dass  lim_{n to infty} PP \{a <= X_n^*(om) <= b\} = int_a^b phi(x) d x.  
+**Satz von deMoivre/Laplace**.. Sei  p = frac 1 2.  Sei  X_n sim B(n, p)  für alle  n in NN.  Dann gilt für  a, b in RR  mit  a < b:: {lim_{n to infty}} PP(a <= X_n^*(om) <= b) = int_a^b phi(x) d x.  
 
 Bmk.. (i)  int_{-infty}^infty phi(x) = 1..  (ii) Theorem gilt auch für  p in (0, 1).  
 
-Def.. Für Folgen  (a_n)  und  (b_n)  schreiben wir  a_n sim b_n,  falls  lim_{n to infty} frac{a_n}{b_n} = 1.  
+Def.. Für Folgen  (a_n)  und  (b_n)  schreiben wir  quine{a_n sim b_n},  falls  lim_{n to infty} frac{a_n}{b_n} = 1.  
 
 **Stirling-Formel**..  n! sim sqrt{2 pi n}(frac n e)^n.  
+
+# Nov. 27
+
+(Beweis der Stirling-Formel.)
+
+# Dez. 2
+
+# Dez. 4
+
+# Dez. 9
+
+Def.. Sei  mu in RR  und  sigma > 0.  Eine Zufallsvariable  X  mit der Dichte  f_X(x) = frac{1}{sqrt{2 pi sigma^2}} exp (-frac{(x - mu)^2}{2 sigma^2})  heißt **normalverteilt** mit Parametern  (mu, sigma)..  Schreiben dann  quine{X sim N(mu, sigma)}..  
+
+Def.. Eine Zufallsvariable  X  mit  X ~ N(0, 1)  heißt **standardnormalverteilt**.
+
+Satz.. Für  X sim N(mu, sigma)  gilt::  EE(X) = mu  und  Var(X) = sigma^2.  
+
+Prop.. Sei  alpha > 0  und  beta in RR..  Wenn  X ~ N(mu, sigma),  dann  (alpha X + beta) ~ N(alpha mu + beta, alpha sigma).  
+
+Prop.. Für jedes  X ~ B(n, p)  gibt es ein  Z ~ N(0, 1)  mit  limn PP(frac{X - n p}{sqrt{n p (1-p)}}) = PP(Z in (a, b)).  
+% „Die Binomialverteilung lässt sich durch die Standardnormalverteilung approximieren“?
+
+Def..  Phi(x) := frac{1}{sqrt{2 pi}} int_{-infty}^x exp(- onehalf z^2) d z.  
+
+Satz.. Für diskrete  X ~ B(n, p)  gilt::  PP(X = i) = PP(i - onehalf < X < i + onehalf) = ... approx Phi(frac{i - onehalf - n p}{sqrt{n p (1-p)}}) - Phi(frac{i + onehalf - n p}{sqrt{n p (1-p)}}).  
+
+# Dez. 11
+
+(Zwischenklausur.)
+
+# Dez. 16
+
+%Prop.. Für  X ~ B(n, p)  gilt  limn PP(frac{X_n - n p}{sqrt{n p (1-p)}}) = 1 - Phi(a).  
+Prop.. Für  B(n, p)  -verteilte Zufallsvariablen  X  gilt  limn PP(frac{X_n - n p}{sqrt{n p (1-p)}} >= a) = 1 - Phi(a).  
+%Prop.. Für  (n, p)  -binomialverteilte Zufallsvariablen  X  gilt  limn PP(frac{X_n - n p}{sqrt{n p (1-p)}}) = 1 - Phi(a).  
+
+%> Bsp: Berliner für ein Alkoholverbot.
+
+Def.. Sei  lam > 0.  Eine absolutstetige ZV  X  mit der Dichte  f(x) = lam exp(-lam x)  für  x >= 0,  sonst  f(x) = 0,  heißt **exponentialverteilt** mit Parameter  lam..  Schreiben dann  quine{X ~ E(lam)}.  
+
+Bmk..  X ~ E(lam) => X(Om) sse [0, infty).  
+
+Satz.. Für  X sim E(lam)  gilt::  EE(X) = frac 1 lam  und  Var(X) = frac{1}{lam^2}.  
+
+% „Erinnerung: Eine ZV  X ~ G(p)  ist gedächtnislos.“ Was ist G(p)?
+
+Lemma.. Für  X ~ E(lam)  und  s, t > 0  gilt::  PP(X > s+t | X > t) = PP(X > s).  
+% Beweis: Bayes, Def.  X ~ E(lam), Potenzrechnung.
+
+Lemma.. Sei ZV  Y >= 0.  Dann gilt  EE(Y) = int_0^infty PP(Y > y) d y.  
+% (Vgl. Satz von Fubini.)
+
+# Dez. 18
+
+(Mehrdimensionale Integration.)
+
+# Jan. 6
+
+% Confused stuff...
+
+Def.. Seien  X, Y  Zufallsvariablen auf   (Om, Ff, PP).  Die Funktion  F : RR^2 to [0, 1]  mit  F(a, b) := PP(X <= a, Y <= b)  heißt die **gemeinsame Verteilungsfunktion** von  X  und  Y.  
+
+Def.. Seien  X, Y  Zufallsvariablen mit der gemeinsamen Verteilungsfunktion  F.  Dann heißen die Funktion  F_X : RR to [0, 1]  mit  F_X(a) := F(a, infty) := limn F(a, n)  und analog  F_Y  ihre **Randverteilungen**.
+
+Bmk..  PP(a_1 < X <= a_2, b_1 < Y <= b_2) = F(a_2, b_2) - F(a_1, b_2) - F(a_2, b_1) + F(a_1, b_1).  
+
+% Man muss diese Funktionskennzeichnungsterme wohl erlauben.
+Def.. Die **gemeinsame Massenfunktion** zweier diskreter Zufallsvariablen  X, Y  ist die Funktion  p(x, y) = PP(X = y, Y = y).  
+
+Def.. Die **Randverteilungen** der gemeinsamen Massenfunktion von  X  und  Y  sind die Funktionen  p_X(x) = sum_{y : p(x, y) > 0} p(x, y)  und analog  p_Y.  
+
+%# Jan. 6 Übung
+
+%(Integration)
+
+# Jan. 8
+
+Def.. Seien  X, Y  Zufallsvariablen auf  (Om, Ff, PP).  Sie heißen **gemeinsam absolut-stetig verteilt mit Dichte**  f: RR^2 to RR_+,  falls  PP((X, Y) in C) = int_C (x, y) d(x, y)  für jedes  C sse RR^2.  
+
+Def.. Für  C = (-infty, a] times (-infty, b]  setzen wir  PP(X <= a, Y <= b) = F(a, b) = int_minfty^a int_minfty^b f(x, y) d y\ d x.  
+
+Prop.. Ist  f  stetig, so gilt  f(x, y) = frac{partial^2}{partial x partial y} F(x, y).  
+
+Def.. Die **Randverteilung** von  X  ist  F_X(x) = PP(X <= x, Y <= infty) = int_minfty^x (int_RR f(t, y) d y) d t.  
+
+Prop.. Falls  f  stetig:  F_X' = f_X.  
+
+Def.. Zwei ZV sind **unabhängig**.
