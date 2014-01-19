@@ -4,6 +4,14 @@ Layout: std palatino
 
 Bmk..  Om xrightarrow{enspace X enspace} RR xrightarrow{p_X, F_x} [0, 1].  
 
+# Oct. 16
+
+(Einleitendes.)
+
+# Oct. 21
+
+(Permutationen, Multinomialkoeffizient, Anz. der Lösungen einer Gleichung.)
+
 # Oct. 23
 
 *Zählweisen*.. Mit Wiederholung, mit Reihenfolge:  n^r..  Mit Wiederholung, *ohne* Reihenfolge:  binom{n+r-1}{r}..  *Ohne* Wiederholung, mit Reihenfolge:  frac{n!}{(n-r)!}..  Ohne Wiederholung, *ohne* Reihenfolge:  binom n r.  
@@ -21,6 +29,24 @@ Prop.. Sei  E in Ff.  Dann  PP(E^C) = 1 - PP(E).
 Prop.. Für  E, F in Ff  mit  E sse F  gilt:  PP(E) ≤ PP(F).  
 
 Prop.. Seien  E, F in Ff.  Dann gilt:  PP(E verin F) = PP(E) + PP(F) - PP(E schnitt F).  
+
+# Oct. 28
+
+**Sylvester**.. (...)
+
+Laplace-Experiment, Geburtstagsproblem, Hutproblem
+
+# Oct. 30
+
+Bedingte W'keiten.
+
+# Nov. 4
+
+Bayessche Regel, Propositionen über Partitionen des **Grundraums**, unabhängige Ereignisse.
+
+# Nov. 6
+
+FEHLT.
 
 # Nov. 11
 
@@ -45,6 +71,14 @@ Bmk.. Für Zufallsvariablen  X  gilt  X^-1(k) in Ff  für alle  k in RR.
 *Def*.. Sei  X  eine diskrete Zufallsvariable auf  (Om, Ff, PP).  Die Zahl  EE(X) := sum_{x in X(Om)} x cdot p_X(x)  heißt **Erwartungswert von _X_**, falls diese Reihe absolut konvergiert, das heißt  sum_{x in X(Om)} |x| cdot p_X(x) < infty.  
 
 %> Bsp.. Sei  A aus Om.  Wir definieren als Zufallsvariable die Indikatorfunktion  I_A : Om to \{0, 1\}  mit  I_A(om) = 1,  falls  om in A  und  I_A(om) = 0,  sonst. Dann gilt  p_{I_A}(0) = PP(A^C) = 1 - PP(A)  und  p_{I_A}(1) = PP(A).  Also nach Definition  EE I_A = 0 cdot (1 - PP(A)) + 1 cdot PP(A) = PP(A).  
+
+# Nov. 13
+
+(Zwischenklausur.)
+
+# Nov. 18
+
+allgemeinerer Erwartungswert, Rechenregeln dazu, Lagerhaltungsbeispiel.
 
 # Nov. 20
 
@@ -100,7 +134,11 @@ Bmk.. (i)  int_{-infty}^infty phi(x) = 1..  (ii) Theorem gilt auch für  p in (0
 
 # Dez. 2
 
+(Beweis deMoivre/Laplace.)
+
 # Dez. 4
+
+FEHLT.
 
 # Dez. 9
 
@@ -183,3 +221,25 @@ Prop.. Ist  f  stetig, so gilt  f(x, y) = frac{partial^2}{partial x partial y} F
 Prop.. Falls  f  stetig:  F_X' = f_X.  
 
 *Def*.. Zwei ZV sind **unabhängig**.
+
+# Jan. 13
+
+# Jan. 15
+
+FEHLT.
+
+# Jan. 20
+
+# Jan. 22
+
+# Jan. 27
+
+# Jan 29.
+
+# Feb. 3
+
+# Feb. 5
+
+# Feb. 10
+
+# Feb. 12
