@@ -58,9 +58,9 @@ FEHLT.
 
 Bmk.. Für Zufallsvariablen  X  gilt  X^-1(k) in Ff  für alle  k in RR.  
 
-*Def*.. Eine Zufallsvariable  X  heißt **diskret**, falls  X(Om)  endlich oder abzählbar unendlich.
+*Def*.. Eine Zufallsvariable, die nur abzählbar viele verschiedene Werte hat, heißt **diskret**.
 
-*Def*.. Sei  X  eine diskrete Zufallsvariable auf  (Om, Ff, PP).  Die Funktion  k in RR mapsto PP(X = k)  heißt **Massenfunktion von _X_**.. Wir nennen wie  quine{p_X}.  
+*Def*.. Sei  X  eine diskrete  (Om, Ff, PP)  -Zufallsvariable. Die  X(Om)  -Funktion  x mapsto PP(X = x)  heißt **Massenfunktion von _X_**.. Wir nennen wie  quine{p_X}.  
 
 %> Bsp.. Wir haben eine Urne mit 20 nummerierten Kugeln. Wir ziehen 3x ohne Zurücklegen. Wir suchen die Wkt, dass wir eine Kugel mit Nr.  >= 17  ziehen. Haben also Laplace-Experiment mit  Om = \{1, ..., 20\}^3.  Wählen die Zufallsvariable  X  mit  X(om) = max om.  Suchen also die Wkt  PP\{X(om) >= 17\} = p_X(17) + ... + p_X(20).  Berechnen zuerst  p_X(20).  Die Gegenwkt ist  frac{19}{20} cdot frac{18}{19} cdot frac{17}{18} = frac{17}{20}.  Also  p_X(20) = 1 - frac{17}{20} = frac{3}{20}.  Ein alternativer Rechenweg stellt fest, dass dieses Ereignis aus  binom{19}{2}  günstigen Realisierungen besteht, bei  binom{20}{3}  möglichen Realisierungen. Also  p_X(20) = frac{binom{19}{2}}{binom{20}{3}} = frac{3}{20}.  Analog gilt für  i in \{17, 18, 19\},  dass  p_X(i) = frac{binom{i - 1}{2}}{binom{20}{3}}.  
 
@@ -82,14 +82,16 @@ allgemeinerer Erwartungswert, Rechenregeln dazu, Lagerhaltungsbeispiel.
 
 # Nov. 20
 
-*Def*.. Sei  X  eine Zufallsvariable auf  (Om, Ff, PP).  Die Funktion  k in RR mapsto PP(X <= k)  heißt **Verteilungsfunktion von _X_**  (F_X).  
+*Def*.. Eine monoton wachsende, rechtsseitig stetige  RR  -Funktion  f  mit  lim_{x to infty} f(x) = 1  und  lim_{x to -infty} f(x) = 0  heißt **Verteilung**.
 
-*Eigenschaften*.. Die Verteilungsfunktion einer Zufallsvariable  X  ist monoton wachsend und rechtsseitig stetig mit  lim_{x to infty} F_X(x) = 1  und  lim_{x to -infty} F_X(x) = 0.  
+*Prop*.. Für eine  (Om, Ff, PP)  -Zufallsvariable  X  ist die  RR  -Funktion  x mapsto PP(X <= x)  eine Verteilung. Deshalb bezeichnen wir sie als „Verteilungsfunktion von *X*“ oder kurz  double{F_X}.  
 
 % Folgen von Zufallsvariablen, die Indikatorfunktionen sind
 
 %Def.. Sei  n in NN  und  p in (0, 1).  Eine Zufallsvariable  X  heißt  (n, p)  -**binominalverteilt**, falls für jedes  k in NN  gilt::  PP(X = k) = binom n k p^k (1-p)^{n-k}..  Schreiben dann  quine{X ~ B(n, p)}.  
 *Def*.. Sei  n in NN  und  p in (0, 1).  Eine Zufallsvariable  X  mit der Massenfunktion  k in RR mapsto binom n k p^k (1-p)^{n-k}  heißt  (n, p)  -**binominalverteilt**  (X ~ B(n, p)).  
+
+Bmk.. Dass eine ZV  (n, p)  -binomialverteilt ist, heißt, dass ihre Verteilungsfunktion die  B(n, p)  -Verteilung ist. Die  B(n, p)  -Verteilung ist wie jede Verteilung eine monoton steigende Funktion von  RR  nach  [0, 1].  
 
 %Def.. Eine Zufallsvariable  X  heißt **binomialverteilt** gdw. es gibt  n  und  p  mit  X ~ B(n, p).  
 
@@ -191,7 +193,7 @@ Lemma.. Sei ZV  Y >= 0.  Dann gilt  EE(Y) = int_0^infty PP(Y > y) d y.
 
 % Confused stuff...
 
-*Def*.. Seien  X, Y  Zufallsvariablen auf   (Om, Ff, PP).  Die Funktion  (a, b) mapsto PP(X <= a, Y <= b)  heißt die **gemeinsame Verteilungsfunktion** von  X  und  Y.  
+*Def*.. Seien  X, Y  Zufallsvariablen auf   (Om, Ff, PP).  Die Funktion  (a, b) mapsto PP(X <= a, Y <= b)  heißt die **gemeinsame Verteilungsfunktion** von  X  und  Y.  Wir nennen sie  double F.  
 
 *Def*.. Seien  X, Y  Zufallsvariablen mit der gemeinsamen Verteilungsfunktion  F.  Dann heißen die Funktion  F_X : RR to [0, 1]  mit  F_X(a) := F(a, infty) := limn F(a, n)  und analog  F_Y  ihre **Randverteilungen**.
 
@@ -210,23 +212,51 @@ Bmk..  PP(a_1 < X <= a_2, b_1 < Y <= b_2) = F(a_2, b_2) - F(a_1, b_2) - F(a_2, b
 
 # Jan. 8
 
-*Def*.. Seien  X, Y  Zufallsvariablen auf  (Om, Ff, PP).  Sie heißen **gemeinsam absolut-stetig verteilt mit Dichte**  f: RR^2 to RR_+,  falls  PP((X, Y) in C) = int_C (x, y) d(x, y)  für jedes  C sse RR^2.  
+*Def*.. Seien  X, Y  Zufallsvariablen auf  (Om, Ff, PP).  Sie heißen **gemeinsam absolut-stetig verteilt mit Dichte**  f: RR^2 to RR_+,  falls  PP((X, Y) in C) = int_C f(x, y) d(x, y)  für jedes  C sse RR^2.  
 
-*Def*.. Für  C = (-infty, a] times (-infty, b]  setzen wir  PP(X <= a, Y <= b) = F(a, b) = int_minfty^a int_minfty^b f(x, y) d y\ d x.  
+% Eigentlich geht es doch hier darum, dass das obere wohldefiniert ist, oder?
+*Def*.. Seien  X, Y  gem. absolut-stetig verteilt mit Dichte  f.  Dann  F(a, b) := int_minfty^a int_minfty^b f(x, y) d y\ d x  für  a, b in RR.  
 
 Prop.. Ist  f  stetig, so gilt  f(x, y) = frac{partial^2}{partial x partial y} F(x, y).  
 
 *Def*.. Die **Randverteilung** von  X  ist  F_X(x) = PP(X <= x, Y <= infty) = int_minfty^x (int_RR f(t, y) d y) d t.  
 
 Prop.. Falls  f  stetig:  F_X' = f_X.  
+% Das ist nichts anderes als der Hauptsatz, oder?
+% Und "f stetig" heißt: f ist nicht Massenfunktion (also die ZV, von der f die Dichte ist, ist nicht diskret).
 
 *Def*.. Zwei ZV sind **unabhängig**.
+% vom 13.01.: F(a, b) = F_X(a) cdot F_Y(b)  und  f(a, b) = f_X(a) cdot f_Y(b).
 
 # Jan. 13
+
+*Def*.. Eine Folge von unabhängigen Zufallsvariablen  X_1, ..., X_n  mit  X_i ~ Nn(mu, sigma)  für alle  1 <= i <= n  heißt **independent and identically distributed**, kurz „iid.“.
+
+% Ausblick: Schätzer für mu und für sigma bei bekanntem mu.
+
+*Def*.. Seien  f, g  Funktionen. Die Funktion  x mapsto displaystyle int_minfty^infty f(x-y)g(y) d y  heißt **Faltung** von  f  und  g.  Wir bezeichnen sie mit  quine{f * g}.  
+
+Prop.. Seien  X, Y  unabhängige Zufallsvariablen mit Dichten  f_X  und  f_Y.  Für die Dichte von  (X + Y)  gilt  f_{X+Y} = f_X * f_Y.  
+
+% Bsp.: Addierte Dichte von zwei Indikator-ähnlichen Zufallsvariablen.
+
+% Bsp.: Addierte Dichte von zwei exponentialverteileten ZVen.
+
+*Def*..  Gamma(s) := int_0^infty t^{s-1} e^{-t} d t.  
+
+*Fakt*.. Für  n in NN  gilt  Gamma(n+1) = n Gamma(n) = n(n-1)Gamma(n-1) = ... = n!  und  Gamma(onehalf) = sqrt pi.  
+
+*Def*.. Seien  s, lam in RR.  Eine absolutstetige Zufallsvariable  X  mit der Dichte  x mapsto (lam x)^{s-1} frac{lam exp(-lam x)}{Gamma(s)}  für  x >= 0,  sonst  x mapsto 0,  heißt **Gamma-verteilt** mit den Parametern  s  und  lam..  Wir schreiben dann  quine{X ~ Gamma(s, lam)}.  
+
+*Zusammenhang Exponential- und Gamma-Verteilung*.. Sei  lam in RR.  Für unabhängige Zufallsvariablen  X_1, ..., X_n  mit  X_i ~ E(lam)  gilt  sum_{i=1}^n X_i ~ Gamma(n, lam).  
+
+*Def*..  chi^2_{(n)} := Gamma(frac n 2, onehalf).  
 
 # Jan. 15
 
 FEHLT.
+
+*Zusammenhang Standardnormal- und Gamma-Verteilung*.. Für unabhängige Zufallsvariablen  X_1, ..., X_n  mit  X_i ~ Nn(0, 1)  gilt  sum_{i=1}^n X_i^2 ~ chi^2_{(n)}.  
 
 # Jan. 20
 
@@ -243,3 +273,17 @@ FEHLT.
 # Feb. 10
 
 # Feb. 12
+
+---
+
+Wir betrachten Funktionspaare  (X, PP),  so dass  X : Om to RR  und  PP : Ff to [0, 1]  und  Ff  ist eine  sigma  -Algebra auf  Om  und  PP  ist  sigma  -additiv. Wir betrachten insbesondere solche Paare  (X, PP),  für die die Verteilungsfunktion  x mapsto PP(X <= x)  eine der folgenden ist:
+
+-  B(n, p) := left(x mapsto displaystyle sum_{k=0}^{floor x} binom n k p^k (1-p)^{n-k} right)  
+-  pi(lam) := left(x mapsto displaystyle sum_{k=1}^{floor x} frac{lam^k}{exp(lam)cdot k!} right)  
+-  Nn(mu, sigma) := left(y mapsto displaystyle int_minfty^y frac{1}{sqrt{2 pi sigma^2}} exp (-frac{(x - mu)^2}{2 sigma^2})d x right)  
+-  Nn(0, 1) = left(y mapsto displaystyle int_minfty^y frac{1}{sqrt{2 pi}exp(frac{x^2}{2})} d x right)  
+-  E(lam) := left(y mapsto displaystyle int_0^{max(y, 0)} frac{lam}{exp(lam x)} d x right)  
+-  Gamma(s, lam) := left(x mapsto displaystyle int_0^{max(y, 0)} frac{(lam x)^{s-1}}{Gamma(s)} frac{lam}{exp(lam x)}d x right)  
+-  chi^2_{(n)} := Gamma(frac n 2, onehalf)  
+
+Für Verteilungsfunktionen, die Treppenfunktionen sind, nennen wir die "generierende" Funktion „Massenfunktion“, bei differenzierbaren nennen wir die Ableitung „Dichtefunktion“. Alle anderen Arten ignorieren wir.
